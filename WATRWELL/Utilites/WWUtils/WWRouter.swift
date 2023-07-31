@@ -19,7 +19,7 @@ struct WWRouter {
     }
     
     func setTestLandingScene() {
-        let splashVideoScene = WWStep2VC.create(with: WWStep2VM())
+        let splashVideoScene = WWStep3VC.create(with: WWStep3VM())
         let navigationController = UINavigationController(rootViewController: splashVideoScene)
         setRoot(viewController: navigationController)
     }

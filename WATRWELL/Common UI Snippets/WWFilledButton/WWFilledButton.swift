@@ -44,7 +44,6 @@ class WWFilledButton: UIButton {
     }
     
     private func setupButton() {
-        titleLabel?.font = WWFonts.europaRegular.withSize(16)
         updateBackground()
         updateCornerStyle()
     }
@@ -82,9 +81,22 @@ class WWFilledButton: UIButton {
         }
     }
     
+    private func updateTitleAppearance() {
+        guard let title = titleLabel?.text else { return }
+        let attributes: [NSAttributedString.Key: Any] = [.font: WWFonts.europaRegular.withSize(16)]
+        let attributedText = NSAttributedString(string: title, attributes: attributes)
+        setAttributedTitle(attributedText, for: .normal)
+    }
+
+    
     // MARK: - Interface Builder Live Rendering
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupButton()
+    }
+    
+    override func setTitle(_ title: String?, for state: UIControl.State) {
+        super.setTitle(title, for: state)
+        updateTitleAppearance()
     }
 }

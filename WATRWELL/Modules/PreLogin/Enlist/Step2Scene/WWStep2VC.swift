@@ -134,7 +134,7 @@ private extension WWStep2VC {
     }
     
     func moveToNextStep() {
-        let welcomeScene = WWWelcomeVC.instantiate(fromAppStoryboard: .PreLogin)
-        navigationController?.pushViewController(welcomeScene, animated: true)
+        let step3Scene = WWStep3VC.create(with: WWStep3VM())
+        navigationController?.pushViewController(step3Scene, animated: true)
     }
 }
