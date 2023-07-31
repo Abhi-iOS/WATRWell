@@ -61,6 +61,8 @@
 		12C562672A769AC00088E709 /* WWDiscoverVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562662A769AC00088E709 /* WWDiscoverVC + CollectionView.swift */; };
 		12C562692A769B0E0088E709 /* WWDiscoverVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562682A769B0E0088E709 /* WWDiscoverVM.swift */; };
 		12C5626B2A769B330088E709 /* WWDiscoverDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5626A2A769B330088E709 /* WWDiscoverDataModel.swift */; };
+		12C562702A77E1100088E709 /* WWStep3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5626F2A77E1100088E709 /* WWStep3VC.swift */; };
+		12C562722A77E1240088E709 /* WWStep3VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562712A77E1240088E709 /* WWStep3VM.swift */; };
 		12E0B7682A6EEEFD002B7181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E0B7662A6EEEFD002B7181 /* LaunchScreen.storyboard */; };
 		12E0B7732A6EEEFD002B7181 /* WATRWELLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0B7722A6EEEFD002B7181 /* WATRWELLTests.swift */; };
 		12E0B77D2A6EEEFD002B7181 /* WATRWELLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0B77C2A6EEEFD002B7181 /* WATRWELLUITests.swift */; };
@@ -197,6 +199,8 @@
 		12C562662A769AC00088E709 /* WWDiscoverVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWDiscoverVC + CollectionView.swift"; sourceTree = "<group>"; };
 		12C562682A769B0E0088E709 /* WWDiscoverVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDiscoverVM.swift; sourceTree = "<group>"; };
 		12C5626A2A769B330088E709 /* WWDiscoverDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDiscoverDataModel.swift; sourceTree = "<group>"; };
+		12C5626F2A77E1100088E709 /* WWStep3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWStep3VC.swift; sourceTree = "<group>"; };
+		12C562712A77E1240088E709 /* WWStep3VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWStep3VM.swift; sourceTree = "<group>"; };
 		12E0B7582A6EEEFC002B7181 /* WATRWELL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WATRWELL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E0B7672A6EEEFD002B7181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12E0B76E2A6EEEFD002B7181 /* WATRWELLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WATRWELLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -588,6 +592,23 @@
 			path = WWDiscoverInfoTextCVC;
 			sourceTree = "<group>";
 		};
+		12C5626C2A77E0DB0088E709 /* Step3Scene */ = {
+			isa = PBXGroup;
+			children = (
+				12C5626D2A77E0F60088E709 /* Models */,
+				12C5626F2A77E1100088E709 /* WWStep3VC.swift */,
+			);
+			path = Step3Scene;
+			sourceTree = "<group>";
+		};
+		12C5626D2A77E0F60088E709 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12C562712A77E1240088E709 /* WWStep3VM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		12E0B74F2A6EEEFC002B7181 = {
 			isa = PBXGroup;
 			children = (
@@ -772,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				12C562572A765D550088E709 /* WelcomeScreen */,
+				12C5626C2A77E0DB0088E709 /* Step3Scene */,
 				1269E9222A763D3200B09FCB /* Step2Scene */,
 				1269E9082A75C73E00B09FCB /* Step1Scene */,
 			);
@@ -1319,6 +1341,7 @@
 				1269E9412A763F4900B09FCB /* IQBarButtonItem.swift in Sources */,
 				1269E91C2A75C91C00B09FCB /* WWFilledButtonTVC.swift in Sources */,
 				12C562532A7650690088E709 /* WWStep2VC + Textfield.swift in Sources */,
+				12C562702A77E1100088E709 /* WWStep3VC.swift in Sources */,
 				12E4DB372A73BFAD0020F6C3 /* Observable + Extension.swift in Sources */,
 				12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */,
 				12E4DBA22A746C950020F6C3 /* WWPaymentSlider.swift in Sources */,
@@ -1352,6 +1375,7 @@
 				12E4DB6D2A73FA1D0020F6C3 /* WWSourceVC.swift in Sources */,
 				12E4DB702A73FACA0020F6C3 /* WWMapVC.swift in Sources */,
 				1269E8FA2A75AEE300B09FCB /* WWWatrGuideVC + CollectionView.swift in Sources */,
+				12C562722A77E1240088E709 /* WWStep3VM.swift in Sources */,
 				1269E9072A75B76500B09FCB /* WWWatrGuidePopUpVM.swift in Sources */,
 				12E4DB512A73CDE10020F6C3 /* WWVerticalImageTextButton.swift in Sources */,
 				1269E9272A763D6800B09FCB /* WWStep2VM.swift in Sources */,
