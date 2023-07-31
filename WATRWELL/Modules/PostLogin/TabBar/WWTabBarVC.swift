@@ -17,14 +17,16 @@ class WWTabBarVC: UITabBarController {
     }
     
     private let initialScene: SceneType
+    private let sourceType: WWSourceVM.IncomingCase?
     
     private let backgroundImageView: UIImageView = {
         let bgImageView = UIImageView(image: UIImage(named: "tabbarBG"))
         return bgImageView
     }()
     
-    init(with initialScene: SceneType) {
+    init(with initialScene: SceneType, sourceType: WWSourceVM.IncomingCase?) {
         self.initialScene = initialScene
+        self.sourceType = sourceType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,12 +35,12 @@ class WWTabBarVC: UITabBarController {
     }
     
     //MARK: - Tabbar Item Controllers
-    var sourceNavigationController: UINavigationController = {
-        let sourceScene = WWSourceVC.instantiate(fromAppStoryboard: .Source)
+    var sourceNavigationController: UINavigationController {
+        let sourceScene = WWSourceVC.create(with: WWSourceVM(viewType: self.sourceType ?? .notSubscribed))
         let nvc = UINavigationController(rootViewController: sourceScene)
         nvc.tabBarItem = UITabBarItem(title: "Source", image: nil, tag: 0)
         return nvc
-    }()
+    }
     var mapNavigationController: UINavigationController = {
         let mapScene = WWMapVC.create(with: WWMapVM())
         let nvc = UINavigationController(rootViewController: mapScene)

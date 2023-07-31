@@ -72,7 +72,7 @@ private extension WWEnterOTPVC {
     }
     
     func loginUserAndRedirectToHome() {
-        WWRouter.shared.setTabbarAsRoot()
+        WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
     }
     
     func moveToNextStep() {

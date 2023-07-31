@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120AB8152A782B0A009B80C8 /* WWStep4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8142A782B0A009B80C8 /* WWStep4VC.swift */; };
+		120AB8182A782B29009B80C8 /* WWStep4VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8172A782B29009B80C8 /* WWStep4VM.swift */; };
+		120AB81A2A78350E009B80C8 /* WWSourceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8192A78350E009B80C8 /* WWSourceVM.swift */; };
+		120AB8212A78369B009B80C8 /* WWSelectSourceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB81F2A78369B009B80C8 /* WWSelectSourceCVC.swift */; };
+		120AB8222A78369B009B80C8 /* WWSelectSourceCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120AB8202A78369B009B80C8 /* WWSelectSourceCVC.xib */; };
+		120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8232A7836B0009B80C8 /* WWSelectedSourceCVC.swift */; };
+		120AB8262A7836B0009B80C8 /* WWSelectedSourceCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */; };
+		120AB8282A783F14009B80C8 /* WWSourceVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8272A783F14009B80C8 /* WWSourceVC + CollectionView.swift */; };
+		120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */; };
 		12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12586AB22A6EF5C40086B315 /* AppDelegate.swift */; };
 		12586AB82A6EF5C40086B315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12586AB42A6EF5C40086B315 /* Assets.xcassets */; };
 		12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12586ABA2A6EF6370086B315 /* PreLogin.storyboard */; };
@@ -143,6 +152,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120AB8142A782B0A009B80C8 /* WWStep4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWStep4VC.swift; sourceTree = "<group>"; };
+		120AB8172A782B29009B80C8 /* WWStep4VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWStep4VM.swift; sourceTree = "<group>"; };
+		120AB8192A78350E009B80C8 /* WWSourceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourceVM.swift; sourceTree = "<group>"; };
+		120AB81F2A78369B009B80C8 /* WWSelectSourceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSelectSourceCVC.swift; sourceTree = "<group>"; };
+		120AB8202A78369B009B80C8 /* WWSelectSourceCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWSelectSourceCVC.xib; sourceTree = "<group>"; };
+		120AB8232A7836B0009B80C8 /* WWSelectedSourceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSelectedSourceCVC.swift; sourceTree = "<group>"; };
+		120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWSelectedSourceCVC.xib; sourceTree = "<group>"; };
+		120AB8272A783F14009B80C8 /* WWSourceVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWSourceVC + CollectionView.swift"; sourceTree = "<group>"; };
+		120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDeviceDetail.swift; sourceTree = "<group>"; };
 		12586AAE2A6EF5C40086B315 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12586AB22A6EF5C40086B315 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12586AB42A6EF5C40086B315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -294,6 +312,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120AB8132A782AF4009B80C8 /* Step4Scene */ = {
+			isa = PBXGroup;
+			children = (
+				120AB8162A782B10009B80C8 /* Models */,
+				120AB8142A782B0A009B80C8 /* WWStep4VC.swift */,
+			);
+			path = Step4Scene;
+			sourceTree = "<group>";
+		};
+		120AB8162A782B10009B80C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				120AB8172A782B29009B80C8 /* WWStep4VM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		120AB81B2A783648009B80C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				120AB81E2A78367D009B80C8 /* WWSelectedSourceCVC */,
+				120AB81D2A783672009B80C8 /* WWSelectSourceCVC */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		120AB81D2A783672009B80C8 /* WWSelectSourceCVC */ = {
+			isa = PBXGroup;
+			children = (
+				120AB81F2A78369B009B80C8 /* WWSelectSourceCVC.swift */,
+				120AB8202A78369B009B80C8 /* WWSelectSourceCVC.xib */,
+			);
+			path = WWSelectSourceCVC;
+			sourceTree = "<group>";
+		};
+		120AB81E2A78367D009B80C8 /* WWSelectedSourceCVC */ = {
+			isa = PBXGroup;
+			children = (
+				120AB8232A7836B0009B80C8 /* WWSelectedSourceCVC.swift */,
+				120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */,
+			);
+			path = WWSelectedSourceCVC;
+			sourceTree = "<group>";
+		};
 		12586AAC2A6EF5C40086B315 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +779,7 @@
 				12E4DB282A73A5730020F6C3 /* WWColors.swift */,
 				12E4DB2A2A73AA310020F6C3 /* WWGlobals.swift */,
 				1269E8EC2A75A2EF00B09FCB /* WWFonts.swift */,
+				120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */,
 			);
 			path = WWUtils;
 			sourceTree = "<group>";
@@ -792,6 +855,7 @@
 		12E4DB422A73C9970020F6C3 /* Enlist */ = {
 			isa = PBXGroup;
 			children = (
+				120AB8132A782AF4009B80C8 /* Step4Scene */,
 				12C562572A765D550088E709 /* WelcomeScreen */,
 				12C5626C2A77E0DB0088E709 /* Step3Scene */,
 				1269E9222A763D3200B09FCB /* Step2Scene */,
@@ -900,8 +964,10 @@
 		12E4DB6A2A73F9F90020F6C3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				120AB81B2A783648009B80C8 /* Views */,
 				12E4DB6B2A73FA0A0020F6C3 /* Models */,
 				12E4DB6C2A73FA1D0020F6C3 /* WWSourceVC.swift */,
+				120AB8272A783F14009B80C8 /* WWSourceVC + CollectionView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -909,6 +975,7 @@
 		12E4DB6B2A73FA0A0020F6C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				120AB8192A78350E009B80C8 /* WWSourceVM.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1234,9 +1301,11 @@
 				12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */,
 				12E4DB252A73A29D0020F6C3 /* AppLanding.storyboard in Resources */,
 				1269E9002A75AF7D00B09FCB /* WWWatrGuideCVC.xib in Resources */,
+				120AB8222A78369B009B80C8 /* WWSelectSourceCVC.xib in Resources */,
 				1269E8EB2A759DF900B09FCB /* Europa-Light.ttf in Resources */,
 				1269E9162A75C81A00B09FCB /* WWSingleTFTVC.xib in Resources */,
 				12E4DB2D2A73ACAD0020F6C3 /* Colors.xcassets in Resources */,
+				120AB8262A7836B0009B80C8 /* WWSelectedSourceCVC.xib in Resources */,
 				1269E8F22A75A51900B09FCB /* WWNavBarView.xib in Resources */,
 				12E0B7682A6EEEFD002B7181 /* LaunchScreen.storyboard in Resources */,
 				1269E91D2A75C91C00B09FCB /* WWFilledButtonTVC.xib in Resources */,
@@ -1330,6 +1399,7 @@
 				12C562672A769AC00088E709 /* WWDiscoverVC + CollectionView.swift in Sources */,
 				1269E8F02A75A50B00B09FCB /* WWNavBarView.swift in Sources */,
 				12E4DB402A73C87D0020F6C3 /* WWLabel.swift in Sources */,
+				120AB81A2A78350E009B80C8 /* WWSourceVM.swift in Sources */,
 				12E4DB292A73A5730020F6C3 /* WWColors.swift in Sources */,
 				12C562512A764A590088E709 /* WWDropDownView.swift in Sources */,
 				1269E9152A75C81A00B09FCB /* WWSingleTFTVC.swift in Sources */,
@@ -1346,11 +1416,15 @@
 				12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */,
 				12E4DBA22A746C950020F6C3 /* WWPaymentSlider.swift in Sources */,
 				12E4DB952A7443890020F6C3 /* TableView + Extensions.swift in Sources */,
+				120AB8182A782B29009B80C8 /* WWStep4VM.swift in Sources */,
+				120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */,
 				1269E9102A75C7B200B09FCB /* WWStep1VM.swift in Sources */,
+				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
 				12C562692A769B0E0088E709 /* WWDiscoverVM.swift in Sources */,
 				12E4DB172A6EFE6E0020F6C3 /* WWRouter.swift in Sources */,
 				1269E9422A763F4900B09FCB /* IQToolbar.swift in Sources */,
 				12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */,
+				120AB8152A782B0A009B80C8 /* WWStep4VC.swift in Sources */,
 				12E4DB802A743CFF0020F6C3 /* WWMenuVM.swift in Sources */,
 				12E4DB9D2A7463740020F6C3 /* WWWatrSourceInfoVC.swift in Sources */,
 				12C562592A765D700088E709 /* WWWelcomeVC.swift in Sources */,
@@ -1395,6 +1469,7 @@
 				1269E8E42A74950100B09FCB /* DailyBenifitsMasterVC + CollectionView.swift in Sources */,
 				1269E9402A763F4900B09FCB /* IQTitleBarButtonItem.swift in Sources */,
 				12E4DB572A73E2C70020F6C3 /* Bool + Extension.swift in Sources */,
+				120AB8212A78369B009B80C8 /* WWSelectSourceCVC.swift in Sources */,
 				12E4DB732A73FBB10020F6C3 /* WWDiscoverVC.swift in Sources */,
 				12C5625F2A7690120088E709 /* WWDiscoverIntentCVC.swift in Sources */,
 				12C5626B2A769B330088E709 /* WWDiscoverDataModel.swift in Sources */,
@@ -1412,6 +1487,7 @@
 				12E4DB922A7441FE0020F6C3 /* WWVerticalButtonTVC.swift in Sources */,
 				12E4DB472A73CA0B0020F6C3 /* WWEnterPhoneVC.swift in Sources */,
 				12E4DBAC2A7482310020F6C3 /* DailyBenifitsMasterVM.swift in Sources */,
+				120AB8282A783F14009B80C8 /* WWSourceVC + CollectionView.swift in Sources */,
 				12E4DB332A73B3B40020F6C3 /* WWFilledButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

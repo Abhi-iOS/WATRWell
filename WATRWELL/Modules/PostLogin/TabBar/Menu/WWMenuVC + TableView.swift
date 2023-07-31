@@ -58,7 +58,7 @@ private extension WWMenuVC{
             return
         case .source:
             dismiss(animated: true) {
-                WWRouter.shared.setTabbarAsRoot(initialItem: .source)
+                WWRouter.shared.setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
             }
 
         case .map:
