@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Europa-Light.ttf">
+            <string>Europa-Light</string>
+        </array>
+        <array key="Europa-Regular.ttf">
+            <string>Europa-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WWLogoTVC" rowHeight="238" id="KGk-i7-Jjw" customClass="WWLogoTVC" customModule="WATRWELL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9di-M7-ZnY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="roc-Bl-YZK">
+                                <rect key="frame" x="24" y="16" width="272" height="210"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlW-ZA-y6f">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="GGZ-Ri-ahQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kg-CL-Gyf" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="116" y="87" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gly-eb-e78"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCa-08-mUY" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="116.33333333333333" y="129" width="39.333333333333329" height="81"/>
+                                        <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="roc-Bl-YZK" firstAttribute="leading" secondItem="9di-M7-ZnY" secondAttribute="leading" constant="24" id="29b-2j-c4w"/>
+                            <constraint firstAttribute="trailing" secondItem="roc-Bl-YZK" secondAttribute="trailing" constant="24" id="HMN-VP-oeQ"/>
+                            <constraint firstAttribute="bottom" secondItem="roc-Bl-YZK" secondAttribute="bottom" constant="12" id="Xya-Bf-RN3"/>
+                            <constraint firstItem="roc-Bl-YZK" firstAttribute="top" secondItem="9di-M7-ZnY" secondAttribute="top" constant="16" id="kNK-dR-u4C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9di-M7-ZnY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3cj-HD-8O4"/>
+                    <constraint firstItem="9di-M7-ZnY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QLR-17-kUB"/>
+                    <constraint firstAttribute="trailing" secondItem="9di-M7-ZnY" secondAttribute="trailing" id="SUW-ec-7gl"/>
+                    <constraint firstAttribute="bottom" secondItem="9di-M7-ZnY" secondAttribute="bottom" id="Sn6-Kj-ccn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="9di-M7-ZnY" id="uDH-lU-T3f"/>
+                <outlet property="heightConstraint" destination="GGZ-Ri-ahQ" id="3eb-RT-2VT"/>
+                <outlet property="logoImageView" destination="TlW-ZA-y6f" id="AXJ-UR-rkz"/>
+                <outlet property="subtitleLabel" destination="FCa-08-mUY" id="Y5D-1z-ckW"/>
+                <outlet property="titleLabel" destination="6kg-CL-Gyf" id="X9y-l6-wCt"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="88.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

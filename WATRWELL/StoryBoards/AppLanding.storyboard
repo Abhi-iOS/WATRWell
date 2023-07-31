@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-jP-fjU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designedAndDeveloped" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-EJ-gcp">
+                                <rect key="frame" x="0.0" y="655" width="375" height="12"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ShS-jP-fjU" secondAttribute="trailing" id="1JI-y5-8xp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BQf-EJ-gcp" secondAttribute="bottom" id="Ee1-AF-CKK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BQf-EJ-gcp" secondAttribute="trailing" id="QmJ-Je-fcZ"/>
+                            <constraint firstItem="BQf-EJ-gcp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XBu-HN-ANb"/>
+                            <constraint firstAttribute="bottom" secondItem="ShS-jP-fjU" secondAttribute="bottom" id="bay-YM-Lje"/>
+                            <constraint firstItem="ShS-jP-fjU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tSw-P2-xHC"/>
+                            <constraint firstItem="ShS-jP-fjU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="zg8-eK-vXb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="12"/>
+        </scene>
+        <!--LandingVC-->
+        <scene sceneID="IZH-6N-FO4">
+            <objects>
+                <viewController storyboardIdentifier="WWLandingVC" id="95U-bN-uaZ" customClass="WWLandingVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnD-p5-Ior">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designedAndDeveloped" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-U3-8Pq">
+                                <rect key="frame" x="0.0" y="655" width="375" height="12"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-EZ-X1d">
+                                <rect key="frame" x="117.5" y="36" width="140" height="196.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-latest 1" translatesAutoresizingMaskIntoConstraints="NO" id="4Lr-2u-aQk">
+                                        <rect key="frame" x="40" y="0.0" width="60" height="127"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WATRWELL" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-s9-6j5">
+                                        <rect key="frame" x="0.0" y="177" width="140" height="19.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TWO-DROPLETS-VECTOR-2 copy 1" translatesAutoresizingMaskIntoConstraints="NO" id="MJY-cI-RrP">
+                                <rect key="frame" x="131.5" y="412" width="243.5" height="255"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1ZV-sl-830">
+                                <rect key="frame" x="137" y="295.5" width="101" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De4-hf-FXr" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="47Q-BE-lF6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ACCESS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-c3-44R" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="101" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ENLIST"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MyX-vY-sNU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QEi-U3-8Pq" firstAttribute="leading" secondItem="MyX-vY-sNU" secondAttribute="leading" id="1vA-e0-sFC"/>
+                            <constraint firstItem="1ZV-sl-830" firstAttribute="centerY" secondItem="MyX-vY-sNU" secondAttribute="centerY" id="4ma-Im-nAa"/>
+                            <constraint firstItem="MyX-vY-sNU" firstAttribute="trailing" secondItem="MJY-cI-RrP" secondAttribute="trailing" id="A1b-zt-POo"/>
+                            <constraint firstItem="MyX-vY-sNU" firstAttribute="trailing" secondItem="QEi-U3-8Pq" secondAttribute="trailing" id="Dd4-LX-02T"/>
+                            <constraint firstItem="P0e-EZ-X1d" firstAttribute="centerX" secondItem="MyX-vY-sNU" secondAttribute="centerX" id="PeQ-Pp-Q26"/>
+                            <constraint firstItem="MyX-vY-sNU" firstAttribute="bottom" secondItem="QEi-U3-8Pq" secondAttribute="bottom" id="QDO-ot-4dc"/>
+                            <constraint firstItem="MyX-vY-sNU" firstAttribute="bottom" secondItem="MJY-cI-RrP" secondAttribute="bottom" id="U5C-Jh-ZRE"/>
+                            <constraint firstItem="1ZV-sl-830" firstAttribute="centerX" secondItem="MyX-vY-sNU" secondAttribute="centerX" id="XKg-oi-UdI"/>
+                            <constraint firstItem="MJY-cI-RrP" firstAttribute="width" secondItem="PnD-p5-Ior" secondAttribute="width" multiplier="0.65" id="gLo-tB-cJ0"/>
+                            <constraint firstItem="1ZV-sl-830" firstAttribute="width" secondItem="PnD-p5-Ior" secondAttribute="width" multiplier="0.27" id="o84-Kv-x0K"/>
+                            <constraint firstItem="P0e-EZ-X1d" firstAttribute="top" secondItem="MyX-vY-sNU" secondAttribute="top" constant="16" id="sPd-cn-yb5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessButton" destination="De4-hf-FXr" id="Pv7-CD-K3r"/>
+                        <outlet property="enlistButton" destination="CX8-c3-44R" id="6eR-Tq-fow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shP-DQ-Wyp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="12"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="CX8-c3-44R">
+            <size key="intrinsicContentSize" width="80" height="34.5"/>
+        </designable>
+        <designable name="De4-hf-FXr">
+            <size key="intrinsicContentSize" width="88.5" height="34.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="TWO-DROPLETS-VECTOR-2 copy 1" width="144" height="255"/>
+        <image name="WATRWELL" width="140" height="20"/>
+        <image name="designedAndDeveloped" width="160" height="12"/>
+        <image name="logo-latest 1" width="60" height="127"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

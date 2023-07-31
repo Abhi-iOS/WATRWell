@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Europa-Bold.ttf">
+            <string>Europa-Bold</string>
+        </array>
+        <array key="Europa-Light.ttf">
+            <string>Europa-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WWWatrGuideCVC" id="gTV-IL-0wX" customClass="WWWatrGuideCVC" customModule="WATRWELL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="562"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="562"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuz-c0-RrU">
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="562"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZHd-n1-xoV">
+                                <rect key="frame" x="16" y="24" width="331" height="159.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="752" image="watrGuide_ic" translatesAutoresizingMaskIntoConstraints="NO" id="rCE-kZ-iyZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="2Ng-lm-6ci"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cj5-1M-6EG">
+                                        <rect key="frame" x="0.0" y="52.999999999999993" width="331" height="106.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACHIEVE DAILY HYDRATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFP-zL-R0E" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="199" height="19.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottle_ic" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-pg-P5S">
+                                                <rect key="frame" x="145.66666666666666" y="35.666666666666671" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="On8-sM-daj"/>
+                                                    <constraint firstAttribute="height" constant="40" id="qas-qh-THo"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUGGESTED 20 oz DAILY SERVINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX2-dK-RGr" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="71.333333333333329" y="91.666666666666657" width="188.66666666666669" height="14.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IF YOU ARE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oho-cP-2Xn" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="142.66666666666666" y="207.33333333333334" width="78" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
+                                <color key="textColor" name="hydrationBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xbi-sO-fo8">
+                                <rect key="frame" x="45.333333333333343" y="250" width="272.33333333333326" height="93"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-M4-gfZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="20.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-Y1-86w" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-KI-pXS" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="DRINK 4*">
+                                                        <attributes>
+                                                            <color key="NSColor" name="hydrationBlue"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-aE-Jxu">
+                                        <rect key="frame" x="0.0" y="36.333333333333314" width="272.33333333333331" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-4N-lyU" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-dH-qvA" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="DRINK 4*">
+                                                        <attributes>
+                                                            <color key="NSColor" name="hydrationBlue"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JkD-a8-AO5">
+                                        <rect key="frame" x="0.0" y="72.666666666666686" width="272.33333333333331" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waF-Kf-GuW" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-wy-5ad" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="DRINK 4*">
+                                                        <attributes>
+                                                            <color key="NSColor" name="hydrationBlue"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFi-Ra-Qro">
+                                <rect key="frame" x="156.66666666666666" y="380" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sVT-7M-6AK"/>
+                                    <constraint firstAttribute="width" constant="50" id="swY-4x-III"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="watrGuideInfo_ic_small"/>
+                                <connections>
+                                    <action selector="viewDescTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oyh-bb-f85"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZHd-n1-xoV" firstAttribute="top" secondItem="xuz-c0-RrU" secondAttribute="top" constant="24" id="2ac-YY-ziW"/>
+                            <constraint firstItem="tFi-Ra-Qro" firstAttribute="centerX" secondItem="xbi-sO-fo8" secondAttribute="centerX" id="8pC-fQ-a2Y"/>
+                            <constraint firstItem="xbi-sO-fo8" firstAttribute="top" secondItem="oho-cP-2Xn" secondAttribute="bottom" constant="24" id="E2f-eh-Yer"/>
+                            <constraint firstItem="oho-cP-2Xn" firstAttribute="centerX" secondItem="ZHd-n1-xoV" secondAttribute="centerX" id="MQc-fH-1yl"/>
+                            <constraint firstItem="tFi-Ra-Qro" firstAttribute="top" secondItem="xbi-sO-fo8" secondAttribute="bottom" constant="37" id="VBN-oy-jRV"/>
+                            <constraint firstItem="oho-cP-2Xn" firstAttribute="top" secondItem="ZHd-n1-xoV" secondAttribute="bottom" constant="24" id="VzK-o1-Wga"/>
+                            <constraint firstItem="xbi-sO-fo8" firstAttribute="width" secondItem="xuz-c0-RrU" secondAttribute="width" multiplier="0.75" id="amJ-Pp-5h8"/>
+                            <constraint firstItem="xbi-sO-fo8" firstAttribute="centerX" secondItem="oho-cP-2Xn" secondAttribute="centerX" id="dBH-U9-Dlr"/>
+                            <constraint firstItem="ZHd-n1-xoV" firstAttribute="leading" secondItem="xuz-c0-RrU" secondAttribute="leading" constant="16" id="phq-l1-4eA"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tFi-Ra-Qro" secondAttribute="bottom" constant="12" id="t7P-vf-40E"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHd-n1-xoV" secondAttribute="trailing" constant="16" id="wOV-L7-p8c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xuz-c0-RrU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0na-5L-ztP"/>
+                <constraint firstItem="xuz-c0-RrU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PLz-gG-l2q"/>
+                <constraint firstAttribute="trailing" secondItem="xuz-c0-RrU" secondAttribute="trailing" id="meH-pr-kCu"/>
+                <constraint firstAttribute="bottom" secondItem="xuz-c0-RrU" secondAttribute="bottom" id="oBW-fd-Ci6"/>
+            </constraints>
+            <size key="customSize" width="363" height="562"/>
+            <connections>
+                <outlet property="bottleIcon" destination="5Oh-pg-P5S" id="qsR-4b-pbI"/>
+                <outlet property="ifYouAreLabel" destination="oho-cP-2Xn" id="HA1-yP-0v0"/>
+                <outlet property="leftTitle1Label" destination="ROM-Y1-86w" id="6ng-xt-0Zm"/>
+                <outlet property="leftTitle2Label" destination="bEh-4N-lyU" id="f9O-nt-hPU"/>
+                <outlet property="leftTitle3Label" destination="waF-Kf-GuW" id="H58-kY-wYG"/>
+                <outlet property="rightTitle1Label" destination="YM0-KI-pXS" id="rJZ-p2-tw1"/>
+                <outlet property="rightTitle2Label" destination="TOt-dH-qvA" id="pe2-rN-JS8"/>
+                <outlet property="rightTitle3Label" destination="IXy-wy-5ad" id="LVb-lb-dKQ"/>
+                <outlet property="subtitleLabel" destination="XX2-dK-RGr" id="uED-eZ-5Q7"/>
+                <outlet property="titleLabel" destination="XFP-zL-R0E" id="3Mi-EX-RQo"/>
+                <outlet property="viewDescButton" destination="tFi-Ra-Qro" id="cdm-SJ-PT8"/>
+            </connections>
+            <point key="canvasLocation" x="316.79389312977099" y="200.70422535211267"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bottle_ic" width="7.3333334922790527" height="24.666666030883789"/>
+        <image name="watrGuideInfo_ic_small" width="30" height="42"/>
+        <image name="watrGuide_ic" width="200" height="29"/>
+        <namedColor name="hydrationBlue">
+            <color red="0.12549019607843137" green="0.23921568627450981" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

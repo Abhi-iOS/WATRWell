@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="WWVerticalButtonTVC" customModule="WATRWELL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-te-iXl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSD-Cg-PbW" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="120" y="16" width="80" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="z4e-KK-zRI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="giG-sU-emJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aSD-Cg-PbW" secondAttribute="bottom" constant="16" id="H6J-ZC-T8x"/>
+                            <constraint firstItem="aSD-Cg-PbW" firstAttribute="centerX" secondItem="LpL-te-iXl" secondAttribute="centerX" id="N6W-kE-Qig"/>
+                            <constraint firstItem="aSD-Cg-PbW" firstAttribute="top" secondItem="LpL-te-iXl" secondAttribute="top" constant="16" id="a6z-Te-csj"/>
+                            <constraint firstItem="aSD-Cg-PbW" firstAttribute="width" relation="greaterThanOrEqual" secondItem="LpL-te-iXl" secondAttribute="width" multiplier="0.25" id="xU3-Km-MI9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="LpL-te-iXl" secondAttribute="bottom" id="7A2-6X-YJs"/>
+                    <constraint firstItem="LpL-te-iXl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AhH-xp-aa5"/>
+                    <constraint firstAttribute="trailing" secondItem="LpL-te-iXl" secondAttribute="trailing" id="YRT-Ad-BUh"/>
+                    <constraint firstItem="LpL-te-iXl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tXl-Iu-doV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="LpL-te-iXl" id="Fnw-0Q-yhH"/>
+                <outlet property="verticalButton" destination="aSD-Cg-PbW" id="PM1-bc-Anz"/>
+            </connections>
+            <point key="canvasLocation" x="33.587786259541986" y="40.845070422535215"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
