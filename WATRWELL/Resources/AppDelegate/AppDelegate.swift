@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        WWRouter.shared.setTabbarAsRoot()
+        WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
         return true
     }
 

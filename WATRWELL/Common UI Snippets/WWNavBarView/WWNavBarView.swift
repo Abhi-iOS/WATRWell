@@ -28,6 +28,7 @@ class WWNavBarView: UIView {
         super.awakeFromNib()
         shouldHideBackButton()
         setLogoTint(WWColors.hexDF5509.color)
+        shouldHideLogoImage(false)
         logoImageView.image = logoImage
         backButton.showUnderline = false
     }
@@ -46,6 +47,10 @@ class WWNavBarView: UIView {
     
     func setLogoTint(_ color: UIColor) {
         logoImageView.tintColor = color
+    }
+    
+    func shouldHideLogoImage(_ status: Bool) {
+        logoImageView.isHidden = status
     }
     
 }

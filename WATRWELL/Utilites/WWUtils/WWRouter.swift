@@ -19,13 +19,13 @@ struct WWRouter {
     }
     
     func setTestLandingScene() {
-        let splashVideoScene = WWStep3VC.create(with: WWStep3VM())
+        let splashVideoScene = WWStep4VC.create(with: WWStep4VM())
         let navigationController = UINavigationController(rootViewController: splashVideoScene)
         setRoot(viewController: navigationController)
     }
     
-    func setTabbarAsRoot(initialItem: WWTabBarVC.SceneType = .source) {
-        let tabbarScene = WWTabBarVC(with: initialItem)
+    func setTabbarAsRoot(initialItem: WWTabBarVC.SceneType = .source, sourceType: WWSourceVM.IncomingCase? = nil) {
+        let tabbarScene = WWTabBarVC(with: initialItem, sourceType: sourceType)
         let navigationController = UINavigationController(rootViewController: tabbarScene)
         navigationController.isNavigationBarHidden = true
         setRoot(viewController: navigationController)

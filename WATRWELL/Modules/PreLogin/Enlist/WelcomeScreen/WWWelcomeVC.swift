@@ -35,7 +35,7 @@ private extension WWWelcomeVC {
     
     @objc func goToTabbar() {
         timer.invalidate()
-        WWRouter.shared.setTabbarAsRoot()
+        WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
     }
 }
 

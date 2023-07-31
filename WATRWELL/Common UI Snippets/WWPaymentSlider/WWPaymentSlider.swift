@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CustomSlider: UISlider {
+class WWPaymentSlider: UISlider {
     
     @IBInspectable
     var thumbImage: UIImage? {
@@ -16,6 +16,8 @@ class CustomSlider: UISlider {
             setThumbImage(thumbImage, for: .normal)
         }
     }
+    
+    var completion: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,8 +47,10 @@ class CustomSlider: UISlider {
     
     // Triggered when the slider value changes
     @objc private func sliderValueChanged() {
-        print(value)
         let roundedValue: Float = (value >= 0.65) ? 1.0 : 0.0
         updateSliderValue(roundedValue)
+        if roundedValue == 1 {
+            completion?()
+        }
     }
 }

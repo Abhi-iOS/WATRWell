@@ -4,11 +4,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Europa-Bold.ttf">
+            <string>Europa-Bold</string>
+        </array>
         <array key="Europa-Light.ttf">
             <string>Europa-Light</string>
         </array>
@@ -35,7 +39,7 @@
                                 <rect key="frame" x="131.5" y="412" width="243.5" height="255"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="70g-7O-A5R">
-                                <rect key="frame" x="16" y="187" width="343" height="102"/>
+                                <rect key="frame" x="16" y="187" width="343" height="110.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE ENTER YOUR MOBILE PHONE #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lem-O2-Ror" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
                                         <rect key="frame" x="23" y="0.0" width="297.5" height="21"/>
@@ -44,12 +48,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-AI-LMB" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="37" width="257" height="34"/>
+                                        <rect key="frame" x="43" y="37" width="257" height="42.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(A 6 Digit Verification Code will be Sent to Your Phone)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-1p-yrL" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="29.5" y="87" width="284" height="15"/>
+                                        <rect key="frame" x="29.5" y="95.5" width="284" height="15"/>
                                         <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +64,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc2-3g-MUY" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="137" y="319" width="101" height="36"/>
+                                <rect key="frame" x="137" y="327.5" width="101" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="6kz-vW-QFx"/>
                                 </constraints>
@@ -68,7 +72,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="ACCESS"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-yq-999" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="146" y="371" width="83.5" height="64"/>
+                                <rect key="frame" x="146" y="379.5" width="83.5" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="4G0-Mu-LJw"/>
                                 </constraints>
@@ -702,25 +706,113 @@
             </objects>
             <point key="canvasLocation" x="2276" y="684"/>
         </scene>
+        <!--Step4VC-->
+        <scene sceneID="G6s-Cn-3pq">
+            <objects>
+                <viewController storyboardIdentifier="WWStep4VC" id="Rmu-vN-J7E" customClass="WWStep4VC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R5q-Yc-nEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-latest 1" translatesAutoresizingMaskIntoConstraints="NO" id="8Zp-ks-DUe">
+                                <rect key="frame" x="157.5" y="36" width="60" height="127"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designedAndDeveloped" translatesAutoresizingMaskIntoConstraints="NO" id="s79-fH-8g5">
+                                <rect key="frame" x="0.0" y="655" width="375" height="12"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4O6-DQ-aQW">
+                                <rect key="frame" x="16" y="187" width="343" height="440"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vWL-zY-hYM">
+                                        <rect key="frame" x="4.5" y="0.0" width="334" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 4 OF 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-4Y-P4R" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="21"/>
+                                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLIDE BELOW TO ESTIMATED BODY WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-AT-6cA" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="29" width="334" height="21"/>
+                                                <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyweightScale" translatesAutoresizingMaskIntoConstraints="NO" id="anP-cn-F3P">
+                                        <rect key="frame" x="109" y="66" width="125" height="233.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 LBS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-uE-xbM" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="315.5" width="63.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-ey-6hJ">
+                                        <rect key="frame" x="29" y="358" width="285" height="31"/>
+                                        <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="maximumTrackTintColor" name="pageIndicatorGray"/>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5em-xL-ipa" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="109" y="404" width="125" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="dwe-YE-d3M"/>
+                                            <constraint firstAttribute="height" constant="36" id="u9L-Kp-Pmm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="COMPLETE"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lcG-zc-KoT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s79-fH-8g5" firstAttribute="leading" secondItem="lcG-zc-KoT" secondAttribute="leading" id="7CU-rB-TZL"/>
+                            <constraint firstItem="lcG-zc-KoT" firstAttribute="leading" secondItem="4O6-DQ-aQW" secondAttribute="leading" constant="-16" id="BiX-0E-k6R"/>
+                            <constraint firstItem="X7x-ey-6hJ" firstAttribute="width" secondItem="R5q-Yc-nEP" secondAttribute="width" multiplier="0.75" id="DG4-Ch-VcU"/>
+                            <constraint firstItem="anP-cn-F3P" firstAttribute="height" secondItem="R5q-Yc-nEP" secondAttribute="height" multiplier="0.35" id="R1y-mM-vpP"/>
+                            <constraint firstItem="8Zp-ks-DUe" firstAttribute="centerX" secondItem="lcG-zc-KoT" secondAttribute="centerX" id="ReV-Vm-Voa"/>
+                            <constraint firstItem="4O6-DQ-aQW" firstAttribute="trailing" secondItem="lcG-zc-KoT" secondAttribute="trailing" constant="-16" id="UdM-WV-lU7"/>
+                            <constraint firstItem="8Zp-ks-DUe" firstAttribute="top" secondItem="lcG-zc-KoT" secondAttribute="top" constant="16" id="fAz-UN-Udg"/>
+                            <constraint firstItem="lcG-zc-KoT" firstAttribute="bottom" secondItem="s79-fH-8g5" secondAttribute="bottom" id="i3M-AK-dIZ"/>
+                            <constraint firstItem="4O6-DQ-aQW" firstAttribute="top" secondItem="8Zp-ks-DUe" secondAttribute="bottom" constant="24" id="nM7-C9-4pQ"/>
+                            <constraint firstItem="lcG-zc-KoT" firstAttribute="trailing" secondItem="s79-fH-8g5" secondAttribute="trailing" id="nTa-Qw-23m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="completeButton" destination="5em-xL-ipa" id="9Ms-pv-dl7"/>
+                        <outlet property="weightLabel" destination="wKx-uE-xbM" id="eJw-k5-QKm"/>
+                        <outlet property="weightSlider" destination="X7x-ey-6hJ" id="YSY-A9-fqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8V-zg-9ss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3022" y="683"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="46e-my-DBv">
-            <size key="intrinsicContentSize" width="84.5" height="34"/>
+            <size key="intrinsicContentSize" width="84.5" height="43"/>
+        </designable>
+        <designable name="5em-xL-ipa">
+            <size key="intrinsicContentSize" width="112.5" height="34.5"/>
         </designable>
         <designable name="7FO-a2-cIb">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="8Ir-yo-Nx7">
-            <size key="intrinsicContentSize" width="67" height="34"/>
+            <size key="intrinsicContentSize" width="67" height="43"/>
         </designable>
         <designable name="FM4-zR-lce">
-            <size key="intrinsicContentSize" width="67" height="34"/>
+            <size key="intrinsicContentSize" width="67" height="43"/>
         </designable>
         <designable name="Jl3-mA-Rao">
-            <size key="intrinsicContentSize" width="56.5" height="34"/>
+            <size key="intrinsicContentSize" width="56.5" height="43"/>
         </designable>
         <designable name="O6p-AI-LMB">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="Rc2-3g-MUY">
             <size key="intrinsicContentSize" width="88.5" height="34.5"/>
@@ -732,31 +824,31 @@
             <size key="intrinsicContentSize" width="67.5" height="34.5"/>
         </designable>
         <designable name="b1h-eq-hcj">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="dIh-Gj-rFg">
-            <size key="intrinsicContentSize" width="88.5" height="34"/>
+            <size key="intrinsicContentSize" width="88.5" height="43"/>
         </designable>
         <designable name="hU6-Yg-hWQ">
-            <size key="intrinsicContentSize" width="83" height="34"/>
+            <size key="intrinsicContentSize" width="83" height="43"/>
         </designable>
         <designable name="jd2-jZ-ZbU">
-            <size key="intrinsicContentSize" width="83" height="34"/>
+            <size key="intrinsicContentSize" width="83" height="43"/>
         </designable>
         <designable name="jqx-0J-EJt">
-            <size key="intrinsicContentSize" width="88.5" height="34"/>
+            <size key="intrinsicContentSize" width="88.5" height="43"/>
         </designable>
         <designable name="o6v-6I-fSr">
-            <size key="intrinsicContentSize" width="84.5" height="34"/>
+            <size key="intrinsicContentSize" width="84.5" height="43"/>
         </designable>
         <designable name="pm6-br-Ier">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="qTS-tJ-rcs">
-            <size key="intrinsicContentSize" width="56.5" height="34"/>
+            <size key="intrinsicContentSize" width="56.5" height="43"/>
         </designable>
         <designable name="td2-pK-D83">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="uDm-Dh-Xl9">
             <size key="intrinsicContentSize" width="67.5" height="34.5"/>
@@ -765,12 +857,16 @@
     <resources>
         <image name="Cancel" width="24" height="24"/>
         <image name="TWO-DROPLETS-VECTOR-2 copy 1" width="144" height="255"/>
+        <image name="bodyweightScale" width="125" height="298"/>
         <image name="card_ic" width="24" height="17"/>
         <image name="designedAndDeveloped" width="160" height="12"/>
         <image name="ellips_empty" width="10" height="10"/>
         <image name="logo-latest 1" width="60" height="127"/>
         <image name="staystrng_ic" width="130" height="17"/>
         <image name="welcome_ic" width="187" height="19"/>
+        <namedColor name="pageIndicatorGray">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
