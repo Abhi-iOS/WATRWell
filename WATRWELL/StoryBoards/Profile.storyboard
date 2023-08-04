@@ -16,9 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tf-u6-q9F" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="326" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4rW-6b-aTB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LOG OUT"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8tf-u6-q9F" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="faV-D3-il5"/>
+                            <constraint firstItem="8tf-u6-q9F" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="i0z-Eg-Sug"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="8tf-u6-q9F" id="3wb-Zi-eJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -70,6 +70,13 @@ extension WWStep2VC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        formattedExpiry = viewModel.monthsArray[row] + "/" + "\(viewModel.yearsArray[row]%100)"
+        var mm: String = ""
+        var yy: String = ""
+        switch component {
+        case 0: mm = viewModel.monthsArray[row]
+        case 1: yy = "\(viewModel.yearsArray[row]%100)"
+        default: break
+        }
+        formattedExpiry = mm + "/" + yy
     }
 }

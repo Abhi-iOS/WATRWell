@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Europa-Light.ttf">
+            <string>Europa-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WWSourcePopupCVC" id="gTV-IL-0wX" customClass="WWSourcePopupCVC" customModule="WATRWELL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="371"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="371"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZU-ee-sQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="371"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rDM-Ol-7tq">
+                                <rect key="frame" x="12" y="8" width="264" height="351"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="MQM-hq-g2A">
+                                        <rect key="frame" x="54" y="0.0" width="156" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_blue_small" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-lC-wB7">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="77"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_orange_small" translatesAutoresizingMaskIntoConstraints="NO" id="wMj-us-HMl">
+                                                <rect key="frame" x="60" y="0.0" width="36" height="77"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_green_small" translatesAutoresizingMaskIntoConstraints="NO" id="yw8-uc-lde">
+                                                <rect key="frame" x="120" y="0.0" width="36" height="77"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-AM-Jr8" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="93" width="246" height="258"/>
+                                        <string key="text">WITH THIS SOURCE YOU ARE GRANTED UNLIMITED ACCESS TO BOTH WILLO AND CACTUS, FOR  THE 5x PURIFIED +ELECTROLYTE FORMULA, + IMMUNITY FORMULA, AND +ANTI-AGING FORMULA.
+
+ SWIPE LEFT TO SEE WHAT EACH 20oz SERVING CONTAINS.</string>
+                                        <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rDM-Ol-7tq" secondAttribute="bottom" constant="12" id="8HI-2F-V4y"/>
+                            <constraint firstAttribute="trailing" secondItem="rDM-Ol-7tq" secondAttribute="trailing" constant="12" id="AQI-cT-eIH"/>
+                            <constraint firstItem="rDM-Ol-7tq" firstAttribute="top" secondItem="DZU-ee-sQ6" secondAttribute="top" constant="8" id="gOH-sU-1KL"/>
+                            <constraint firstItem="rDM-Ol-7tq" firstAttribute="leading" secondItem="DZU-ee-sQ6" secondAttribute="leading" constant="12" id="hkE-pI-G5d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="DZU-ee-sQ6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="03x-cy-Sa1"/>
+                <constraint firstAttribute="bottom" secondItem="DZU-ee-sQ6" secondAttribute="bottom" id="TbE-vc-llh"/>
+                <constraint firstAttribute="trailing" secondItem="DZU-ee-sQ6" secondAttribute="trailing" id="hTu-hs-RqU"/>
+                <constraint firstItem="DZU-ee-sQ6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i3f-qf-z0c"/>
+            </constraints>
+            <size key="customSize" width="288" height="371"/>
+            <connections>
+                <outlet property="blueLogo" destination="UiC-lC-wB7" id="98F-8Z-8Hd"/>
+                <outlet property="descLabel" destination="Qhb-AM-Jr8" id="UHY-U5-1sV"/>
+                <outlet property="greenLogo" destination="yw8-uc-lde" id="HAG-j4-2Cg"/>
+                <outlet property="orangeLogo" destination="wMj-us-HMl" id="cfv-Qd-X7O"/>
+            </connections>
+            <point key="canvasLocation" x="253.43511450381678" y="132.74647887323945"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="logo_blue_small" width="36" height="77"/>
+        <image name="logo_green_small" width="36" height="77"/>
+        <image name="logo_orange_small" width="36" height="77"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

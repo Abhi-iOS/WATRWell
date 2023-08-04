@@ -40,6 +40,9 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
                 cell?.paymentSlider.value = 0
             })
         }
+        cell.tapHandler = { [weak self] in
+            self?.showDescription(for: indexPath.item)
+        }
         return cell
     }
     
@@ -80,6 +83,12 @@ private extension WWSourceVC {
             controller.dismiss(animated: true, completion: nil)
         }
         self.present(dropIn!, animated: true, completion: nil)
+    }
+    
+    func showDescription(for item: Int) {
+        let incomingCase: WWSourcePopVM.IncomingCase = item == 0 ? .all : .electrolyte
+        let scene = WWSourcePopupVC.create(with: WWSourcePopVM(incomingCase: incomingCase))
+        tabBarController?.present(scene, animated: true)
     }
 
 }
