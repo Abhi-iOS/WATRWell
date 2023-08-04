@@ -58,6 +58,7 @@ extension WWStep1VC: UITableViewDelegate, UITableViewDataSource {
         case .mobile:
             let cell = tableView.dequeueCell(with: WWSingleTFTVC.self, indexPath: indexPath)
             cell.inputTextField.delegate = self
+            cell.inputTextField.isEnabled = viewModel.isNumberVerified.not()
             cell.setData(with: viewModel.dataModel.mobile, placeholder: itemType.placeHolder)
             return cell
             

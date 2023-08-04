@@ -12,17 +12,25 @@ struct WWRouter {
     
     private init() {}
     
+    func setRootScene() {
+        if WWUserDefaults.value(forKey: .isLoggedIn).boolValue {
+            setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
+        } else {
+            setLandingScene()
+        }
+    }
+    
     func setLandingScene() {
         let splashVideoScene = WWLandingVC.create(with: WWLandingVM())
         let navigationController = UINavigationController(rootViewController: splashVideoScene)
         setRoot(viewController: navigationController)
     }
     
-    func setTestLandingScene() {
-        let splashVideoScene = WWStep4VC.create(with: WWStep4VM())
-        let navigationController = UINavigationController(rootViewController: splashVideoScene)
-        setRoot(viewController: navigationController)
-    }
+//    func setTestLandingScene() {
+//        let splashVideoScene = WWStep4VC.create(with: WWStep4VM())
+//        let navigationController = UINavigationController(rootViewController: splashVideoScene)
+//        setRoot(viewController: navigationController)
+//    }
     
     func setTabbarAsRoot(initialItem: WWTabBarVC.SceneType = .source, sourceType: WWSourceVM.IncomingCase? = nil) {
         let tabbarScene = WWTabBarVC(with: initialItem, sourceType: sourceType)

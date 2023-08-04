@@ -11,7 +11,7 @@ import RxCocoa
 
 final class WWStep2VM {
     private let disposeBag = DisposeBag()
-    private(set) var dataModel = WWCardModel()
+    private(set) var dataModel: WWEnlistUserModel
     
     let monthsArray: [String] = {
         var monthsArray: [String] = []
@@ -21,15 +21,20 @@ final class WWStep2VM {
         }
         return monthsArray
     }()
-    let yearsArray: [String] = {
-        var yearsArray: [String] = []
-        for year in 2017...2030 {
-            yearsArray.append("\(year)")
+    let yearsArray: [Int] = {
+        var yearsArray: [Int] = []
+        var startYear = Calendar(identifier: .gregorian).dateComponents([.year], from: Date()).year ?? 0
+        var endYear = startYear + 11
+        for year in startYear...endYear {
+            yearsArray.append(year)
         }
         return yearsArray
     }()
     private let shouldMoveToNextSubject = PublishSubject<Void>()
     
+    init(dataModel: WWEnlistUserModel) {
+        self.dataModel = dataModel
+    }
 }
 
 extension WWStep2VM: WWViewModelProtocol {
@@ -60,7 +65,7 @@ extension WWStep2VM: WWViewModelProtocol {
     func updateData(_ text: String?, fieldType: FieldType) {
         switch fieldType {
         case .name:
-            dataModel.name = text
+            dataModel.nameOnCard = text
         case .card:
             dataModel.cardNumber = text
         case .expiry:
@@ -72,15 +77,14 @@ extension WWStep2VM: WWViewModelProtocol {
 private extension WWStep2VM {
     func moveToNextStep() {
         guard verifyDataValidity() else { return }
-        //TODO: - API call goes here
         shouldMoveToNextSubject.onNext(())
     }
     
     private func verifyDataValidity() -> Bool {
-        if dataModel.name == nil {
+        if dataModel.nameOnCard == nil {
             SKToast.show(withMessage: "Enter Name on Card")
             return false
-        } else if let name = dataModel.name, name.checkInvalidity(.Name) {
+        } else if let name = dataModel.nameOnCard, name.checkInvalidity(.Name) {
             SKToast.show(withMessage: "Enter valid Name on Card")
             return false
         } else if dataModel.cardNumber == nil {

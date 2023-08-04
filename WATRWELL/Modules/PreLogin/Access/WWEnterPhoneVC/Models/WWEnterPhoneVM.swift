@@ -11,7 +11,7 @@ import RxCocoa
 
 final class WWEnterPhoneVM {
     private var mobileNumber: String = ""
-    private let proceedToOTPSubject = PublishSubject<Void>()
+    private let proceedToOTPSubject = PublishSubject<String>()
     private let disposeBag = DisposeBag()
 }
 
@@ -23,7 +23,7 @@ extension WWEnterPhoneVM: WWViewModelProtocol {
     }
     
     struct Output {
-        let accessGranted: Driver<Void>
+        let accessGranted: Driver<String>
         let popScreen: Driver<Void>
     }
     
@@ -57,7 +57,13 @@ private extension WWEnterPhoneVM {
     }
     
     func requestOTP() {
-        //TODO: - API Call goes here
-        proceedToOTPSubject.onNext(()) // to be done on success only
+        WebServices.loginUser(parameters: ["users[phone_number]": mobileNumber], response: { [weak self] response in
+            switch response {
+            case .success(let id):
+                self?.proceedToOTPSubject.onNext((id))
+            case .failure(let err):
+                SKToast.show(withMessage: err.localizedDescription)
+            }
+        })
     }
 }

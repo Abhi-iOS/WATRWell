@@ -44,8 +44,8 @@ extension WWEnterPhoneVC: WWControllerType {
         
         let output = viewModel.transform(input: input)
         
-        output.accessGranted.drive(onNext: { [weak self] in
-            self?.navigateToOTPConfirmation()
+        output.accessGranted.drive(onNext: { [weak self] id in
+            self?.navigateToOTPConfirmation(with: id)
         }).disposed(by: rx.disposeBag)
         
         output.popScreen.drive(onNext: { [weak self] in
@@ -55,8 +55,8 @@ extension WWEnterPhoneVC: WWControllerType {
 }
 
 private extension WWEnterPhoneVC {
-    func navigateToOTPConfirmation() {
-        let scene = WWEnterOTPVC.create(with: WWEnterOTPVM(incomingCase: .access))
+    func navigateToOTPConfirmation(with id: String) {
+        let scene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, incomingCase: .access))
         navigationController?.pushViewController(scene, animated: true)
     }
 }

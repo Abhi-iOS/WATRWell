@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weM-su-frp" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
-                        <rect key="frame" x="159" y="24" width="75" height="36"/>
+                        <rect key="frame" x="184.66666666666666" y="24" width="24" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="j21-E7-rwi"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
                         <connections>
                             <action selector="didTapButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4cU-X9-dYD"/>
                         </connections>
@@ -42,4 +42,9 @@
             <point key="canvasLocation" x="52.671755725190835" y="32.74647887323944"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="weM-su-frp">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+    </designables>
 </document>

@@ -72,11 +72,23 @@ private extension WWEnterOTPVC {
     }
     
     func loginUserAndRedirectToHome() {
-        WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
+        if WWUserModel.currentUser.firstName == nil {
+            moveToEnlistUser()
+        } else {
+            WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
+        }
+    }
+    
+    func moveToEnlistUser() {
+        if let mobile = WWUserModel.currentUser.phone,
+           mobile.isEmpty.not() {
+            let step1Scene = WWStep1VC.create(with: WWStep1VM(mobile:  mobile, isNumberVerified: true))
+            navigationController?.pushViewController(step1Scene, animated: true)
+        }
     }
     
     func moveToNextStep() {
-        let scene = WWStep2VC.create(with: WWStep2VM())
+        let scene = WWStep2VC.create(with: WWStep2VM(dataModel: WWEnlistUserModel(with: WWUserModel.currentUser)))
         navigationController?.pushViewController(scene, animated: true)
     }
 }
@@ -85,6 +97,6 @@ extension WWEnterOTPVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let userEnteredString = textField.text ?? ""
         let newString = (userEnteredString as NSString).replacingCharacters(in: range, with: string) as String
-        return newString.isNumeric && newString.count <= 6
+        return (newString.isNumeric || newString == "") && newString.count <= 6
     }
 }

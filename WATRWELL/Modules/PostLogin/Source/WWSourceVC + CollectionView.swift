@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import BraintreeDropIn
+import Braintree
 
 extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,8 +34,11 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     private func getSelectSourceCell(for collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> WWSelectSourceCVC {
         let cell = collectionView.dequeueCell(with: WWSelectSourceCVC.self, indexPath: indexPath)
         cell.setData(indexPath.item)
-        cell.paymentSlider.completion = { [weak self] in
+        cell.paymentSlider.completion = { [weak self, weak cell] in
             self?.makePayment()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {[weak cell] in
+                cell?.paymentSlider.value = 0
+            })
         }
         return cell
     }
@@ -56,6 +61,25 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
 
 private extension WWSourceVC {
     func makePayment() {
-        
+        showDropIn(clientTokenOrTokenizationKey: WWGlobals.brainTreeAuthorization)
     }
+    
+    func showDropIn(clientTokenOrTokenizationKey: String) {
+        let request =  BTDropInRequest()
+        let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request)
+        { (controller, result, error) in
+            if (error != nil) {
+                print("ERROR")
+            } else if let result = result {
+                // Use the BTDropInResult properties to update your UI
+                // result.<SDKMatcher sdk="ios:v4">paymentOptionType</SDKMatcher><SDKMatcher sdk="ios:v5">paymentMethodType</SDKMatcher>
+                // result.paymentMethod
+                // result.paymentIcon
+                // result.paymentDescription
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        self.present(dropIn!, animated: true, completion: nil)
+    }
+
 }

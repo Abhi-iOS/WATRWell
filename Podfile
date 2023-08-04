@@ -12,7 +12,8 @@ def rx_pods
 end
 
 def app_pods
-  pod 'NVActivityIndicatorView'
+  pod 'NVActivityIndicatorView', '~> 4.8.0'
+  pod 'BraintreeDropIn'
 end
 
 def maps

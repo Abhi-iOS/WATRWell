@@ -12,9 +12,14 @@ import RxCocoa
 final class WWStep1VM {
     private let disposeBag = DisposeBag()
     let itemRenderer: [ItemType] = ItemType.allCases
-    private(set) var dataModel: WWStep1DataModel = WWStep1DataModel()
-    private let moveToNextSceneSubject = PublishSubject<Void>()
+    private(set) var dataModel: WWEnlistUserModel = WWEnlistUserModel()
+    private let moveToNextSceneSubject = PublishSubject<String>()
+    private(set) var isNumberVerified: Bool
     
+    init(mobile: String? = nil, isNumberVerified: Bool = false) {
+        self.dataModel.mobile = mobile
+        self.isNumberVerified = isNumberVerified
+    }
 }
 
 extension WWStep1VM: WWViewModelProtocol {
@@ -43,7 +48,7 @@ extension WWStep1VM: WWViewModelProtocol {
     }
     
     struct Output {
-        let moveToNextScene: Driver<Void>
+        let moveToNextScene: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -71,8 +76,7 @@ extension WWStep1VM: WWViewModelProtocol {
 private extension WWStep1VM {
     func requestOTP() {
         guard verifyDataValidity() else { return }
-        //TODO: - API call goes here
-        moveToNextSceneSubject.onNext(())
+        requestOTPService()
     }
     
     private func verifyDataValidity() -> Bool {
@@ -102,5 +106,17 @@ private extension WWStep1VM {
             return false
         }
         return true
+    }
+    
+    func requestOTPService() {
+        guard let mobile = dataModel.mobile else { return }
+        WebServices.loginUser(parameters: ["users[phone_number]": mobile], response: { [weak self] response in
+            switch response {
+            case .success(let id):
+                self?.moveToNextSceneSubject.onNext((id))
+            case .failure(let err):
+                SKToast.show(withMessage: err.localizedDescription)
+            }
+        })
     }
 }

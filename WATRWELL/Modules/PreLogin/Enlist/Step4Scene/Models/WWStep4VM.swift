@@ -13,7 +13,11 @@ final class WWStep4VM {
     private let disposeBag = DisposeBag()
     private let weightUpdateSubject = PublishSubject<String>()
     private let goNextSubject = PublishSubject<Void>()
-    private var weight: Int = 0
+    private var dataModel: WWEnlistUserModel
+    
+    init(dataModel: WWEnlistUserModel) {
+        self.dataModel = dataModel
+    }
 }
 
 extension WWStep4VM: WWViewModelProtocol {
@@ -30,12 +34,13 @@ extension WWStep4VM: WWViewModelProtocol {
     func transform(input: Input) -> Output {
         input.weightUpdate.subscribe(onNext: { [weak self] weight in
             guard let self else { return }
-            self.weight = Int(ceilf(weight))
-            self.weightUpdateSubject.onNext("\(self.weight) LBS")
+            self.dataModel.weight = Int(ceilf(weight))
+            self.weightUpdateSubject.onNext("\(self.dataModel.weight) LBS")
         }).disposed(by: disposeBag)
         
         input.completeTap.subscribe(onNext: { [weak self] in
             guard let self else { return }
+            self.updateData()
         }).disposed(by: disposeBag)
         
         return Output(weightLabelText: weightUpdateSubject.asObservable(),
@@ -45,7 +50,19 @@ extension WWStep4VM: WWViewModelProtocol {
 
 private extension WWStep4VM {
     func updateData() {
-        //TODO: - API call goes here
+        WebServices.enlistUserData(parameters: dataModel.parameters, userId: WWUserModel.currentUser.id) { [weak self] response in
+            switch response {
+            case .success(_):
+                self?.updateUserWithCurrentValues()
+            case .failure(_): break
+            }
+        }
+    }
+    
+    func updateUserWithCurrentValues() {
+        let currentUser = WWUserModel(with: dataModel)
+        WWUserModel.currentUser = currentUser
+        WWUserDefaults.save(value: true, forKey: .isLoggedIn)
         goNextSubject.onNext(())
     }
 }

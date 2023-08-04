@@ -48,16 +48,21 @@ extension WWStep3VC: WWControllerType {
     }
     
     func configure(with viewModel: WWStep3VM){
+        let nextStream = nextButton.rx.tap.do { [weak self] _ in
+            self?.view.endEditing(true)
+        }
+        let input = WWStep3VM.Input(nextTap: nextStream)
+        
+        let output = viewModel.transform(input: input)
+        
+        output.moveToNextStep.drive(onNext: { [weak self] in
+            self?.goToNextStep()
+        }).disposed(by: rx.disposeBag)
         
         billingAddButton.rx.tap.asDriver().drive(onNext: { [weak self] in
             self?.setSameBillingAddress()
         }).disposed(by: rx.disposeBag)
-        
-        nextButton.rx.tap.asDriver().drive(onNext: { [weak self] in
-            self?.view.endEditing(true)
-            self?.goToNextStep()
-        }).disposed(by: rx.disposeBag)
-        
+                
         exitButton.rx.tap.asDriver().drive(onNext: { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }).disposed(by: rx.disposeBag)
@@ -80,8 +85,8 @@ private extension WWStep3VC {
     }
     
     func goToNextStep() {
-        let welcomeScene = WWWelcomeVC.instantiate(fromAppStoryboard: .PreLogin)
-        navigationController?.pushViewController(welcomeScene, animated: true)
+        let step4Scene = WWStep4VC.create(with: WWStep4VM(dataModel: viewModel.dataModel))
+        navigationController?.pushViewController(step4Scene, animated: true)
     }
     
     func setSameBillingAddress() {
@@ -99,12 +104,22 @@ private extension WWStep3VC {
             baCityTF.text = saCityTF.text
             baStateTF.text = saStateTF.text
             baZipCodeTF.text = saZipCodeTF.text
+            viewModel.dataModel.baStreet1 = baStreet1TF.text
+            viewModel.dataModel.baStreet2 = baStreet2TF.text
+            viewModel.dataModel.baCity = baCityTF.text
+            viewModel.dataModel.baState = baStateTF.text
+            viewModel.dataModel.baZip = baZipCodeTF.text
         } else {
             baStreet1TF.text = nil
             baStreet2TF.text = nil
             baCityTF.text = nil
             baStateTF.text = nil
             baZipCodeTF.text = nil
+            viewModel.dataModel.baStreet1 = nil
+            viewModel.dataModel.baStreet2 = nil
+            viewModel.dataModel.baCity = nil
+            viewModel.dataModel.baState = nil
+            viewModel.dataModel.baZip = nil
         }
     }
     
@@ -120,16 +135,55 @@ private extension WWStep3VC {
         baStateTF.autocapitalizationType = .words
         baZipCodeTF.autocapitalizationType = .words
         
-//        saStreet1TF.delegate = self
-//        saStreet2TF.delegate = self
-//        saCityTF.delegate = self
-//        saStateTF.delegate = self
-//        saZipCodeTF.delegate = self
-//        baStreet1TF.delegate = self
-//        baStreet2TF.delegate = self
-//        baCityTF.delegate = self
-//        baStateTF.delegate = self
-//        baZipCodeTF.delegate = self
+        saStreet1TF.delegate = self
+        saStreet2TF.delegate = self
+        saCityTF.delegate = self
+        saStateTF.delegate = self
+        saZipCodeTF.delegate = self
+        baStreet1TF.delegate = self
+        baStreet2TF.delegate = self
+        baCityTF.delegate = self
+        baStateTF.delegate = self
+        baZipCodeTF.delegate = self
+    }
+}
+
+extension WWStep3VC: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        switch textField {
+        case saZipCodeTF, baZipCodeTF :
+            textField.keyboardType = .numberPad
+        default:
+            textField.keyboardType = .asciiCapable
+        }
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case saStreet1TF: viewModel.dataModel.saStreet1 = textField.text
+        case saStreet2TF: viewModel.dataModel.saStreet2 = textField.text
+        case saCityTF: viewModel.dataModel.saCity = textField.text
+        case saStateTF: viewModel.dataModel.saState = textField.text
+        case saZipCodeTF: viewModel.dataModel.saZip = textField.text
+        case baStreet1TF: viewModel.dataModel.baStreet1 = textField.text
+        case baStreet2TF: viewModel.dataModel.baStreet2 = textField.text
+        case baCityTF: viewModel.dataModel.baCity = textField.text
+        case baStateTF: viewModel.dataModel.baState = textField.text
+        case baZipCodeTF: viewModel.dataModel.baZip = textField.text
+        default: break
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let userEnteredString = textField.text ?? ""
+        let newString = (userEnteredString as NSString).replacingCharacters(in: range, with: string) as String
+        switch textField {
+        case saZipCodeTF, baZipCodeTF:
+            return (newString.isNumeric || newString == "") && newString.count <= 8
+        default:
+            return newString.count <= 30
+        }
     }
 }
 

@@ -39,8 +39,8 @@ extension WWStep1VC: WWControllerType {
         
         let outpt = viewModel.transform(input: input)
         
-        outpt.moveToNextScene.drive(onNext: { [weak self] in
-            self?.goToOTPVerification()
+        outpt.moveToNextScene.drive(onNext: { [weak self] id in
+            self?.goToOTPVerification(with: id)
         }).disposed(by: rx.disposeBag)
     }
 }
@@ -60,9 +60,14 @@ private extension WWStep1VC {
         tableView.registerCell(with: WWVerticalButtonTVC.self)
     }
     
-    func goToOTPVerification() {
-        let verifyOtpScene = WWEnterOTPVC.create(with: WWEnterOTPVM(incomingCase: .enlist))
-        navigationController?.pushViewController(verifyOtpScene, animated: true)
+    func goToOTPVerification(with id: String) {
+        var nextScene: UIViewController
+        if viewModel.isNumberVerified {
+            nextScene = WWStep2VC.create(with: WWStep2VM(dataModel: viewModel.dataModel))
+        } else {
+            nextScene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, incomingCase: .enlist))
+        }
+        navigationController?.pushViewController(nextScene, animated: true)
     }
 }
 

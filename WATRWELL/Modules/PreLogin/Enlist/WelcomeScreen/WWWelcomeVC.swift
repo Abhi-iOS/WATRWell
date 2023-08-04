@@ -30,7 +30,7 @@ extension WWWelcomeVC {
 
 private extension WWWelcomeVC {
     func setupTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(goToTabbar), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(goToTabbar), userInfo: nil, repeats: false)
     }
     
     @objc func goToTabbar() {

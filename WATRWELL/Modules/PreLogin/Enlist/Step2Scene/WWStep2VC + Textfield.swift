@@ -41,7 +41,7 @@ extension WWStep2VC: UITextFieldDelegate {
         case nameTextfield:
             return newString.count <= 25
         case cardNuTextfield:
-            return newString.isNumeric && newString.count <= 16
+            return (newString.isNumeric || newString == "") && newString.count <= 16
         default:
             return true
         }
@@ -64,12 +64,12 @@ extension WWStep2VC: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0: return viewModel.monthsArray[row]
-        case 1: return viewModel.yearsArray[row]
+        case 1: return "\(viewModel.yearsArray[row])"
         default: return nil
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        formattedExpiry = viewModel.monthsArray[row] + "/" + viewModel.yearsArray[row]
+        formattedExpiry = viewModel.monthsArray[row] + "/" + "\(viewModel.yearsArray[row]%100)"
     }
 }

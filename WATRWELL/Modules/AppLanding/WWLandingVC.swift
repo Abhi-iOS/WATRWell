@@ -58,6 +58,7 @@ private extension WWLandingVC {
             let scene = WWEnterPhoneVC.create(with: WWEnterPhoneVM())
             navigationController?.pushViewController(scene, animated: true)
         case .enlist:
+            WWUserDefaults.removeAllValues()
             let scene = WWStep1VC.create(with: WWStep1VM())
             navigationController?.pushViewController(scene, animated: true)
         }

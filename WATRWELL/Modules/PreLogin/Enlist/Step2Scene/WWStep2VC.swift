@@ -48,8 +48,10 @@ extension WWStep2VC: WWControllerType {
     }
     
     func configure(with viewModel: WWStep2VM){
-        
-        let input = WWStep2VM.Input(nextTap: nextButton.rx.tap.asObservable(),
+        let nextStream = nextButton.rx.tap.do { [weak self] _ in
+            self?.view.endEditing(true)
+        }
+        let input = WWStep2VM.Input(nextTap: nextStream,
                                     exitTap: exitButton.rx.tap.asObservable())
         
         let output = viewModel.transform(input: input)
@@ -134,7 +136,7 @@ private extension WWStep2VC {
     }
     
     func moveToNextStep() {
-        let step3Scene = WWStep3VC.create(with: WWStep3VM())
+        let step3Scene = WWStep3VC.create(with: WWStep3VM(dataModel: viewModel.dataModel))
         navigationController?.pushViewController(step3Scene, animated: true)
     }
 }

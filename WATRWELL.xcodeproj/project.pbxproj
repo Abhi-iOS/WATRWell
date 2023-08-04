@@ -59,9 +59,15 @@
 		1269E94B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift */; };
 		1269E94C2A763F4900B09FCB /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93C2A763F4900B09FCB /* IQUIView+Hierarchy.swift */; };
 		1269E94D2A763F4900B09FCB /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */; };
+		12AEBC432A797FCB009BCDFB /* WWNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC422A797FCB009BCDFB /* WWNetworking.swift */; };
+		12AEBC452A798042009BCDFB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC442A798042009BCDFB /* JSON.swift */; };
+		12AEBC472A7987A6009BCDFB /* WWWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC462A7987A6009BCDFB /* WWWebservice.swift */; };
+		12AEBC492A799661009BCDFB /* Webservices + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC482A799661009BCDFB /* Webservices + Extensions.swift */; };
+		12AEBC4B2A79973A009BCDFB /* Webservice + Prelogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4A2A79973A009BCDFB /* Webservice + Prelogin.swift */; };
+		12AEBC4D2A7AE80C009BCDFB /* WWUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */; };
+		12AEBC4F2A7AE90F009BCDFB /* WWUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */; };
 		12C562512A764A590088E709 /* WWDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562502A764A590088E709 /* WWDropDownView.swift */; };
 		12C562532A7650690088E709 /* WWStep2VC + Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562522A7650690088E709 /* WWStep2VC + Textfield.swift */; };
-		12C562562A76569D0088E709 /* WWCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562552A76569D0088E709 /* WWCardModel.swift */; };
 		12C562592A765D700088E709 /* WWWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562582A765D700088E709 /* WWWelcomeVC.swift */; };
 		12C5625F2A7690120088E709 /* WWDiscoverIntentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5625D2A7690120088E709 /* WWDiscoverIntentCVC.swift */; };
 		12C562602A7690120088E709 /* WWDiscoverIntentCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C5625E2A7690120088E709 /* WWDiscoverIntentCVC.xib */; };
@@ -206,9 +212,15 @@
 		1269E93B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		1269E93C2A763F4900B09FCB /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		12AEBC422A797FCB009BCDFB /* WWNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWNetworking.swift; sourceTree = "<group>"; };
+		12AEBC442A798042009BCDFB /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		12AEBC462A7987A6009BCDFB /* WWWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWebservice.swift; sourceTree = "<group>"; };
+		12AEBC482A799661009BCDFB /* Webservices + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservices + Extensions.swift"; sourceTree = "<group>"; };
+		12AEBC4A2A79973A009BCDFB /* Webservice + Prelogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservice + Prelogin.swift"; sourceTree = "<group>"; };
+		12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUserDefaults.swift; sourceTree = "<group>"; };
+		12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUserModel.swift; sourceTree = "<group>"; };
 		12C562502A764A590088E709 /* WWDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDropDownView.swift; sourceTree = "<group>"; };
 		12C562522A7650690088E709 /* WWStep2VC + Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWStep2VC + Textfield.swift"; sourceTree = "<group>"; };
-		12C562552A76569D0088E709 /* WWCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWCardModel.swift; sourceTree = "<group>"; };
 		12C562582A765D700088E709 /* WWWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWelcomeVC.swift; sourceTree = "<group>"; };
 		12C5625D2A7690120088E709 /* WWDiscoverIntentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDiscoverIntentCVC.swift; sourceTree = "<group>"; };
 		12C5625E2A7690120088E709 /* WWDiscoverIntentCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWDiscoverIntentCVC.xib; sourceTree = "<group>"; };
@@ -550,7 +562,6 @@
 			isa = PBXGroup;
 			children = (
 				1269E9262A763D6800B09FCB /* WWStep2VM.swift */,
-				12C562552A76569D0088E709 /* WWCardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -609,6 +620,17 @@
 				1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		12AEBC412A797FAB009BCDFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				12AEBC422A797FCB009BCDFB /* WWNetworking.swift */,
+				12AEBC442A798042009BCDFB /* JSON.swift */,
+				12AEBC462A7987A6009BCDFB /* WWWebservice.swift */,
+				12AEBC482A799661009BCDFB /* Webservices + Extensions.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		12C5624F2A764A460088E709 /* WWDropDownView */ = {
@@ -696,6 +718,7 @@
 		12E0B75A2A6EEEFC002B7181 /* WATRWELL */ = {
 			isa = PBXGroup;
 			children = (
+				12AEBC412A797FAB009BCDFB /* Networking */,
 				12586AB92A6EF61B0086B315 /* StoryBoards */,
 				12586AAC2A6EF5C40086B315 /* Resources */,
 				12E0B7902A6EEFAA002B7181 /* Reusable Extensions */,
@@ -780,6 +803,7 @@
 				12E4DB2A2A73AA310020F6C3 /* WWGlobals.swift */,
 				1269E8EC2A75A2EF00B09FCB /* WWFonts.swift */,
 				120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */,
+				12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */,
 			);
 			path = WWUtils;
 			sourceTree = "<group>";
@@ -787,6 +811,7 @@
 		12E4DB182A6EFEEE0020F6C3 /* PreLogin */ = {
 			isa = PBXGroup;
 			children = (
+				12AEBC4A2A79973A009BCDFB /* Webservice + Prelogin.swift */,
 				12E4DB422A73C9970020F6C3 /* Enlist */,
 				12E4DB412A73C98A0020F6C3 /* Access */,
 			);
@@ -1000,6 +1025,7 @@
 		12E4DB742A73FBFD0020F6C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1407,6 +1433,7 @@
 				12E4DB202A739FDC0020F6C3 /* WWLandingVM.swift in Sources */,
 				1269E94A2A763F4900B09FCB /* IQUIViewController+Additions.swift in Sources */,
 				1269E9462A763F4900B09FCB /* IQKeyboardManagerConstants.swift in Sources */,
+				12AEBC4D2A7AE80C009BCDFB /* WWUserDefaults.swift in Sources */,
 				12E4DB352A73B7600020F6C3 /* String + Extension.swift in Sources */,
 				1269E9412A763F4900B09FCB /* IQBarButtonItem.swift in Sources */,
 				1269E91C2A75C91C00B09FCB /* WWFilledButtonTVC.swift in Sources */,
@@ -1422,6 +1449,7 @@
 				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
 				12C562692A769B0E0088E709 /* WWDiscoverVM.swift in Sources */,
 				12E4DB172A6EFE6E0020F6C3 /* WWRouter.swift in Sources */,
+				12AEBC492A799661009BCDFB /* Webservices + Extensions.swift in Sources */,
 				1269E9422A763F4900B09FCB /* IQToolbar.swift in Sources */,
 				12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */,
 				120AB8152A782B0A009B80C8 /* WWStep4VC.swift in Sources */,
@@ -1429,6 +1457,7 @@
 				12E4DB9D2A7463740020F6C3 /* WWWatrSourceInfoVC.swift in Sources */,
 				12C562592A765D700088E709 /* WWWelcomeVC.swift in Sources */,
 				12E4DB7E2A743CF40020F6C3 /* WWMenuVC.swift in Sources */,
+				12AEBC432A797FCB009BCDFB /* WWNetworking.swift in Sources */,
 				12E4DB4C2A73CB510020F6C3 /* WWEnterOTPVC.swift in Sources */,
 				1269E9482A763F4900B09FCB /* IQKeyboardManager.swift in Sources */,
 				1269E8ED2A75A2EF00B09FCB /* WWFonts.swift in Sources */,
@@ -1440,13 +1469,15 @@
 				12E4DB232A73A0160020F6C3 /* WWControllerType.swift in Sources */,
 				1269E9452A763F4900B09FCB /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				12E4DB552A73DCED0020F6C3 /* SKToast.swift in Sources */,
-				12C562562A76569D0088E709 /* WWCardModel.swift in Sources */,
 				1269E9432A763F4900B09FCB /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				12E4DB7A2A7434BA0020F6C3 /* WWMapVM.swift in Sources */,
 				1269E8FF2A75AF7D00B09FCB /* WWWatrGuideCVC.swift in Sources */,
 				12E4DB3D2A73C54C0020F6C3 /* WWTextField.swift in Sources */,
+				12AEBC4F2A7AE90F009BCDFB /* WWUserModel.swift in Sources */,
 				1269E9212A75D05700B09FCB /* WWStep1DataModel.swift in Sources */,
+				12AEBC452A798042009BCDFB /* JSON.swift in Sources */,
 				12E4DB6D2A73FA1D0020F6C3 /* WWSourceVC.swift in Sources */,
+				12AEBC4B2A79973A009BCDFB /* Webservice + Prelogin.swift in Sources */,
 				12E4DB702A73FACA0020F6C3 /* WWMapVC.swift in Sources */,
 				1269E8FA2A75AEE300B09FCB /* WWWatrGuideVC + CollectionView.swift in Sources */,
 				12C562722A77E1240088E709 /* WWStep3VM.swift in Sources */,
@@ -1486,6 +1517,7 @@
 				12E4DB9F2A7464400020F6C3 /* WWWatrSourceInfoVM.swift in Sources */,
 				12E4DB922A7441FE0020F6C3 /* WWVerticalButtonTVC.swift in Sources */,
 				12E4DB472A73CA0B0020F6C3 /* WWEnterPhoneVC.swift in Sources */,
+				12AEBC472A7987A6009BCDFB /* WWWebservice.swift in Sources */,
 				12E4DBAC2A7482310020F6C3 /* DailyBenifitsMasterVM.swift in Sources */,
 				120AB8282A783F14009B80C8 /* WWSourceVC + CollectionView.swift in Sources */,
 				12E4DB332A73B3B40020F6C3 /* WWFilledButton.swift in Sources */,

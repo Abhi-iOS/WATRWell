@@ -12,6 +12,7 @@ import RxCocoa
 final class WWEnterOTPVM {
     private let disposeBag = DisposeBag()
     private var otp: String = ""
+    private let id: String
     private let verificationSuccessSubject = PublishSubject<Void>()
     
     // Timer Setup
@@ -21,7 +22,8 @@ final class WWEnterOTPVM {
     private let hideResendSubject = PublishSubject<Bool>()
     let incomingCase: IncomingCase
     var isOnce: Bool = false
-    init(incomingCase: IncomingCase) {
+    init(id: String, incomingCase: IncomingCase) {
+        self.id = id
         self.incomingCase = incomingCase
         setupTimer()
     }
@@ -97,12 +99,23 @@ private extension WWEnterOTPVM {
 
     //MARK: - API call
     func resendOTP() {
+        WebServices.resendOTP(parameters: ["id": id]) { response in
+            switch response {
+            case .success(_): break
+            case .failure(_): break
+            }
+        }
         setupTimer()
-        //TODO: - API call goes here
     }
     
     func verifyOTP() {
-        //TODO: - API call goes here
-        verificationSuccessSubject.onNext(())
+        WebServices.validateUserOTP(parameters: ["otp": otp, "id": id]) { [weak self] response in
+            switch response {
+            case .success(let data):
+                self?.verificationSuccessSubject.onNext(())
+                print(data)
+            case .failure(_): break
+            }
+        }
     }
 }

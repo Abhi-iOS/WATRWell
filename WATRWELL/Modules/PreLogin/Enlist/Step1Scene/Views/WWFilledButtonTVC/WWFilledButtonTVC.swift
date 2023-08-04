@@ -28,6 +28,7 @@ class WWFilledButtonTVC: WWBaseTVC {
     
     func updateTitle(_ title: String) {
         filledButton.setTitle(title, for: .normal)
+        filledButton.titleLabel?.text = title
     }
     
     @IBAction private func didTapButton(_ sender: WWFilledButton) {

@@ -669,6 +669,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Cancel" title="EXIT"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="JEC-Qr-bRi" firstAttribute="width" secondItem="lcy-ND-VDJ" secondAttribute="width" id="QQr-0O-kX6"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cvG-NH-hIN"/>
@@ -681,7 +684,6 @@
                             <constraint firstItem="iNT-X7-FuV" firstAttribute="top" secondItem="cvG-NH-hIN" secondAttribute="top" constant="16" id="Y30-wb-dbc"/>
                             <constraint firstItem="cvG-NH-hIN" firstAttribute="leading" secondItem="UWf-1G-7vr" secondAttribute="leading" constant="-16" id="aV8-JQ-xgF"/>
                             <constraint firstItem="UWf-1G-7vr" firstAttribute="top" secondItem="iNT-X7-FuV" secondAttribute="bottom" constant="24" id="kvC-Qm-wKW"/>
-                            <constraint firstItem="ybz-Pi-wAg" firstAttribute="width" secondItem="Rea-u4-Ivp" secondAttribute="width" multiplier="0.8" id="kxu-zS-Oh9"/>
                             <constraint firstItem="cvG-NH-hIN" firstAttribute="trailing" secondItem="cl5-bR-TMC" secondAttribute="trailing" id="mbU-Ps-BV7"/>
                             <constraint firstItem="lcy-ND-VDJ" firstAttribute="width" secondItem="Rea-u4-Ivp" secondAttribute="width" multiplier="0.8" id="xyz-Fe-awA"/>
                         </constraints>
@@ -740,7 +742,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyweightScale" translatesAutoresizingMaskIntoConstraints="NO" id="anP-cn-F3P">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyweightScale" translatesAutoresizingMaskIntoConstraints="NO" id="anP-cn-F3P">
                                         <rect key="frame" x="109" y="66" width="125" height="233.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 LBS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-uE-xbM" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
@@ -765,6 +767,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyweightScale" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-Xc-Fec">
+                                <rect key="frame" x="125" y="253" width="125" height="233.5"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lcG-zc-KoT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -772,16 +777,21 @@
                             <constraint firstItem="s79-fH-8g5" firstAttribute="leading" secondItem="lcG-zc-KoT" secondAttribute="leading" id="7CU-rB-TZL"/>
                             <constraint firstItem="lcG-zc-KoT" firstAttribute="leading" secondItem="4O6-DQ-aQW" secondAttribute="leading" constant="-16" id="BiX-0E-k6R"/>
                             <constraint firstItem="X7x-ey-6hJ" firstAttribute="width" secondItem="R5q-Yc-nEP" secondAttribute="width" multiplier="0.75" id="DG4-Ch-VcU"/>
+                            <constraint firstItem="K6J-Xc-Fec" firstAttribute="leading" secondItem="anP-cn-F3P" secondAttribute="leading" id="QYf-XE-YtJ"/>
                             <constraint firstItem="anP-cn-F3P" firstAttribute="height" secondItem="R5q-Yc-nEP" secondAttribute="height" multiplier="0.35" id="R1y-mM-vpP"/>
                             <constraint firstItem="8Zp-ks-DUe" firstAttribute="centerX" secondItem="lcG-zc-KoT" secondAttribute="centerX" id="ReV-Vm-Voa"/>
                             <constraint firstItem="4O6-DQ-aQW" firstAttribute="trailing" secondItem="lcG-zc-KoT" secondAttribute="trailing" constant="-16" id="UdM-WV-lU7"/>
+                            <constraint firstItem="K6J-Xc-Fec" firstAttribute="trailing" secondItem="anP-cn-F3P" secondAttribute="trailing" id="aAz-VT-YKO"/>
                             <constraint firstItem="8Zp-ks-DUe" firstAttribute="top" secondItem="lcG-zc-KoT" secondAttribute="top" constant="16" id="fAz-UN-Udg"/>
+                            <constraint firstItem="K6J-Xc-Fec" firstAttribute="bottom" secondItem="anP-cn-F3P" secondAttribute="bottom" id="gLz-6X-zDF"/>
                             <constraint firstItem="lcG-zc-KoT" firstAttribute="bottom" secondItem="s79-fH-8g5" secondAttribute="bottom" id="i3M-AK-dIZ"/>
                             <constraint firstItem="4O6-DQ-aQW" firstAttribute="top" secondItem="8Zp-ks-DUe" secondAttribute="bottom" constant="24" id="nM7-C9-4pQ"/>
                             <constraint firstItem="lcG-zc-KoT" firstAttribute="trailing" secondItem="s79-fH-8g5" secondAttribute="trailing" id="nTa-Qw-23m"/>
+                            <constraint firstItem="K6J-Xc-Fec" firstAttribute="top" secondItem="anP-cn-F3P" secondAttribute="top" id="ys8-j4-IPC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alphaShiftImageView" destination="K6J-Xc-Fec" id="inR-e5-3go"/>
                         <outlet property="completeButton" destination="5em-xL-ipa" id="9Ms-pv-dl7"/>
                         <outlet property="weightLabel" destination="wKx-uE-xbM" id="eJw-k5-QKm"/>
                         <outlet property="weightSlider" destination="X7x-ey-6hJ" id="YSY-A9-fqh"/>
