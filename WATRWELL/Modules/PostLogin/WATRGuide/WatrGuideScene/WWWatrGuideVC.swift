@@ -25,6 +25,7 @@ final class WWWatrGuideVC: WWBaseVC {
         configure(with: viewModel)
         setupCollectionView()
         setNavBar()
+        pageControl.numberOfPages = viewModel.dataSource.endIndex
     }
 }
 

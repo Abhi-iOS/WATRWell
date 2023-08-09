@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,24 +27,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="288" height="371"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rDM-Ol-7tq">
-                                <rect key="frame" x="12" y="8" width="264" height="351"/>
+                                <rect key="frame" x="16" y="8" width="256" height="351"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="MQM-hq-g2A">
-                                        <rect key="frame" x="54" y="0.0" width="156" height="77"/>
+                                        <rect key="frame" x="50" y="0.0" width="156" height="77"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_blue_small" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-lC-wB7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_green_small" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-lC-wB7">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="77"/>
+                                                <color key="tintColor" name="hydrationBlue"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_orange_small" translatesAutoresizingMaskIntoConstraints="NO" id="wMj-us-HMl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_green_small" translatesAutoresizingMaskIntoConstraints="NO" id="wMj-us-HMl">
                                                 <rect key="frame" x="60" y="0.0" width="36" height="77"/>
+                                                <color key="tintColor" name="appOrange"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_green_small" translatesAutoresizingMaskIntoConstraints="NO" id="yw8-uc-lde">
                                                 <rect key="frame" x="120" y="0.0" width="36" height="77"/>
+                                                <color key="tintColor" name="watrGreen"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-AM-Jr8" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="9" y="93" width="246" height="258"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="WITH THIS SOURCE YOU ARE GRANTED UNLIMITED ACCESS TO BOTH WILLO AND CACTUS, " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-se-a1s" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="93" width="246" height="47.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-AM-Jr8" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="156.33333333333337" width="246" height="194.66666666666663"/>
                                         <string key="text">WITH THIS SOURCE YOU ARE GRANTED UNLIMITED ACCESS TO BOTH WILLO AND CACTUS, FOR  THE 5x PURIFIED +ELECTROLYTE FORMULA, + IMMUNITY FORMULA, AND +ANTI-AGING FORMULA.
 
  SWIPE LEFT TO SEE WHAT EACH 20oz SERVING CONTAINS.</string>
@@ -57,9 +67,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rDM-Ol-7tq" secondAttribute="bottom" constant="12" id="8HI-2F-V4y"/>
-                            <constraint firstAttribute="trailing" secondItem="rDM-Ol-7tq" secondAttribute="trailing" constant="12" id="AQI-cT-eIH"/>
+                            <constraint firstAttribute="trailing" secondItem="rDM-Ol-7tq" secondAttribute="trailing" constant="16" id="AQI-cT-eIH"/>
                             <constraint firstItem="rDM-Ol-7tq" firstAttribute="top" secondItem="DZU-ee-sQ6" secondAttribute="top" constant="8" id="gOH-sU-1KL"/>
-                            <constraint firstItem="rDM-Ol-7tq" firstAttribute="leading" secondItem="DZU-ee-sQ6" secondAttribute="leading" constant="12" id="hkE-pI-G5d"/>
+                            <constraint firstItem="rDM-Ol-7tq" firstAttribute="leading" secondItem="DZU-ee-sQ6" secondAttribute="leading" constant="16" id="hkE-pI-G5d"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -76,14 +86,22 @@
                 <outlet property="descLabel" destination="Qhb-AM-Jr8" id="UHY-U5-1sV"/>
                 <outlet property="greenLogo" destination="yw8-uc-lde" id="HAG-j4-2Cg"/>
                 <outlet property="orangeLogo" destination="wMj-us-HMl" id="cfv-Qd-X7O"/>
+                <outlet property="titleLabel" destination="y7R-se-a1s" id="b4c-An-rPw"/>
             </connections>
             <point key="canvasLocation" x="253.43511450381678" y="132.74647887323945"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="logo_blue_small" width="36" height="77"/>
         <image name="logo_green_small" width="36" height="77"/>
-        <image name="logo_orange_small" width="36" height="77"/>
+        <namedColor name="appOrange">
+            <color red="0.87450980392156863" green="0.33333333333333331" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hydrationBlue">
+            <color red="0.12549019607843137" green="0.23921568627450981" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="watrGreen">
+            <color red="0.70196078431372544" green="0.90196078431372551" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

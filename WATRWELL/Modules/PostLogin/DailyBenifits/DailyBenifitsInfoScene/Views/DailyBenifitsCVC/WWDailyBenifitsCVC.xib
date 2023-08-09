@@ -29,10 +29,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="436" height="619"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="h4C-pT-V0W">
-                                <rect key="frame" x="30" y="120.66666666666666" width="376" height="377.66666666666674"/>
+                                <rect key="frame" x="30" y="100" width="376" height="293"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO5-45-pqX" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="102.33333333333333" y="0.0" width="171.33333333333337" height="39.333333333333336"/>
+                                        <rect key="frame" x="97.000000000000014" y="0.0" width="182.33333333333337" height="0.0"/>
                                         <string key="text">BENEFITS
 OF DAILY ELECTROLYTE</string>
                                         <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="16"/>
@@ -40,7 +40,7 @@ OF DAILY ELECTROLYTE</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-R0-aMs" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="101.33333333333336" y="69.333333333333329" width="173.66666666666663" height="109.99999999999999"/>
+                                        <rect key="frame" x="101.33333333333336" y="30" width="173.66666666666663" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="110" id="Udg-rb-Fh0"/>
                                         </constraints>
@@ -51,10 +51,10 @@ OF DAILY ELECTROLYTE</string>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elc-db-intro" translatesAutoresizingMaskIntoConstraints="NO" id="lo1-xg-L7D">
-                                        <rect key="frame" x="143" y="209.33333333333329" width="90" height="123.66666666666666"/>
+                                        <rect key="frame" x="143" y="170" width="90" height="79"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yg-6Z-oLQ" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="174.33333333333334" y="363" width="27.666666666666657" height="14.666666666666686"/>
+                                        <rect key="frame" x="173.33333333333334" y="279" width="29.666666666666657" height="14"/>
                                         <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,8 +64,9 @@ OF DAILY ELECTROLYTE</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="h4C-pT-V0W" firstAttribute="top" secondItem="Y4v-17-Vnt" secondAttribute="top" constant="100" id="GAT-nA-S60"/>
                             <constraint firstItem="h4C-pT-V0W" firstAttribute="leading" secondItem="Y4v-17-Vnt" secondAttribute="leading" constant="30" id="Pmo-8X-ZTO"/>
-                            <constraint firstItem="h4C-pT-V0W" firstAttribute="centerY" secondItem="Y4v-17-Vnt" secondAttribute="centerY" id="VB5-a1-evo"/>
+                            <constraint firstItem="lo1-xg-L7D" firstAttribute="centerY" secondItem="Y4v-17-Vnt" secondAttribute="centerY" id="YPU-K6-nCJ"/>
                             <constraint firstAttribute="trailing" secondItem="h4C-pT-V0W" secondAttribute="trailing" constant="30" id="fCf-qn-Huu"/>
                         </constraints>
                     </view>
@@ -79,9 +80,11 @@ OF DAILY ELECTROLYTE</string>
             </constraints>
             <size key="customSize" width="436" height="619"/>
             <connections>
+                <outlet property="centerPositionConstraint" destination="YPU-K6-nCJ" id="BbI-QP-lbK"/>
                 <outlet property="descLabel" destination="2yg-6Z-oLQ" id="Wbc-KB-2bp"/>
                 <outlet property="goNextButton" destination="KBQ-R0-aMs" id="con-Kj-Bp6"/>
                 <outlet property="illusImageView" destination="lo1-xg-L7D" id="JbP-W9-Ong"/>
+                <outlet property="stackView" destination="h4C-pT-V0W" id="yMA-Fd-7rK"/>
                 <outlet property="titleLabel" destination="hO5-45-pqX" id="tv6-QW-ox9"/>
             </connections>
             <point key="canvasLocation" x="386.25954198473283" y="220.07042253521129"/>

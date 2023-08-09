@@ -19,6 +19,10 @@ extension DailyBenifitsMasterVC: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(with: WWDailyBenifitsCVC.self, indexPath: indexPath)
         cell.setData(with: viewModel.dataSource[indexPath.item])
+        if viewModel.sceneType == .child {
+            cell.stackView.spacing = 50
+        }
+        cell.centerPositionConstraint?.isActive = viewModel.sceneType == .child
         cell.goNexthandler = { [weak self] in
             self?.goToDetailView(for: indexPath.item)
         }

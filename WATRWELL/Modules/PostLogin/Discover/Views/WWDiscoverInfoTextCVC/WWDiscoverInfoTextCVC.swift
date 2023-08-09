@@ -10,6 +10,7 @@ import UIKit
 class WWDiscoverInfoTextCVC: WWBaseCVC {
 
     // Outlets
+    @IBOutlet weak var emptyLabelView: WWLabel!
     @IBOutlet weak var titleLabel: WWLabel!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var descLabel: WWLabel!
@@ -20,6 +21,7 @@ class WWDiscoverInfoTextCVC: WWBaseCVC {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        emptyLabelView.isHidden = true
         logoImageView.image = UIImage(named: "logo-latest 1")?.withRenderingMode(.alwaysTemplate)
         logoImageView.isHidden = true
         clickToViewButton.isHidden = true
@@ -27,6 +29,7 @@ class WWDiscoverInfoTextCVC: WWBaseCVC {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        emptyLabelView.isHidden = true
         logoImageView.isHidden = true
         clickToViewButton.isHidden = true
     }
@@ -38,14 +41,24 @@ class WWDiscoverInfoTextCVC: WWBaseCVC {
     
     func setData(with data: WWDiscoverDataModel) {
         titleLabel.text = data.title
+        descLabel.textAlignmentOverride = .center
         if let tint = data.logoTint {
+            emptyLabelView.isHidden = false
+            logoImageView.image = UIImage(named: "logo-latest 1")?.withRenderingMode(.alwaysTemplate)
             logoImageView.tintColor = tint
             logoImageView.isHidden = false
+            descLabel.textAlignmentOverride = .left
         }
-        descLabel.text = data.descText
+        descLabel.attributedText = data.descText
         if let btn = data.buttonLogo {
             clickToViewButton.setImage(btn, for: .normal)
             clickToViewButton.isHidden = false
+        }
+        
+        if clickToViewButton.isHidden && logoImageView.isHidden {
+            emptyLabelView.isHidden = false
+            logoImageView.isHidden = false
+            logoImageView.image = nil
         }
     }
 }

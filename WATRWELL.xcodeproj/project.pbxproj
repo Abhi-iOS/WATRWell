@@ -72,6 +72,7 @@
 		12AEBC5A2A7CFBE3009BCDFB /* WWSourcePopupCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12AEBC582A7CFBE3009BCDFB /* WWSourcePopupCVC.xib */; };
 		12AEBC5C2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC5B2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift */; };
 		12AEBC5E2A7D19C0009BCDFB /* WWSourcePopupDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC5D2A7D19C0009BCDFB /* WWSourcePopupDataModel.swift */; };
+		12AEBC602A82D1D2009BCDFB /* WWWatrGuideDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC5F2A82D1D2009BCDFB /* WWWatrGuideDataModel.swift */; };
 		12C562512A764A590088E709 /* WWDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562502A764A590088E709 /* WWDropDownView.swift */; };
 		12C562532A7650690088E709 /* WWStep2VC + Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562522A7650690088E709 /* WWStep2VC + Textfield.swift */; };
 		12C562592A765D700088E709 /* WWWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C562582A765D700088E709 /* WWWelcomeVC.swift */; };
@@ -143,7 +144,7 @@
 		12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */; };
 		12E4DBB72A7487F60020F6C3 /* WWDailyBenifitsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */; };
 		12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */; };
-		34D1ACCF1A7AD70BF804AF72 /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71A590779D45A8FCDB68DDA /* Pods_WATRWELL.framework */; };
+		917864AB7F4225295468E294 /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,7 @@
 		12AEBC582A7CFBE3009BCDFB /* WWSourcePopupCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWSourcePopupCVC.xib; sourceTree = "<group>"; };
 		12AEBC5B2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWSourcePopupVC + CollectionView.swift"; sourceTree = "<group>"; };
 		12AEBC5D2A7D19C0009BCDFB /* WWSourcePopupDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourcePopupDataModel.swift; sourceTree = "<group>"; };
+		12AEBC5F2A82D1D2009BCDFB /* WWWatrGuideDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWatrGuideDataModel.swift; sourceTree = "<group>"; };
 		12C562502A764A590088E709 /* WWDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDropDownView.swift; sourceTree = "<group>"; };
 		12C562522A7650690088E709 /* WWStep2VC + Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWStep2VC + Textfield.swift"; sourceTree = "<group>"; };
 		12C562582A765D700088E709 /* WWWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWelcomeVC.swift; sourceTree = "<group>"; };
@@ -305,9 +307,9 @@
 		12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyBenifitsCVC.swift; sourceTree = "<group>"; };
 		12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWDailyBenifitsCVC.xib; sourceTree = "<group>"; };
 		12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBenifitsModel.swift; sourceTree = "<group>"; };
-		137092AE7D6F81543A998197 /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
-		B71A590779D45A8FCDB68DDA /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC602220AC50D6D12110F59D /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
+		35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
+		8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,7 +317,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D1ACCF1A7AD70BF804AF72 /* Pods_WATRWELL.framework in Frameworks */,
+				917864AB7F4225295468E294 /* Pods_WATRWELL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				1269E8F72A75ADF400B09FCB /* WWWatrGuideVM.swift */,
+				12AEBC5F2A82D1D2009BCDFB /* WWWatrGuideDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -742,7 +745,7 @@
 				12E0B77B2A6EEEFD002B7181 /* WATRWELLUITests */,
 				12E0B7592A6EEEFC002B7181 /* Products */,
 				1F7E47EABE139DAD20EB2BA7 /* Pods */,
-				5DD6B698283BDCC27EB0BD0D /* Frameworks */,
+				FC1C307D76BB8657AD81352A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1232,16 +1235,16 @@
 		1F7E47EABE139DAD20EB2BA7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC602220AC50D6D12110F59D /* Pods-WATRWELL.debug.xcconfig */,
-				137092AE7D6F81543A998197 /* Pods-WATRWELL.release.xcconfig */,
+				9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */,
+				35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		5DD6B698283BDCC27EB0BD0D /* Frameworks */ = {
+		FC1C307D76BB8657AD81352A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B71A590779D45A8FCDB68DDA /* Pods_WATRWELL.framework */,
+				8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1253,12 +1256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12E0B7822A6EEEFD002B7181 /* Build configuration list for PBXNativeTarget "WATRWELL" */;
 			buildPhases = (
-				6EB9B413F95EA05B92B56F16 /* [CP] Check Pods Manifest.lock */,
+				890B6CE2908F404C97A22755 /* [CP] Check Pods Manifest.lock */,
 				12E0B7542A6EEEFC002B7181 /* Sources */,
 				12E0B7552A6EEEFC002B7181 /* Frameworks */,
 				12E0B7562A6EEEFC002B7181 /* Resources */,
-				BFCA32A1D954E60B3DADAC39 /* [CP] Embed Pods Frameworks */,
-				2BF817E96892B1F13FD88D93 /* [CP] Copy Pods Resources */,
+				B8ADFC1DE4984F50F65502EA /* [CP] Embed Pods Frameworks */,
+				9C03E521065B3E7241AFBC67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1400,24 +1403,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2BF817E96892B1F13FD88D93 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6EB9B413F95EA05B92B56F16 /* [CP] Check Pods Manifest.lock */ = {
+		890B6CE2908F404C97A22755 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1439,7 +1425,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BFCA32A1D954E60B3DADAC39 /* [CP] Embed Pods Frameworks */ = {
+		9C03E521065B3E7241AFBC67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8ADFC1DE4984F50F65502EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1485,6 +1488,7 @@
 				12E4DB372A73BFAD0020F6C3 /* Observable + Extension.swift in Sources */,
 				12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */,
 				12AEBC5E2A7D19C0009BCDFB /* WWSourcePopupDataModel.swift in Sources */,
+				12AEBC602A82D1D2009BCDFB /* WWWatrGuideDataModel.swift in Sources */,
 				12E4DBA22A746C950020F6C3 /* WWPaymentSlider.swift in Sources */,
 				12AEBC5C2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift in Sources */,
 				12E4DB952A7443890020F6C3 /* TableView + Extensions.swift in Sources */,
@@ -1732,17 +1736,17 @@
 		};
 		12E0B7832A6EEEFD002B7181 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC602220AC50D6D12110F59D /* Pods-WATRWELL.debug.xcconfig */;
+			baseConfigurationReference = 9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WATR WELL";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WATRWELL uses this to make features work and personalizes your content. You can always change this later in your phone’s settings.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WATRWELL uses this to make features work and personalizes your content. You can always change this later in your phone’s settings.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1751,8 +1755,7 @@
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1760,7 +1763,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watr.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watrwell.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1773,17 +1776,17 @@
 		};
 		12E0B7842A6EEEFD002B7181 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 137092AE7D6F81543A998197 /* Pods-WATRWELL.release.xcconfig */;
+			baseConfigurationReference = 35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WATR WELL";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WATRWELL uses this to make features work and personalizes your content. You can always change this later in your phone’s settings.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WATRWELL uses this to make features work and personalizes your content. You can always change this later in your phone’s settings.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1792,8 +1795,7 @@
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1801,7 +1803,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watr.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watrwell.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1819,7 +1821,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AU597GBZ3D;
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -1839,7 +1841,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AU597GBZ3D;
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -1858,7 +1860,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AU597GBZ3D;
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WATR.WATRWELLUITests;
@@ -1876,7 +1878,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AU597GBZ3D;
+				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WATR.WATRWELLUITests;

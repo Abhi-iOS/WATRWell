@@ -19,6 +19,7 @@ extension WWSourcePopupVC: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(with: WWSourcePopupCVC.self, indexPath: indexPath)
         cell.setupData(with: viewModel.dataModel[indexPath.item])
+        cell.descLabel.textAlignmentOverride = indexPath.item == 0 ? .center : .justified
         return cell
     }
     

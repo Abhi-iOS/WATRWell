@@ -18,6 +18,8 @@ final class WWStep2VC: WWBaseVC {
     @IBOutlet weak var nameTextfield: WWTextField!
     @IBOutlet weak var cardNuTextfield: WWTextField!
     @IBOutlet weak var cvvTextfield: WWTextField!
+    @IBOutlet weak var expiryTextfield: WWTextField!
+    
     @IBOutlet weak var nextButton: WWFilledButton!
     @IBOutlet weak var exitButton: WWVerticalImageTextButton!
     
@@ -27,6 +29,8 @@ final class WWStep2VC: WWBaseVC {
     let toolBar = UIToolbar()
     let selectedExpirySubject = PublishSubject<String>()
     var formattedExpiry: String = ""
+    var month: String = ""
+    var year: String = ""
     
     // Overriden functions
     override func setupViews() {
@@ -98,8 +102,12 @@ private extension WWStep2VC {
         cvvTextfield.delegate = self
         cvvTextfield.textAlignment = .natural
         cvvTextfield.disableCopyPasteCapability = true
-        cvvTextfield.placeholder = "EXPIRATION DATE(MM/YY)"
-
+        cvvTextfield.placeholder = "CVV"
+        
+        expiryTextfield.delegate = self
+        expiryTextfield.textAlignment = .natural
+        expiryTextfield.disableCopyPasteCapability = true
+        expiryTextfield.placeholder = "EXPIRATION DATE(MM/YY)"
     }
     
     func setupPicker() {
@@ -124,7 +132,7 @@ private extension WWStep2VC {
         
         let doneStream = doneButton.rx.tap.do(onNext: {[weak self] _ in
             guard let self else { return }
-            self.cvvTextfield.text = self.formattedExpiry
+            self.expiryTextfield.text = self.formattedExpiry
             self.viewModel.updateData(self.formattedExpiry, fieldType: .expiry)
         })
         

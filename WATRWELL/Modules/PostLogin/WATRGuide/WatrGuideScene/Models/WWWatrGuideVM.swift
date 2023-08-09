@@ -11,7 +11,7 @@ import RxCocoa
 
 final class WWWatrGuideVM {
     private let disposeBag = DisposeBag()
-    
+    let dataSource: [WWWatrGuideDataModel] = WWWatrGuideDataModel.getDataSource()
 }
 
 extension WWWatrGuideVM: WWViewModelProtocol {

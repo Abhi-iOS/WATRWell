@@ -9,7 +9,7 @@ import UIKit
 
 extension WWWatrGuideVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel.dataSource.endIndex
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -18,7 +18,7 @@ extension WWWatrGuideVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(with: WWWatrGuideCVC.self, indexPath: indexPath)
-//        cell.setData(with: viewModel.dataSource[indexPath.item])
+        cell.setData(with: viewModel.dataSource[indexPath.item], index: indexPath.item)
         cell.viewDiscHandler = { [weak self] in
             self?.goToDetailView(for: indexPath.item)
         }

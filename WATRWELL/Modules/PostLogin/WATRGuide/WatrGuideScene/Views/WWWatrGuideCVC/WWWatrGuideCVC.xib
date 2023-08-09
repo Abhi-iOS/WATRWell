@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="363" height="562"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZHd-n1-xoV">
-                                <rect key="frame" x="16" y="24" width="331" height="159.33333333333331"/>
+                                <rect key="frame" x="16" y="24" width="331" height="159.33333333333334"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="752" image="watrGuide_ic" translatesAutoresizingMaskIntoConstraints="NO" id="rCE-kZ-iyZ">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="29"/>
@@ -152,6 +152,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47m-aR-SYx">
+                                <rect key="frame" x="199" y="380" width="7.6666666666666572" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFi-Ra-Qro">
                                 <rect key="frame" x="156.66666666666666" y="380" width="50" height="50"/>
                                 <constraints>
@@ -169,6 +175,7 @@
                         <constraints>
                             <constraint firstItem="ZHd-n1-xoV" firstAttribute="top" secondItem="xuz-c0-RrU" secondAttribute="top" constant="24" id="2ac-YY-ziW"/>
                             <constraint firstItem="tFi-Ra-Qro" firstAttribute="centerX" secondItem="xbi-sO-fo8" secondAttribute="centerX" id="8pC-fQ-a2Y"/>
+                            <constraint firstItem="47m-aR-SYx" firstAttribute="top" secondItem="tFi-Ra-Qro" secondAttribute="top" id="E1P-Si-uSJ"/>
                             <constraint firstItem="xbi-sO-fo8" firstAttribute="top" secondItem="oho-cP-2Xn" secondAttribute="bottom" constant="24" id="E2f-eh-Yer"/>
                             <constraint firstItem="oho-cP-2Xn" firstAttribute="centerX" secondItem="ZHd-n1-xoV" secondAttribute="centerX" id="MQc-fH-1yl"/>
                             <constraint firstItem="tFi-Ra-Qro" firstAttribute="top" secondItem="xbi-sO-fo8" secondAttribute="bottom" constant="37" id="VBN-oy-jRV"/>
@@ -178,6 +185,7 @@
                             <constraint firstItem="ZHd-n1-xoV" firstAttribute="leading" secondItem="xuz-c0-RrU" secondAttribute="leading" constant="16" id="phq-l1-4eA"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tFi-Ra-Qro" secondAttribute="bottom" constant="12" id="t7P-vf-40E"/>
                             <constraint firstAttribute="trailing" secondItem="ZHd-n1-xoV" secondAttribute="trailing" constant="16" id="wOV-L7-p8c"/>
+                            <constraint firstItem="47m-aR-SYx" firstAttribute="trailing" secondItem="tFi-Ra-Qro" secondAttribute="trailing" id="x4v-pf-AiI"/>
                         </constraints>
                     </view>
                 </subviews>

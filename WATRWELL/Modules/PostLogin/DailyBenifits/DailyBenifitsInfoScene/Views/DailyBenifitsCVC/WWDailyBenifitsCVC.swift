@@ -14,6 +14,8 @@ class WWDailyBenifitsCVC: WWBaseCVC {
     @IBOutlet weak var goNextButton: WWVerticalImageTextButton!
     @IBOutlet weak var illusImageView: UIImageView!
     @IBOutlet weak var descLabel: WWLabel!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var centerPositionConstraint: NSLayoutConstraint!
     
     var goNexthandler: (() -> ())?
     
@@ -34,7 +36,7 @@ class WWDailyBenifitsCVC: WWBaseCVC {
         titleLabel.text = model.title
         goNextButton.isHidden = model.showGoNextButton.not()
         illusImageView.image = model.image
-        descLabel.text = model.subtitle
+        descLabel.text = model.subtitle?.uppercased()
         
         descLabel.isHidden = model.subtitle == nil
     }

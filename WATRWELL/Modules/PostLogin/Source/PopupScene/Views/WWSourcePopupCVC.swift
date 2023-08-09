@@ -12,6 +12,7 @@ class WWSourcePopupCVC: WWBaseCVC {
     @IBOutlet weak var blueLogo: UIImageView!
     @IBOutlet weak var orangeLogo: UIImageView!
     @IBOutlet weak var greenLogo: UIImageView!
+    @IBOutlet weak var titleLabel: WWLabel!
     
     @IBOutlet weak var descLabel: WWLabel!
     
@@ -39,8 +40,9 @@ class WWSourcePopupCVC: WWBaseCVC {
             greenLogo.isHidden = false
 
         }
-        
-        descLabel.text = data.descriptionText
+        titleLabel.attributedText = data.titleText
+        titleLabel.isHidden = data.titleText == nil
+        descLabel.attributedText = data.descriptionText
     }
     
     override func prepareForReuse() {
@@ -48,5 +50,6 @@ class WWSourcePopupCVC: WWBaseCVC {
         blueLogo.isHidden = true
         orangeLogo.isHidden = true
         greenLogo.isHidden = true
+        titleLabel.isHidden = true
     }
 }

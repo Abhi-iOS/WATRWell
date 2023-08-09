@@ -37,7 +37,7 @@ enum AppNetworking {
                         }
                         
                     }else{
-                        let error = NSError.init(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No Data Found".capitalized])
+                        let error = NSError.init(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No Data Found".uppercased()])
                         result(.failure(error))
                     }
                 } catch let err as NSError {
@@ -52,7 +52,7 @@ enum AppNetworking {
                     DispatchQueue.main.async(execute: { () -> Void in
                         //MARK:- Handle No Internet
                         if let error = error as NSError?, error.domain == NSURLErrorDomain && error.code == NSURLErrorNotConnectedToInternet {
-                            SKToast.show(withMessage: "No Internet connection".capitalized)
+                            SKToast.show(withMessage: "No Internet connection".uppercased())
                             AppNetworking.showNoInternetConnectionWindow(request,result)
                             
                         }else{
@@ -60,7 +60,7 @@ enum AppNetworking {
                         }
                     })
                 }else{
-                    let error = NSError.init(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unexpected Error encountered".capitalized])
+                    let error = NSError.init(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unexpected Error encountered".uppercased()])
                     result(.failure(error))
                 }
             }
@@ -430,7 +430,7 @@ enum AppNetworking {
 extension AppNetworking {
     
     static func showLoader() {
-        NVActivityIndicatorView.DEFAULT_TYPE = .lineScalePulseOutRapid
+        NVActivityIndicatorView.DEFAULT_TYPE = .ballBeat
         NVActivityIndicatorView.DEFAULT_COLOR = WWColors.hexDF5509.color
         
         let activityData = ActivityData()
@@ -474,7 +474,7 @@ extension AppNetworking {
 extension AppNetworking{
     static func showNoInternetConnectionWindow(_ request: NSMutableURLRequest, _ result: @escaping APIResponse){
         AppNetworking.hideLoader()
-        SKToast.show(withMessage: "No Internet Connection".capitalized)
+        SKToast.show(withMessage: "No Internet Connection".uppercased())
         
     }
     

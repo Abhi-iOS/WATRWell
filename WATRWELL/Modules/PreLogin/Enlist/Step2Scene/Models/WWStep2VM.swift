@@ -42,6 +42,7 @@ extension WWStep2VM: WWViewModelProtocol {
         case name
         case card
         case expiry
+        case cvv
     }
     
     struct Input {
@@ -70,6 +71,8 @@ extension WWStep2VM: WWViewModelProtocol {
             dataModel.cardNumber = text
         case .expiry:
             dataModel.expiry = text
+        case .cvv:
+            dataModel.cvv = text
         }
     }
 }

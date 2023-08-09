@@ -285,7 +285,7 @@
                                 <rect key="frame" x="0.0" y="655" width="375" height="12"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ob1-fO-jU5">
-                                <rect key="frame" x="16" y="187" width="343" height="207"/>
+                                <rect key="frame" x="16" y="187" width="343" height="423"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-3i-mB5">
                                         <rect key="frame" x="49" y="0.0" width="245.5" height="70.5"/>
@@ -304,11 +304,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-vP-Hu0">
-                                        <rect key="frame" x="108.5" y="86.5" width="126" height="34.5"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-vP-Hu0">
+                                        <rect key="frame" x="108.5" y="78.5" width="126" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-Hz-gC6">
-                                                <rect key="frame" x="0.0" y="0.0" width="126" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="0.0"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -324,8 +324,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e46-MB-fja">
-                                        <rect key="frame" x="31" y="129" width="281" height="192"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e46-MB-fja">
+                                        <rect key="frame" x="31" y="86.5" width="281" height="250.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="td2-pK-D83" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="281" height="36"/>
@@ -345,8 +345,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-Lv-mMh" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="156" width="281" height="42.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDm-Dh-Xl9" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="90.5" y="156" width="100" height="36"/>
+                                                <rect key="frame" x="90.5" y="214.5" width="100" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="g1p-OF-BCQ"/>
                                                     <constraint firstAttribute="height" constant="36" id="mai-0z-4dd"/>
@@ -360,10 +365,11 @@
                                             <constraint firstItem="7FO-a2-cIb" firstAttribute="width" secondItem="td2-pK-D83" secondAttribute="width" id="Lo4-x8-Kjr"/>
                                             <constraint firstItem="7FO-a2-cIb" firstAttribute="height" secondItem="td2-pK-D83" secondAttribute="height" id="O2I-gs-r6m"/>
                                             <constraint firstItem="b1h-eq-hcj" firstAttribute="width" secondItem="td2-pK-D83" secondAttribute="width" id="Vb0-qq-vgX"/>
+                                            <constraint firstItem="OFq-Lv-mMh" firstAttribute="width" secondItem="b1h-eq-hcj" secondAttribute="width" id="dtm-eq-vuU"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-3f-fBM" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
-                                        <rect key="frame" x="130" y="137" width="83.5" height="70"/>
+                                        <rect key="frame" x="130" y="353" width="83.5" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="X1E-ak-JGS"/>
                                         </constraints>
@@ -395,6 +401,7 @@
                         <outlet property="cvvTextfield" destination="b1h-eq-hcj" id="hoe-H9-ay5"/>
                         <outlet property="dropdownView" destination="pd1-qt-mlY" id="zw3-uZ-xPy"/>
                         <outlet property="exitButton" destination="m8f-3f-fBM" id="H4M-UG-Z22"/>
+                        <outlet property="expiryTextfield" destination="OFq-Lv-mMh" id="Xx3-7y-N0D"/>
                         <outlet property="inputStackView" destination="e46-MB-fja" id="T14-UC-Var"/>
                         <outlet property="nameTextfield" destination="td2-pK-D83" id="MXE-hl-iH7"/>
                         <outlet property="nextButton" destination="uDm-Dh-Xl9" id="7so-kM-mMJ"/>
@@ -822,6 +829,9 @@
             <size key="intrinsicContentSize" width="56.5" height="43"/>
         </designable>
         <designable name="O6p-AI-LMB">
+            <size key="intrinsicContentSize" width="32" height="42.5"/>
+        </designable>
+        <designable name="OFq-Lv-mMh">
             <size key="intrinsicContentSize" width="32" height="42.5"/>
         </designable>
         <designable name="Rc2-3g-MUY">

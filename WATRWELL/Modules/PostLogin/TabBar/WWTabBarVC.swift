@@ -38,25 +38,25 @@ class WWTabBarVC: UITabBarController {
     var sourceNavigationController: UINavigationController {
         let sourceScene = WWSourceVC.create(with: WWSourceVM(viewType: self.sourceType ?? .notSubscribed))
         let nvc = UINavigationController(rootViewController: sourceScene)
-        nvc.tabBarItem = UITabBarItem(title: "Source", image: nil, tag: 0)
+        nvc.tabBarItem = UITabBarItem(title: "SOURCE".uppercased(), image: nil, tag: 0)
         return nvc
     }
     var mapNavigationController: UINavigationController = {
         let mapScene = WWMapVC.create(with: WWMapVM())
         let nvc = UINavigationController(rootViewController: mapScene)
-        nvc.tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 1)
+        nvc.tabBarItem = UITabBarItem(title: "MAP", image: nil, tag: 1)
         return nvc
     }()
     var discoverNavigationController: UINavigationController = {
         let discoverScene = WWDiscoverVC.create(with: WWDiscoverVM())
         let nvc = UINavigationController(rootViewController: discoverScene)
-        nvc.tabBarItem = UITabBarItem(title: "Discover", image: nil, tag: 2)
+        nvc.tabBarItem = UITabBarItem(title: "DISCOVER", image: nil, tag: 2)
         return nvc
     }()
     var profileNavigationController: UINavigationController = {
         let profileScene = WWProfileVC.instantiate(fromAppStoryboard: .Profile)
         let nvc = UINavigationController(rootViewController: profileScene)
-        nvc.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 3)
+        nvc.tabBarItem = UITabBarItem(title: "PROFILE", image: nil, tag: 3)
         return nvc
     }()
     

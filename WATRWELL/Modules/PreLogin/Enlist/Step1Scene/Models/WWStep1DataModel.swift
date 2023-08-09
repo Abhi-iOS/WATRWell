@@ -21,6 +21,7 @@ struct WWEnlistUserModel {
     var nameOnCard: String?
     var cardNumber: String?
     var expiry: String?
+    var cvv: String?
     var saStreet1: String?
     var saStreet2: String?
     var saCity: String?

@@ -145,7 +145,7 @@
                                         </constraints>
                                     </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="yGl-NG-UkH">
-                                        <rect key="frame" x="83" y="390" width="134.5" height="26"/>
+                                        <rect key="frame" x="83" y="406" width="134.5" height="26"/>
                                         <color key="pageIndicatorTintColor" name="pageIndicatorGray"/>
                                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pageControl>
@@ -160,7 +160,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="NaZ-Dm-fGH" firstAttribute="top" secondItem="yGl-NG-UkH" secondAttribute="bottom" constant="16" id="Fja-Xg-jOw"/>
+                                    <constraint firstItem="NaZ-Dm-fGH" firstAttribute="top" secondItem="yGl-NG-UkH" secondAttribute="bottom" id="Fja-Xg-jOw"/>
                                     <constraint firstAttribute="trailing" secondItem="A2p-jh-xoN" secondAttribute="trailing" id="JV2-N7-eVY"/>
                                     <constraint firstItem="NaZ-Dm-fGH" firstAttribute="bottom" secondItem="cdf-MI-Px4" secondAttribute="bottom" id="Jvc-Oz-76N"/>
                                     <constraint firstItem="yGl-NG-UkH" firstAttribute="centerX" secondItem="NaZ-Dm-fGH" secondAttribute="centerX" id="KNt-KL-0F7"/>

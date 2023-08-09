@@ -37,4 +37,27 @@ class WWWatrGuideCVC: WWBaseCVC {
     @IBAction func viewDescTap(_ sender: UIButton) {
         viewDiscHandler?()
     }
+    
+    func setData(with data: WWWatrGuideDataModel, index: Int) {
+        titleLabel.attributedText = data.title
+        switch index {
+        case 0:
+            bottleIcon.borderColor = WWColors.hex203D75.color
+            ifYouAreLabel.textColor = WWColors.hex203D75.color
+        case 1:
+            bottleIcon.borderColor = WWColors.hexDF5509.color
+            ifYouAreLabel.textColor = WWColors.hexDF5509.color
+        case 2:
+            bottleIcon.borderColor = WWColors.hexB3E6B5.color
+            ifYouAreLabel.textColor = WWColors.hexB3E6B5.color
+        default: break
+        }
+        leftTitle1Label.text = data.leftTitle1.uppercased()
+        leftTitle2Label.text = data.leftTitle2.uppercased()
+        leftTitle3Label.text = data.leftTitle3.uppercased()
+        
+        rightTitle1Label.attributedText = data.rightValue1
+        rightTitle2Label.attributedText = data.rightValue2
+        rightTitle3Label.attributedText = data.rightValue3
+    }
 }

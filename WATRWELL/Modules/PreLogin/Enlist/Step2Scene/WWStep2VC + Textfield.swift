@@ -13,9 +13,9 @@ extension WWStep2VC: UITextFieldDelegate {
         case nameTextfield:
             textField.keyboardType = .asciiCapable
             textField.autocapitalizationType = .words
-        case cardNuTextfield:
+        case cardNuTextfield, cvvTextfield:
             textField.keyboardType = .numberPad
-        case cvvTextfield:
+        case expiryTextfield:
             textField.inputView = pickerView
             textField.inputAccessoryView = toolBar
         default:
@@ -27,9 +27,11 @@ extension WWStep2VC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
         case nameTextfield:
-            self.viewModel.updateData(textField.text, fieldType: .name)
+            viewModel.updateData(textField.text, fieldType: .name)
         case cardNuTextfield:
-            self.viewModel.updateData(textField.text, fieldType: .card)
+            viewModel.updateData(textField.text, fieldType: .card)
+        case cvvTextfield:
+            viewModel.updateData(textField.text, fieldType: .cvv)
         default: return
         }
     }
@@ -42,6 +44,8 @@ extension WWStep2VC: UITextFieldDelegate {
             return newString.count <= 25
         case cardNuTextfield:
             return (newString.isNumeric || newString == "") && newString.count <= 16
+        case cvvTextfield:
+            return (newString.isNumeric || newString == "") && newString.count <= 3
         default:
             return true
         }
@@ -70,13 +74,11 @@ extension WWStep2VC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        var mm: String = ""
-        var yy: String = ""
         switch component {
-        case 0: mm = viewModel.monthsArray[row]
-        case 1: yy = "\(viewModel.yearsArray[row]%100)"
+        case 0: month = viewModel.monthsArray[row]
+        case 1: year = "\(viewModel.yearsArray[row]%100)"
         default: break
         }
-        formattedExpiry = mm + "/" + yy
+        formattedExpiry = month + "/" + year
     }
 }
