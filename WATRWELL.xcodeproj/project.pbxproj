@@ -16,6 +16,8 @@
 		120AB8262A7836B0009B80C8 /* WWSelectedSourceCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */; };
 		120AB8282A783F14009B80C8 /* WWSourceVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8272A783F14009B80C8 /* WWSourceVC + CollectionView.swift */; };
 		120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */; };
+		122DD46E2A840AE400C8F962 /* WWProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD46B2A840AE400C8F962 /* WWProfileVC.swift */; };
+		122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD46D2A840AE400C8F962 /* WWUserModel.swift */; };
 		12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12586AB22A6EF5C40086B315 /* AppDelegate.swift */; };
 		12586AB82A6EF5C40086B315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12586AB42A6EF5C40086B315 /* Assets.xcassets */; };
 		12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12586ABA2A6EF6370086B315 /* PreLogin.storyboard */; };
@@ -65,7 +67,6 @@
 		12AEBC492A799661009BCDFB /* Webservices + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC482A799661009BCDFB /* Webservices + Extensions.swift */; };
 		12AEBC4B2A79973A009BCDFB /* Webservice + Prelogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4A2A79973A009BCDFB /* Webservice + Prelogin.swift */; };
 		12AEBC4D2A7AE80C009BCDFB /* WWUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */; };
-		12AEBC4F2A7AE90F009BCDFB /* WWUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */; };
 		12AEBC522A7CF87E009BCDFB /* WWSourcePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC512A7CF87E009BCDFB /* WWSourcePopupVC.swift */; };
 		12AEBC552A7CF896009BCDFB /* WWSourcePopVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC542A7CF896009BCDFB /* WWSourcePopVM.swift */; };
 		12AEBC592A7CFBE3009BCDFB /* WWSourcePopupCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC572A7CFBE3009BCDFB /* WWSourcePopupCVC.swift */; };
@@ -121,7 +122,6 @@
 		12E4DB6D2A73FA1D0020F6C3 /* WWSourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB6C2A73FA1D0020F6C3 /* WWSourceVC.swift */; };
 		12E4DB702A73FACA0020F6C3 /* WWMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB6F2A73FACA0020F6C3 /* WWMapVC.swift */; };
 		12E4DB732A73FBB10020F6C3 /* WWDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB722A73FBB10020F6C3 /* WWDiscoverVC.swift */; };
-		12E4DB762A73FC140020F6C3 /* WWProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB752A73FC140020F6C3 /* WWProfileVC.swift */; };
 		12E4DB7A2A7434BA0020F6C3 /* WWMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB792A7434BA0020F6C3 /* WWMapVM.swift */; };
 		12E4DB7E2A743CF40020F6C3 /* WWMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB7D2A743CF40020F6C3 /* WWMenuVC.swift */; };
 		12E4DB802A743CFF0020F6C3 /* WWMenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DB7F2A743CFF0020F6C3 /* WWMenuVM.swift */; };
@@ -144,7 +144,7 @@
 		12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */; };
 		12E4DBB72A7487F60020F6C3 /* WWDailyBenifitsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */; };
 		12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */; };
-		917864AB7F4225295468E294 /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */; };
+		20E993D6E3BCB9991070DF4B /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +174,8 @@
 		120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWSelectedSourceCVC.xib; sourceTree = "<group>"; };
 		120AB8272A783F14009B80C8 /* WWSourceVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWSourceVC + CollectionView.swift"; sourceTree = "<group>"; };
 		120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDeviceDetail.swift; sourceTree = "<group>"; };
+		122DD46B2A840AE400C8F962 /* WWProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWProfileVC.swift; sourceTree = "<group>"; };
+		122DD46D2A840AE400C8F962 /* WWUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWUserModel.swift; sourceTree = "<group>"; };
 		12586AAE2A6EF5C40086B315 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12586AB22A6EF5C40086B315 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12586AB42A6EF5C40086B315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,7 +227,6 @@
 		12AEBC482A799661009BCDFB /* Webservices + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservices + Extensions.swift"; sourceTree = "<group>"; };
 		12AEBC4A2A79973A009BCDFB /* Webservice + Prelogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservice + Prelogin.swift"; sourceTree = "<group>"; };
 		12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUserDefaults.swift; sourceTree = "<group>"; };
-		12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUserModel.swift; sourceTree = "<group>"; };
 		12AEBC512A7CF87E009BCDFB /* WWSourcePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourcePopupVC.swift; sourceTree = "<group>"; };
 		12AEBC542A7CF896009BCDFB /* WWSourcePopVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourcePopVM.swift; sourceTree = "<group>"; };
 		12AEBC572A7CFBE3009BCDFB /* WWSourcePopupCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourcePopupCVC.swift; sourceTree = "<group>"; };
@@ -284,7 +285,6 @@
 		12E4DB6C2A73FA1D0020F6C3 /* WWSourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSourceVC.swift; sourceTree = "<group>"; };
 		12E4DB6F2A73FACA0020F6C3 /* WWMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWMapVC.swift; sourceTree = "<group>"; };
 		12E4DB722A73FBB10020F6C3 /* WWDiscoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDiscoverVC.swift; sourceTree = "<group>"; };
-		12E4DB752A73FC140020F6C3 /* WWProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProfileVC.swift; sourceTree = "<group>"; };
 		12E4DB792A7434BA0020F6C3 /* WWMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWMapVM.swift; sourceTree = "<group>"; };
 		12E4DB7D2A743CF40020F6C3 /* WWMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWMenuVC.swift; sourceTree = "<group>"; };
 		12E4DB7F2A743CFF0020F6C3 /* WWMenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWMenuVM.swift; sourceTree = "<group>"; };
@@ -307,9 +307,9 @@
 		12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyBenifitsCVC.swift; sourceTree = "<group>"; };
 		12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWDailyBenifitsCVC.xib; sourceTree = "<group>"; };
 		12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBenifitsModel.swift; sourceTree = "<group>"; };
-		35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
-		8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
+		1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19FB6FD22B668C6D48DEC0B /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
+		F0859A51DD2A09B19F6103DA /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +317,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917864AB7F4225295468E294 /* Pods_WATRWELL.framework in Frameworks */,
+				20E993D6E3BCB9991070DF4B /* Pods_WATRWELL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +380,23 @@
 				120AB8242A7836B0009B80C8 /* WWSelectedSourceCVC.xib */,
 			);
 			path = WWSelectedSourceCVC;
+			sourceTree = "<group>";
+		};
+		122DD46A2A840AE400C8F962 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				122DD46B2A840AE400C8F962 /* WWProfileVC.swift */,
+				122DD46C2A840AE400C8F962 /* Models */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		122DD46C2A840AE400C8F962 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				122DD46D2A840AE400C8F962 /* WWUserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		12586AAC2A6EF5C40086B315 /* Resources */ = {
@@ -745,7 +762,7 @@
 				12E0B77B2A6EEEFD002B7181 /* WATRWELLUITests */,
 				12E0B7592A6EEEFC002B7181 /* Products */,
 				1F7E47EABE139DAD20EB2BA7 /* Pods */,
-				FC1C307D76BB8657AD81352A /* Frameworks */,
+				B497FC3D861BD88C2192D5C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1001,15 +1018,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		12E4DB662A73F9D80020F6C3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				12E4DB742A73FBFD0020F6C3 /* Models */,
-				12E4DB752A73FC140020F6C3 /* WWProfileVC.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		12E4DB672A73F9E00020F6C3 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,22 +1075,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		12E4DB742A73FBFD0020F6C3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				12AEBC4E2A7AE90F009BCDFB /* WWUserModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		12E4DB772A7433BB0020F6C3 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				122DD46A2A840AE400C8F962 /* Profile */,
 				12E4DB632A73F4710020F6C3 /* TabBar */,
 				12E4DB6A2A73F9F90020F6C3 /* Source */,
 				12E4DB682A73F9EA0020F6C3 /* Map */,
 				12E4DB672A73F9E00020F6C3 /* Discover */,
-				12E4DB662A73F9D80020F6C3 /* Profile */,
 				12E4DBA32A7481250020F6C3 /* DailyBenifits */,
 				1269E8F32A75ADBE00B09FCB /* WATRGuide */,
 			);
@@ -1235,16 +1235,16 @@
 		1F7E47EABE139DAD20EB2BA7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */,
-				35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */,
+				F0859A51DD2A09B19F6103DA /* Pods-WATRWELL.debug.xcconfig */,
+				A19FB6FD22B668C6D48DEC0B /* Pods-WATRWELL.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FC1C307D76BB8657AD81352A /* Frameworks */ = {
+		B497FC3D861BD88C2192D5C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F191BC6229FA97260F90D56 /* Pods_WATRWELL.framework */,
+				1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1256,12 +1256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12E0B7822A6EEEFD002B7181 /* Build configuration list for PBXNativeTarget "WATRWELL" */;
 			buildPhases = (
-				890B6CE2908F404C97A22755 /* [CP] Check Pods Manifest.lock */,
+				1B59169B56D0AADC4280F435 /* [CP] Check Pods Manifest.lock */,
 				12E0B7542A6EEEFC002B7181 /* Sources */,
 				12E0B7552A6EEEFC002B7181 /* Frameworks */,
 				12E0B7562A6EEEFC002B7181 /* Resources */,
-				B8ADFC1DE4984F50F65502EA /* [CP] Embed Pods Frameworks */,
-				9C03E521065B3E7241AFBC67 /* [CP] Copy Pods Resources */,
+				53050E144B80F2106F048A7B /* [CP] Embed Pods Frameworks */,
+				40D84DF6BD0151F925D4ECE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1403,7 +1403,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		890B6CE2908F404C97A22755 /* [CP] Check Pods Manifest.lock */ = {
+		1B59169B56D0AADC4280F435 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1425,7 +1425,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C03E521065B3E7241AFBC67 /* [CP] Copy Pods Resources */ = {
+		40D84DF6BD0151F925D4ECE4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1442,7 +1442,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WATRWELL/Pods-WATRWELL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8ADFC1DE4984F50F65502EA /* [CP] Embed Pods Frameworks */ = {
+		53050E144B80F2106F048A7B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1513,7 +1513,6 @@
 				12E4DB4C2A73CB510020F6C3 /* WWEnterOTPVC.swift in Sources */,
 				1269E9482A763F4900B09FCB /* IQKeyboardManager.swift in Sources */,
 				1269E8ED2A75A2EF00B09FCB /* WWFonts.swift in Sources */,
-				12E4DB762A73FC140020F6C3 /* WWProfileVC.swift in Sources */,
 				1269E94C2A763F4900B09FCB /* IQUIView+Hierarchy.swift in Sources */,
 				1269E93F2A763F4900B09FCB /* IQPreviousNextView.swift in Sources */,
 				1269E9252A763D5A00B09FCB /* WWStep2VC.swift in Sources */,
@@ -1525,7 +1524,6 @@
 				12E4DB7A2A7434BA0020F6C3 /* WWMapVM.swift in Sources */,
 				1269E8FF2A75AF7D00B09FCB /* WWWatrGuideCVC.swift in Sources */,
 				12E4DB3D2A73C54C0020F6C3 /* WWTextField.swift in Sources */,
-				12AEBC4F2A7AE90F009BCDFB /* WWUserModel.swift in Sources */,
 				1269E9212A75D05700B09FCB /* WWStep1DataModel.swift in Sources */,
 				12AEBC452A798042009BCDFB /* JSON.swift in Sources */,
 				12E4DB6D2A73FA1D0020F6C3 /* WWSourceVC.swift in Sources */,
@@ -1542,6 +1540,7 @@
 				1269E94D2A763F4900B09FCB /* IQNSArray+Sort.swift in Sources */,
 				12E4DB992A7461FF0020F6C3 /* UIView + Extension.swift in Sources */,
 				1269E8F82A75ADF400B09FCB /* WWWatrGuideVM.swift in Sources */,
+				122DD46E2A840AE400C8F962 /* WWProfileVC.swift in Sources */,
 				1269E9492A763F4900B09FCB /* IQUIScrollView+Additions.swift in Sources */,
 				12E4DB972A7446300020F6C3 /* WWMenuVC + TableView.swift in Sources */,
 				12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */,
@@ -1566,6 +1565,7 @@
 				12C562642A7695A60088E709 /* WWDiscoverInfoTextCVC.swift in Sources */,
 				12E4DB492A73CA190020F6C3 /* WWEnterPhoneVM.swift in Sources */,
 				12E4DB272A73A45F0020F6C3 /* WWStoryBoard.swift in Sources */,
+				122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */,
 				12E4DB9F2A7464400020F6C3 /* WWWatrSourceInfoVM.swift in Sources */,
 				12E4DB922A7441FE0020F6C3 /* WWVerticalButtonTVC.swift in Sources */,
 				12E4DB472A73CA0B0020F6C3 /* WWEnterPhoneVC.swift in Sources */,
@@ -1736,7 +1736,7 @@
 		};
 		12E0B7832A6EEEFD002B7181 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EABB455CF5BF06E7347D43F /* Pods-WATRWELL.debug.xcconfig */;
+			baseConfigurationReference = F0859A51DD2A09B19F6103DA /* Pods-WATRWELL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1776,7 +1776,7 @@
 		};
 		12E0B7842A6EEEFD002B7181 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35063331A360E0712031DF5B /* Pods-WATRWELL.release.xcconfig */;
+			baseConfigurationReference = A19FB6FD22B668C6D48DEC0B /* Pods-WATRWELL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

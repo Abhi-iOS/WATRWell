@@ -111,7 +111,12 @@ extension WWStep1VC: UITextFieldDelegate {
         case .firstName, .lastName:
             return newString.count <= 25
         case .mobile:
-            return newString.isNumeric && newString.count <= 14
+            if newString.count <= 14 {
+                let formattedNumber = newString.formatPhoneNumber()
+                textField.text = formattedNumber
+                return true
+            }
+            return false
         case .email:
             return newString.contains(" ").not()
         default:

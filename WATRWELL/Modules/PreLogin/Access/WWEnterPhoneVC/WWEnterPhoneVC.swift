@@ -20,7 +20,7 @@ final class WWEnterPhoneVC: WWBaseVC {
     private(set) var viewModel: WWEnterPhoneVM!
     
     // Overriden functions
-        override func setupViews() {
+    override func setupViews() {
         super.setupViews()
         phoneNumberTextField.delegate = self
         phoneNumberTextField.keyboardType = .numberPad
@@ -65,6 +65,11 @@ extension WWEnterPhoneVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let userEnteredString = textField.text ?? ""
         let newString = (userEnteredString as NSString).replacingCharacters(in: range, with: string) as String
-        return newString.isNumeric && newString.count <= 14
+        if newString.count <= 14 {
+            let formattedNumber = newString.formatPhoneNumber()
+            textField.text = formattedNumber
+            return true
+        }
+        return false
     }
 }

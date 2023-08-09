@@ -61,6 +61,29 @@ extension String {
         return attributedString
 
     }
+    
+    func formatPhoneNumber() -> String {
+        let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        var formattedNumber = ""
+        let areaCodeLength = min(3, cleanPhoneNumber.count)
+        let startIndex = cleanPhoneNumber.index(cleanPhoneNumber.startIndex, offsetBy: areaCodeLength)
+        let areaCode = cleanPhoneNumber[..<startIndex]
+        formattedNumber += String(areaCode)
+        let prefixLength = min(3, cleanPhoneNumber.count - areaCodeLength)
+        let prefixStartIndex = cleanPhoneNumber.index(startIndex, offsetBy: prefixLength)
+        let prefix = cleanPhoneNumber[startIndex..<prefixStartIndex]
+
+        if cleanPhoneNumber.count - areaCodeLength > 0 {
+            formattedNumber += "-\(prefix)"
+        }
+
+        if cleanPhoneNumber.count - areaCodeLength > 3 {
+            let remainingDigits = cleanPhoneNumber.suffix(from: prefixStartIndex)
+            formattedNumber += "-\(remainingDigits)"
+        }
+
+        return formattedNumber
+    }
 }
 
 extension NSAttributedString {
