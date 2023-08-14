@@ -11,7 +11,13 @@ import RxCocoa
 
 final class WWWatrSourceInfoVM {
     private let disposeBag = DisposeBag()
+    private(set) var outletDetail: WWOutletData
+    private(set) var outletWatrSource: [WWOutletWatrSource]
     
+    init(outletDetail: WWOutletData, outletWatrSource: [WWOutletWatrSource]) {
+        self.outletDetail = outletDetail
+        self.outletWatrSource = outletWatrSource
+    }
 }
 
 extension WWWatrSourceInfoVM: WWViewModelProtocol {

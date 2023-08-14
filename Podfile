@@ -14,6 +14,7 @@ end
 def app_pods
   pod 'NVActivityIndicatorView', '~> 4.8.0'
   pod 'BraintreeDropIn'
+  pod 'Kingfisher', '~> 5.0'
 end
 
 def maps

@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 final class WWWatrSourceInfoVC: WWBaseVC {
     
@@ -19,6 +20,7 @@ final class WWWatrSourceInfoVC: WWBaseVC {
     @IBOutlet weak var locSubtitleLabel: WWLabel!
     @IBOutlet weak var locStreetAddLabel: WWLabel!
     @IBOutlet weak var watrSrcTypeLabel: WWLabel!
+    @IBOutlet weak var distFromYouLabel: WWLabel!
     
     @IBOutlet weak var electrolyteStackView: UIStackView! {
         didSet{
@@ -63,6 +65,7 @@ final class WWWatrSourceInfoVC: WWBaseVC {
     // Overriden functions
     override func setupViews() {
         configure(with: viewModel)
+        setupData()
     }
 }
 
@@ -87,12 +90,41 @@ extension WWWatrSourceInfoVC: WWControllerType {
     }
 }
 
-// MARK: - ViewController life cycle methods
-extension WWWatrSourceInfoVC {
-    
-}
-
 private extension WWWatrSourceInfoVC {
-    
+    func setupData() {
+        let outletDetail = viewModel.outletDetail
+        locLogoImageView.setImage(outletDetail.logo, placeHolder: nil)
+        locTitleLabel.text = outletDetail.title
+        locSubtitleLabel.text = outletDetail.subTitle
+        locStreetAddLabel.text = outletDetail.address
+        watrSrcTypeLabel.text = outletDetail.sourceType.title
+        
+        
+        let loc1 = CLLocation(latitude: outletDetail.coordinate.latitude, longitude: outletDetail.coordinate.longitude)
+        let distance = WWLocationManager.shared.currentLocation.distance(from: loc1).getDistance()
+        distFromYouLabel.attributedText = distance.getDistanceString()
+        
+        let watrSource = viewModel.outletWatrSource
+        electrolyteStackView.isHidden = true
+        immunityStackView.isHidden = true
+        antiAgingStackView.isHidden = true
+        watrSource.forEach { source in
+            switch source.sourceType {
+            case .electrolyte:
+                electrolyteStackView.isHidden = false
+                elcNameLabel.text = source.displayName
+                elcPercentLabel.text = source.percent
+            case .immunity:
+                immunityStackView.isHidden = false
+                immNameLabel.text = source.displayName
+                immPercentLabel.text = source.percent
+            case .antiAging:
+                antiAgingStackView.isHidden = false
+                aaNameLabel.text = source.displayName
+                aaPercentLabel.text = source.percent
+            default: break
+            }
+        }
+    }
 }
 

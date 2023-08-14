@@ -20,17 +20,17 @@ struct WWRouter {
         }
     }
     
+    func setSplashScene() {
+        let splashVideoScene = WWSplashVC.instantiate(fromAppStoryboard: .AppLanding)
+        let navigationController = UINavigationController(rootViewController: splashVideoScene)
+        setRoot(viewController: navigationController)
+    }
+    
     func setLandingScene() {
         let splashVideoScene = WWLandingVC.create(with: WWLandingVM())
         let navigationController = UINavigationController(rootViewController: splashVideoScene)
         setRoot(viewController: navigationController)
     }
-    
-//    func setTestLandingScene() {
-//        let splashVideoScene = WWStep4VC.create(with: WWStep4VM())
-//        let navigationController = UINavigationController(rootViewController: splashVideoScene)
-//        setRoot(viewController: navigationController)
-//    }
     
     func setTabbarAsRoot(initialItem: WWTabBarVC.SceneType = .source, sourceType: WWSourceVM.IncomingCase? = nil) {
         let tabbarScene = WWTabBarVC(with: initialItem, sourceType: sourceType)

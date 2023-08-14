@@ -12,3 +12,4 @@ extension Bool {
         return !self
     }
 }
+

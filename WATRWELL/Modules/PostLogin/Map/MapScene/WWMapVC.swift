@@ -22,10 +22,15 @@ final class WWMapVC: WWBaseVC {
     // Properties
     private var viewModel: WWMapVM!
     private var navBarView: WWNavBarView = .fromNib()
+    private let rquestDescSubject = PublishSubject<Int>()
     
     // Overriden functions
     override func setupViews() {
         setNavView()
+        setupMapView()
+        WWLocationManager.shared.fetchCurrentLocation { [weak self] location in
+            self?.zoomToCurrentLocation(location.coordinate)
+        }
         willoButton.setBlackFillButton()
         cactusButton.setWhiteFillButton()
         configure(with: viewModel)
@@ -42,14 +47,25 @@ extension WWMapVC: WWControllerType {
     }
 
     func configure(with viewModel: WWMapVM){
-        let input = WWMapVM.Input(willoTapped: willoButton.rx.tap.asObservable(),
-                                  cactusTapped: cactusButton.rx.tap.asObservable())
+        let input = WWMapVM.Input(didLoadTrigger: Observable.just(()),
+                                  willoTapped: willoButton.rx.tap.asObservable(),
+                                  cactusTapped: cactusButton.rx.tap.asObservable(),
+                                  requestDescription: rquestDescSubject.asObserver())
         
         let output = viewModel.transform(input: input)
         
         output.updateSelection.drive(onNext: { [weak self] option in
             guard let self else { return }
             self.updateMapOptionSelection(with: option)
+        }).disposed(by: rx.disposeBag)
+        
+        output.updateMarker.drive(onNext: { [weak self] option in
+            guard let self else { return }
+            self.updateMarkers(for: option)
+        }).disposed(by: rx.disposeBag)
+        
+        output.showOutletDesc.drive(onNext: { [weak self] watrSource in
+            self?.showWatrSourceDetail(with: watrSource)
         }).disposed(by: rx.disposeBag)
     }
 }
@@ -80,8 +96,7 @@ private extension WWMapVC {
             willoButton.setBlackFillButton()
             cactusButton.setWhiteFillButton()
         }
-        //TODO: - Map updates goes here
-        showWatrSourceDetail()
+        updateMarkers(for: option)
     }
     
     func showMenuOnTabBar() {
@@ -89,9 +104,58 @@ private extension WWMapVC {
         tabBarController?.present(menuScene, animated: true)
     }
     
-    func showWatrSourceDetail(){
-        let watrSourceScene = WWWatrSourceInfoVC.create(with: WWWatrSourceInfoVM())
+    func showWatrSourceDetail(with data: (WWOutletData,[WWOutletWatrSource])){
+        let watrSourceScene = WWWatrSourceInfoVC.create(with: WWWatrSourceInfoVM(outletDetail: data.0, outletWatrSource: data.1))
         tabBarController?.present(watrSourceScene, animated: true)
+    }
+    
+    func setupMapView() {
+        mapView.isMyLocationEnabled = true
+        mapView.setMinZoom(5, maxZoom: 30)
+        mapView.delegate = self
+    }
+    
+    func zoomToCurrentLocation(_ loc: CLLocationCoordinate2D) {
+        mapView.camera = .camera(withLatitude: loc.latitude, longitude: loc.longitude, zoom: 9)
+    }
+    
+    func updateMarkers(for type: WWMapVM.SelectedOption) {
+        mapView.clear()
+        switch type {
+        case .cactus: updateCactusMarker()
+        case .willo: updateWilloMarker()
+        }
+    }
+    
+    func updateWilloMarker() {
+        viewModel.willoOutlets.forEach { [weak self] outlet in
+            self?.setMarker(for: outlet)
+        }
+    }
+    
+    func updateCactusMarker() {
+        viewModel.cactusOutlets.forEach { [weak self] outlet in
+            self?.setMarker(for: outlet)
+        }
+    }
+
+    func setMarker(for outlet: WWOutletData) {
+        let marker = GMSMarker(position: outlet.coordinate)
+        let markerImage = UIImage(named: "logo-latest 1")
+        marker.icon = markerImage
+        marker.setIconSize(scaledToSize: .init(width: 20, height: 40))
+        marker.isFlat = false
+        marker.id = outlet.id
+        marker.map = self.mapView
+    }
+}
+
+extension WWMapVC: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let markerId = marker.id
+        rquestDescSubject.onNext(markerId)
+        mapView.animate(toLocation: marker.position)
+        return true
     }
 }
 

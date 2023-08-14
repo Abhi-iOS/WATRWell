@@ -50,7 +50,6 @@ extension String {
     }
     
     func applyColor(to value: [(String, WWColors)]) -> NSAttributedString? {
-        let boldTexts = ["50,000 USERS", "100%"]
         let attributedString = NSMutableAttributedString(string: self,
                                                          attributes: [.font: WWFonts.europaLight.withSize(17)])
         value.forEach { textInfo in
@@ -62,27 +61,36 @@ extension String {
 
     }
     
+    func getDistanceString() -> NSAttributedString {
+        let distanceString = "Distance from you: ".uppercased() + self
+        let attributedString = NSMutableAttributedString(string: distanceString,
+                                                         attributes: [.font: WWFonts.europaRegular.withSize(15)])
+        let range = (distanceString as NSString).range(of: self)
+        let attr: [NSAttributedString.Key: Any] = [.font: WWFonts.europaLight.withSize(15)]
+        attributedString.addAttributes(attr, range: range)
+        return attributedString
+    }
+    
     func formatPhoneNumber() -> String {
-        let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        var formattedNumber = ""
-        let areaCodeLength = min(3, cleanPhoneNumber.count)
-        let startIndex = cleanPhoneNumber.index(cleanPhoneNumber.startIndex, offsetBy: areaCodeLength)
-        let areaCode = cleanPhoneNumber[..<startIndex]
-        formattedNumber += String(areaCode)
-        let prefixLength = min(3, cleanPhoneNumber.count - areaCodeLength)
-        let prefixStartIndex = cleanPhoneNumber.index(startIndex, offsetBy: prefixLength)
-        let prefix = cleanPhoneNumber[startIndex..<prefixStartIndex]
-
-        if cleanPhoneNumber.count - areaCodeLength > 0 {
-            formattedNumber += "-\(prefix)"
+        let mask = "(XXX) XXX - XXXX"
+        let numbers = self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = numbers.startIndex // numbers iterator
+        
+        // iterate over the mask characters until the iterator of numbers ends
+        for ch in mask where index < numbers.endIndex {
+            if ch == "X" {
+                // mask requires a number in this place, so take the next one
+                result.append(numbers[index])
+                
+                // move numbers iterator to the next index
+                index = numbers.index(after: index)
+                
+            } else {
+                result.append(ch) // just append a mask character
+            }
         }
-
-        if cleanPhoneNumber.count - areaCodeLength > 3 {
-            let remainingDigits = cleanPhoneNumber.suffix(from: prefixStartIndex)
-            formattedNumber += "-\(remainingDigits)"
-        }
-
-        return formattedNumber
+        return result
     }
 }
 
@@ -108,7 +116,7 @@ extension NSAttributedString {
 //MARK: - ValidityExression for Strings
 enum ValidityExression : String {
     case Email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-    case MobileNumber = "^[0-9]{4,15}$"
+    case MobileNumber = "^[0-9() -]{4,20}$"
     case Name = "^[a-zA-Z ]{3,}"
     case AccountNumber = "^[0-9]{9,18}"
     case CardNumber = "^[0-9]{16}"

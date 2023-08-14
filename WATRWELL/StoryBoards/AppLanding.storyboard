@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SplashVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WWSplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WWSplashVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-jP-fjU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designedAndDeveloped" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-EJ-gcp">
                                 <rect key="frame" x="0.0" y="655" width="375" height="12"/>
                             </imageView>
@@ -27,13 +24,9 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ShS-jP-fjU" secondAttribute="trailing" id="1JI-y5-8xp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BQf-EJ-gcp" secondAttribute="bottom" id="Ee1-AF-CKK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BQf-EJ-gcp" secondAttribute="trailing" id="QmJ-Je-fcZ"/>
                             <constraint firstItem="BQf-EJ-gcp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XBu-HN-ANb"/>
-                            <constraint firstAttribute="bottom" secondItem="ShS-jP-fjU" secondAttribute="bottom" id="bay-YM-Lje"/>
-                            <constraint firstItem="ShS-jP-fjU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tSw-P2-xHC"/>
-                            <constraint firstItem="ShS-jP-fjU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="zg8-eK-vXb"/>
                         </constraints>
                     </view>
                 </viewController>

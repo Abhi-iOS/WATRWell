@@ -39,7 +39,7 @@ extension WWStep1VC: UITableViewDelegate, UITableViewDataSource {
             cell.verticalButton.normalTitleColor = WWColors.hex000000.color
             cell.setData("EXIT", UIImage(named: "Cancel"))
             cell.tapHandler = { [weak self] in
-                self?.navigationController?.popViewController(animated: true)
+                self?.navigationController?.popToRootViewController(animated: true)
             }
             return cell
             
@@ -111,10 +111,10 @@ extension WWStep1VC: UITextFieldDelegate {
         case .firstName, .lastName:
             return newString.count <= 25
         case .mobile:
-            if newString.count <= 14 {
+            if newString.count <= 20 {
                 let formattedNumber = newString.formatPhoneNumber()
                 textField.text = formattedNumber
-                return true
+                return false
             }
             return false
         case .email:

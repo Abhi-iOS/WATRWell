@@ -38,8 +38,12 @@ extension WWEnterPhoneVC: WWControllerType {
     }
     
     func configure(with viewModel: WWEnterPhoneVM){
+        let accessTap = accessButton.rx.tap.do { [weak self] _ in
+            self?.view.endEditing(true)
+        }
+        
         let input = WWEnterPhoneVM.Input(userMobileNumber: phoneNumberTextField.textFieldText,
-                                         didTapAccess: accessButton.rx.tap.asObservable(),
+                                         didTapAccess: accessTap,
                                          didTapExit: exitButton.rx.tap.asObservable())
         
         let output = viewModel.transform(input: input)
@@ -64,11 +68,11 @@ private extension WWEnterPhoneVC {
 extension WWEnterPhoneVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let userEnteredString = textField.text ?? ""
-        let newString = (userEnteredString as NSString).replacingCharacters(in: range, with: string) as String
-        if newString.count <= 14 {
+        let newString = (userEnteredString as NSString).replacingCharacters(in: range, with: string)
+        if newString.count <= 20 {
             let formattedNumber = newString.formatPhoneNumber()
             textField.text = formattedNumber
-            return true
+            return false
         }
         return false
     }

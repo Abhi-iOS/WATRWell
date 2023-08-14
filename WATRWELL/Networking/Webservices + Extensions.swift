@@ -7,13 +7,14 @@
 
 import Foundation
 extension WebServices {
-    static var baseUrl: String { "http://13.50.16.34/api/v1/" }
+    static var baseUrl: String { "http://174.138.127.119/api/v1/" }
     
     enum EndPoint : String {
         
         case users = "users"
         case validateOtp = "users/verify_otp"
         case resendOtp = "users/resend_otp"
+        case outlets = "outlets"
         
         // MARK: - API url path
         var path : String {

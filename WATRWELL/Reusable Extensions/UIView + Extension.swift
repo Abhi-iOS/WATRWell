@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import Kingfisher
 
 extension UIView {
     ///Sets the corner radius of the view
@@ -137,5 +139,36 @@ extension UIWindow {
             }
             return topViewController(for: presentedViewController)
         }
+    }
+}
+
+extension GMSMarker {
+    func setIconSize(scaledToSize newSize: CGSize) {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        icon?.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        icon = newImage
+    }
+    
+    var id: Int {
+        set(id) {
+            self.userData = id
+        }
+
+        get {
+           return self.userData as! Int
+       }
+   }
+}
+
+extension UIImageView {
+    func setImage(_ url: String, placeHolder: UIImage?){
+        guard let url = URL(string: url) else {
+            image = placeHolder
+            return
+        }
+        
+        kf.setImage(with: url, placeholder: placeHolder)
     }
 }
