@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,7 +81,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xbi-sO-fo8">
                                 <rect key="frame" x="45.333333333333343" y="250" width="272.33333333333326" height="93"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-M4-gfZ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-M4-gfZ">
                                         <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="20.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-Y1-86w" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
@@ -92,6 +92,9 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-KI-pXS" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
                                                 <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Use-2q-Xp3"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="DRINK 4*">
                                                         <attributes>
@@ -104,7 +107,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-aE-Jxu">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-aE-Jxu">
                                         <rect key="frame" x="0.0" y="36.333333333333314" width="272.33333333333331" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-4N-lyU" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
@@ -115,6 +118,9 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-dH-qvA" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
                                                 <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="1Qa-R2-C1X"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="DRINK 4*">
                                                         <attributes>
@@ -127,7 +133,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JkD-a8-AO5">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkD-a8-AO5">
                                         <rect key="frame" x="0.0" y="72.666666666666686" width="272.33333333333331" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waF-Kf-GuW" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
@@ -138,6 +144,9 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-wy-5ad" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
                                                 <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="hnX-UM-HKV"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="DRINK 4*">
                                                         <attributes>
@@ -216,7 +225,7 @@
     <resources>
         <image name="bottle_ic" width="7.3333334922790527" height="24.666666030883789"/>
         <image name="watrGuideInfo_ic_small" width="30" height="42"/>
-        <image name="watrGuide_ic" width="200" height="29"/>
+        <image name="watrGuide_ic" width="206" height="29"/>
         <namedColor name="hydrationBlue">
             <color red="0.12549019607843137" green="0.23921568627450981" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

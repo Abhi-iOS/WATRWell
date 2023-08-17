@@ -18,6 +18,7 @@ class WWTabBarVC: UITabBarController {
     
     private let initialScene: SceneType
     private let sourceType: WWSourceVM.IncomingCase?
+    let tabBarAppearance = UITabBarItem.appearance()
     
     private let backgroundImageView: UIImageView = {
         let bgImageView = UIImageView(image: UIImage(named: "tabbarBG"))
@@ -54,7 +55,7 @@ class WWTabBarVC: UITabBarController {
         return nvc
     }()
     var profileNavigationController: UINavigationController = {
-        let profileScene = WWProfileVC.instantiate(fromAppStoryboard: .Profile)
+        let profileScene = WWProfileVC.create(with: WWProfileVM())
         let nvc = UINavigationController(rootViewController: profileScene)
         nvc.tabBarItem = UITabBarItem(title: "PROFILE", image: nil, tag: 3)
         return nvc
@@ -77,6 +78,7 @@ class WWTabBarVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(resetTabbar), name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
         setupTabs(initial: initialScene.rawValue)
         tabBar.insertSubview(backgroundImageView, at: 0)
         tabBar.unselectedItemTintColor = WWColors.hexFFFFFF.color
@@ -92,11 +94,7 @@ class WWTabBarVC: UITabBarController {
         // Assign the view controllers to the tab bar
         self.viewControllers = tabBarControllers
         
-        // Set the tab bar item appearance to show only text
-        let tabBarAppearance = UITabBarItem.appearance()
-        tabBarAppearance.setTitleTextAttributes([.foregroundColor: WWColors.hexDF5509.color,
-                                                 .font: WWFonts.europaRegular.withSize(14)], for: .selected)
-        tabBarAppearance.setTitleTextAttributes([.font: WWFonts.europaRegular.withSize(14)], for: .normal)
+        tabBar.tintColor = WWColors.hexDF5509.color
         
         // Adjust the vertical position of the title for each tab bar item
         for item in self.tabBar.items ?? [] {
@@ -122,6 +120,12 @@ class WWTabBarVC: UITabBarController {
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        tabBar.tintColor = WWColors.hexDF5509.color
         addDotViewToTabBarItem(atIndex: item.tag)
+    }
+    
+    @objc private func resetTabbar() {
+        tabBar.tintColor = .white
+        selectedNotifierView.removeFromSuperview()
     }
 }

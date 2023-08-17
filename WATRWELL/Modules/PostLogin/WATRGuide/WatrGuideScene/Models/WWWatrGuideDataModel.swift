@@ -20,9 +20,9 @@ struct WWWatrGuideDataModel {
 extension WWWatrGuideDataModel {
     static func getDataSource() -> [WWWatrGuideDataModel] {
         return [WWWatrGuideDataModel(title: "Achieve Daily Hydration".uppercased().applyColor(to: [("Hydration", WWColors.hex203D75)]),
-                                     leftTitle1: "Below 200 Lbs:",
-                                     leftTitle2: "200 to 300 Lbs:",
-                                     leftTitle3: "Above 300 Lbs:",
+                                     leftTitle1: "\tBelow 200 Lbs:",
+                                     leftTitle2: "\t200 to 300 Lbs:",
+                                     leftTitle3: "\tAbove 300 Lbs:",
                                      rightValue1: getRightValue(with: "4", colorType: .hex203D75),
                                      rightValue2: getRightValue(with: "6", colorType: .hex203D75),
                                      rightValue3: getRightValue(with: "8", colorType: .hex203D75)),

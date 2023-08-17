@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -151,7 +151,7 @@
         <!--Watr Guide Pop UpVC-->
         <scene sceneID="nni-do-fEc">
             <objects>
-                <viewController storyboardIdentifier="WWWatrGuidePopUpVC" id="Ni8-6l-rVr" customClass="WWWatrGuidePopUpVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WWWatrGuidePopUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ni8-6l-rVr" customClass="WWWatrGuidePopUpVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n9n-wK-y2X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +159,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-33-o0W">
                                 <rect key="frame" x="23.5" y="172.5" width="328" height="342.5"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aqs-rl-5zY">
+                                        <rect key="frame" x="43.5" y="106.5" width="240" height="128"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-xM-RAw">
+                                        <rect key="frame" x="163.5" y="170.5" width="0.0" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="8TH-Fi-7rQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="Ni8-6l-rVr" eventType="touchUpInside" id="G7D-48-zfZ"/>
+                                        </connections>
+                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watrGuideInfo_ic" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-ld-NVe">
                                         <rect key="frame" x="141" y="24" width="46" height="65"/>
                                     </imageView>
@@ -183,12 +197,19 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="aI3-Oy-2r5" firstAttribute="top" secondItem="IAa-yl-Ye5" secondAttribute="bottom" constant="35.5" id="1ri-ZX-sRb"/>
+                                    <constraint firstItem="Aqs-rl-5zY" firstAttribute="top" secondItem="rfq-33-o0W" secondAttribute="top" id="5hn-UB-qLk"/>
                                     <constraint firstAttribute="trailing" secondItem="IAa-yl-Ye5" secondAttribute="trailing" constant="16" id="6QY-lV-HDV"/>
+                                    <constraint firstAttribute="trailing" secondItem="PkE-xM-RAw" secondAttribute="trailing" id="BC4-OY-Vzb"/>
                                     <constraint firstItem="aI3-Oy-2r5" firstAttribute="centerX" secondItem="IAa-yl-Ye5" secondAttribute="centerX" id="Px7-SX-8Kz"/>
+                                    <constraint firstItem="PkE-xM-RAw" firstAttribute="leading" secondItem="rfq-33-o0W" secondAttribute="leading" id="YQt-8o-1Ig"/>
                                     <constraint firstItem="IAa-yl-Ye5" firstAttribute="leading" secondItem="rfq-33-o0W" secondAttribute="leading" constant="16" id="bob-cb-eaH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aqs-rl-5zY" secondAttribute="trailing" id="hES-K5-yvQ"/>
                                     <constraint firstAttribute="bottom" secondItem="aI3-Oy-2r5" secondAttribute="bottom" constant="16" id="mJc-c2-yYK"/>
+                                    <constraint firstAttribute="bottom" secondItem="PkE-xM-RAw" secondAttribute="bottom" id="osv-w5-OVg"/>
                                     <constraint firstItem="IAa-yl-Ye5" firstAttribute="top" secondItem="MWS-ld-NVe" secondAttribute="bottom" constant="12" id="sKa-MO-8WL"/>
+                                    <constraint firstItem="Aqs-rl-5zY" firstAttribute="leading" secondItem="rfq-33-o0W" secondAttribute="leading" id="tPP-Ol-M8O"/>
                                     <constraint firstItem="MWS-ld-NVe" firstAttribute="centerX" secondItem="rfq-33-o0W" secondAttribute="centerX" id="wxd-uw-Pco"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aqs-rl-5zY" secondAttribute="bottom" id="wy2-t5-Y2b"/>
                                     <constraint firstItem="MWS-ld-NVe" firstAttribute="top" secondItem="rfq-33-o0W" secondAttribute="top" constant="24" id="yvv-oj-FGw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -196,6 +217,13 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="MWS-ld-NVe"/>
+                                        <exclude reference="IAa-yl-Ye5"/>
+                                        <exclude reference="aI3-Oy-2r5"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I5L-p4-s5P"/>
@@ -209,6 +237,7 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
                     <connections>
                         <outlet property="closeButton" destination="aI3-Oy-2r5" id="J1a-VE-ebc"/>
                         <outlet property="descLabel" destination="IAa-yl-Ye5" id="Ue7-gc-pGe"/>
+                        <outlet property="imageView" destination="Aqs-rl-5zY" id="Ynu-Mb-okN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NF2-7S-PU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

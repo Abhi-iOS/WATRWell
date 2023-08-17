@@ -72,9 +72,11 @@ private extension WWMenuVC{
             }
             
         case .dailyBenifits:
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
             showDailyBenifits()
             
         case .watrGuide:
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
             showWatrGuide()
             
         case .conusmption:

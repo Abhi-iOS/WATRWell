@@ -10,7 +10,7 @@ import UIKit
 class WWNavBarView: UIView {
     
     // Outlets
-    @IBOutlet private weak var logoImageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var backButton: WWVerticalImageTextButton!
     

@@ -55,7 +55,7 @@ class WWWatrGuideCVC: WWBaseCVC {
         leftTitle1Label.text = data.leftTitle1.uppercased()
         leftTitle2Label.text = data.leftTitle2.uppercased()
         leftTitle3Label.text = data.leftTitle3.uppercased()
-        
+
         rightTitle1Label.attributedText = data.rightValue1
         rightTitle2Label.attributedText = data.rightValue2
         rightTitle3Label.attributedText = data.rightValue3

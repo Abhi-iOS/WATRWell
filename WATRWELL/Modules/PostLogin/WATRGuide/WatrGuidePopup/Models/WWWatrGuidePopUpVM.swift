@@ -11,7 +11,10 @@ import RxCocoa
 
 final class WWWatrGuidePopUpVM {
     private let disposeBag = DisposeBag()
-    
+    let imageName: String
+    init(imageName: String) {
+        self.imageName = imageName
+    }
 }
 
 extension WWWatrGuidePopUpVM: WWViewModelProtocol {

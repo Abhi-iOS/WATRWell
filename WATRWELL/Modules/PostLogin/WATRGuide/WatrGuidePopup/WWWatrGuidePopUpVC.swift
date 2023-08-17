@@ -14,14 +14,21 @@ final class WWWatrGuidePopUpVC: WWBaseVC {
     // Outlets
     @IBOutlet weak var descLabel: WWLabel!
     @IBOutlet weak var closeButton: WWVerticalImageTextButton!
-    
+    @IBOutlet weak var imageView: UIImageView!
+
     // Properties
     private var viewModel: WWWatrGuidePopUpVM!
     
     // Overriden functions
     override func setupViews() {
         configure(with: viewModel)
+        imageView.image = UIImage(named: viewModel.imageName)
     }
+    
+    @IBAction func dismiss(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
 
 // MARK: - WWControllerType

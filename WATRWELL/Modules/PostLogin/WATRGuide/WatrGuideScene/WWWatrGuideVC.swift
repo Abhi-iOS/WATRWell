@@ -18,7 +18,8 @@ final class WWWatrGuideVC: WWBaseVC {
     
     // Properties
     private(set) var viewModel: WWWatrGuideVM!
-    private let navBar: WWNavBarView = .fromNib()
+    let navBar: WWNavBarView = .fromNib()
+    var lastContentOffset: CGPoint = .zero
     
     // Overriden functions
     override func setupViews() {
@@ -60,6 +61,7 @@ extension WWWatrGuideVC {
 private extension WWWatrGuideVC {
     func setNavBar(){
         navContainerView.addSubview(navBar)
+        navBar.logoImageView.tintColor = WWColors.hex203D75.color
         view.layoutIfNeeded()
         navBar.shareDidTap = { [weak self] in
             self?.showMenu()

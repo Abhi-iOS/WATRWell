@@ -23,6 +23,13 @@
 		12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12586AB22A6EF5C40086B315 /* AppDelegate.swift */; };
 		12586AB82A6EF5C40086B315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12586AB42A6EF5C40086B315 /* Assets.xcassets */; };
 		12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12586ABA2A6EF6370086B315 /* PreLogin.storyboard */; };
+		125EE5712A8B9BBB007B0F84 /* WWProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EE5702A8B9BBB007B0F84 /* WWProfileVM.swift */; };
+		125EE5762A8BA027007B0F84 /* WWProfilePicTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EE5742A8BA027007B0F84 /* WWProfilePicTVC.swift */; };
+		125EE5772A8BA027007B0F84 /* WWProfilePicTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125EE5752A8BA027007B0F84 /* WWProfilePicTVC.xib */; };
+		125EE5792A8BA3B7007B0F84 /* WWProfileVC + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EE5782A8BA3B7007B0F84 /* WWProfileVC + TableView.swift */; };
+		125EE57B2A8BEDD4007B0F84 /* WWImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EE57A2A8BEDD4007B0F84 /* WWImagePicker.swift */; };
+		125EE57E2A8E71CD007B0F84 /* WWProfileSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EE57D2A8E71CD007B0F84 /* WWProfileSectionHeader.swift */; };
+		125EE5802A8E71E6007B0F84 /* WWProfileSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125EE57F2A8E71E6007B0F84 /* WWProfileSectionHeader.xib */; };
 		1269E8E42A74950100B09FCB /* DailyBenifitsMasterVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E8E32A74950100B09FCB /* DailyBenifitsMasterVC + CollectionView.swift */; };
 		1269E8E92A759DF900B09FCB /* Europa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1269E8E62A759DF900B09FCB /* Europa-Regular.ttf */; };
 		1269E8EA2A759DF900B09FCB /* Europa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1269E8E72A759DF900B09FCB /* Europa-Bold.ttf */; };
@@ -63,6 +70,8 @@
 		1269E94B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift */; };
 		1269E94C2A763F4900B09FCB /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93C2A763F4900B09FCB /* IQUIView+Hierarchy.swift */; };
 		1269E94D2A763F4900B09FCB /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */; };
+		12816E472A8E7C020062F32C /* WWAccountInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12816E452A8E7C020062F32C /* WWAccountInfoTVC.swift */; };
+		12816E482A8E7C020062F32C /* WWAccountInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12816E462A8E7C020062F32C /* WWAccountInfoTVC.xib */; };
 		12AEBC432A797FCB009BCDFB /* WWNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC422A797FCB009BCDFB /* WWNetworking.swift */; };
 		12AEBC452A798042009BCDFB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC442A798042009BCDFB /* JSON.swift */; };
 		12AEBC472A7987A6009BCDFB /* WWWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC462A7987A6009BCDFB /* WWWebservice.swift */; };
@@ -150,6 +159,10 @@
 		12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */; };
 		12E4DBB72A7487F60020F6C3 /* WWDailyBenifitsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */; };
 		12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */; };
+		12E50E492A8E9615000A88E5 /* WWAddressTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E472A8E9615000A88E5 /* WWAddressTVC.swift */; };
+		12E50E4A2A8E9615000A88E5 /* WWAddressTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E482A8E9615000A88E5 /* WWAddressTVC.xib */; };
+		12E50E4E2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */; };
+		12E50E4F2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */; };
 		20E993D6E3BCB9991070DF4B /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +201,13 @@
 		12586AB22A6EF5C40086B315 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12586AB42A6EF5C40086B315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12586ABA2A6EF6370086B315 /* PreLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreLogin.storyboard; sourceTree = "<group>"; };
+		125EE5702A8B9BBB007B0F84 /* WWProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProfileVM.swift; sourceTree = "<group>"; };
+		125EE5742A8BA027007B0F84 /* WWProfilePicTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProfilePicTVC.swift; sourceTree = "<group>"; };
+		125EE5752A8BA027007B0F84 /* WWProfilePicTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWProfilePicTVC.xib; sourceTree = "<group>"; };
+		125EE5782A8BA3B7007B0F84 /* WWProfileVC + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWProfileVC + TableView.swift"; sourceTree = "<group>"; };
+		125EE57A2A8BEDD4007B0F84 /* WWImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWImagePicker.swift; sourceTree = "<group>"; };
+		125EE57D2A8E71CD007B0F84 /* WWProfileSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWProfileSectionHeader.swift; sourceTree = "<group>"; };
+		125EE57F2A8E71E6007B0F84 /* WWProfileSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWProfileSectionHeader.xib; sourceTree = "<group>"; };
 		1269E8E32A74950100B09FCB /* DailyBenifitsMasterVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyBenifitsMasterVC + CollectionView.swift"; sourceTree = "<group>"; };
 		1269E8E62A759DF900B09FCB /* Europa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Europa-Regular.ttf"; sourceTree = "<group>"; };
 		1269E8E72A759DF900B09FCB /* Europa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Europa-Bold.ttf"; sourceTree = "<group>"; };
@@ -229,6 +249,8 @@
 		1269E93B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		1269E93C2A763F4900B09FCB /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		12816E452A8E7C020062F32C /* WWAccountInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAccountInfoTVC.swift; sourceTree = "<group>"; };
+		12816E462A8E7C020062F32C /* WWAccountInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWAccountInfoTVC.xib; sourceTree = "<group>"; };
 		12AEBC422A797FCB009BCDFB /* WWNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWNetworking.swift; sourceTree = "<group>"; };
 		12AEBC442A798042009BCDFB /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		12AEBC462A7987A6009BCDFB /* WWWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWebservice.swift; sourceTree = "<group>"; };
@@ -319,6 +341,10 @@
 		12E4DBB42A7487F60020F6C3 /* WWDailyBenifitsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyBenifitsCVC.swift; sourceTree = "<group>"; };
 		12E4DBB52A7487F60020F6C3 /* WWDailyBenifitsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWDailyBenifitsCVC.xib; sourceTree = "<group>"; };
 		12E4DBB82A748A970020F6C3 /* DailyBenifitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBenifitsModel.swift; sourceTree = "<group>"; };
+		12E50E472A8E9615000A88E5 /* WWAddressTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAddressTVC.swift; sourceTree = "<group>"; };
+		12E50E482A8E9615000A88E5 /* WWAddressTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWAddressTVC.xib; sourceTree = "<group>"; };
+		12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWBodyMetricsTVC.swift; sourceTree = "<group>"; };
+		12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWBodyMetricsTVC.xib; sourceTree = "<group>"; };
 		1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19FB6FD22B668C6D48DEC0B /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
 		F0859A51DD2A09B19F6103DA /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -397,7 +423,9 @@
 		122DD46A2A840AE400C8F962 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				125EE5722A8B9FF8007B0F84 /* Views */,
 				122DD46B2A840AE400C8F962 /* WWProfileVC.swift */,
+				125EE5782A8BA3B7007B0F84 /* WWProfileVC + TableView.swift */,
 				122DD46C2A840AE400C8F962 /* Models */,
 			);
 			path = Profile;
@@ -407,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				122DD46D2A840AE400C8F962 /* WWUserModel.swift */,
+				125EE5702A8B9BBB007B0F84 /* WWProfileVM.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,6 +499,45 @@
 				12E4DB602A73F32D0020F6C3 /* Profile.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		125EE5722A8B9FF8007B0F84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E4B2A8E9A61000A88E5 /* WWBodyMetricsCell */,
+				12E50E462A8E95F8000A88E5 /* WWAddressInfoCell */,
+				125EE5812A8E7B6D007B0F84 /* WWAccountInfoCell */,
+				125EE57C2A8E717F007B0F84 /* WWProfileSectionHeader */,
+				125EE5732A8BA001007B0F84 /* WWProfilePicTVC */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		125EE5732A8BA001007B0F84 /* WWProfilePicTVC */ = {
+			isa = PBXGroup;
+			children = (
+				125EE5742A8BA027007B0F84 /* WWProfilePicTVC.swift */,
+				125EE5752A8BA027007B0F84 /* WWProfilePicTVC.xib */,
+			);
+			path = WWProfilePicTVC;
+			sourceTree = "<group>";
+		};
+		125EE57C2A8E717F007B0F84 /* WWProfileSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				125EE57D2A8E71CD007B0F84 /* WWProfileSectionHeader.swift */,
+				125EE57F2A8E71E6007B0F84 /* WWProfileSectionHeader.xib */,
+			);
+			path = WWProfileSectionHeader;
+			sourceTree = "<group>";
+		};
+		125EE5812A8E7B6D007B0F84 /* WWAccountInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				12816E452A8E7C020062F32C /* WWAccountInfoTVC.swift */,
+				12816E462A8E7C020062F32C /* WWAccountInfoTVC.xib */,
+			);
+			path = WWAccountInfoCell;
 			sourceTree = "<group>";
 		};
 		1269E8E52A759DDC00B09FCB /* Fonts */ = {
@@ -896,6 +964,7 @@
 				120AB8292A78490D009B80C8 /* WWDeviceDetail.swift */,
 				12AEBC4C2A7AE80C009BCDFB /* WWUserDefaults.swift */,
 				12B042062A8AB30B0033FC80 /* WWLocationManager.swift */,
+				125EE57A2A8BEDD4007B0F84 /* WWImagePicker.swift */,
 			);
 			path = WWUtils;
 			sourceTree = "<group>";
@@ -1266,6 +1335,24 @@
 			path = DailyBenifitsCVC;
 			sourceTree = "<group>";
 		};
+		12E50E462A8E95F8000A88E5 /* WWAddressInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E472A8E9615000A88E5 /* WWAddressTVC.swift */,
+				12E50E482A8E9615000A88E5 /* WWAddressTVC.xib */,
+			);
+			path = WWAddressInfoCell;
+			sourceTree = "<group>";
+		};
+		12E50E4B2A8E9A61000A88E5 /* WWBodyMetricsCell */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */,
+				12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */,
+			);
+			path = WWBodyMetricsCell;
+			sourceTree = "<group>";
+		};
 		1F7E47EABE139DAD20EB2BA7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1392,6 +1479,7 @@
 			files = (
 				1269E8EA2A759DF900B09FCB /* Europa-Bold.ttf in Resources */,
 				12E4DBAA2A7481E60020F6C3 /* Misc.storyboard in Resources */,
+				12E50E4A2A8E9615000A88E5 /* WWAddressTVC.xib in Resources */,
 				12E4DB932A7441FE0020F6C3 /* WWVerticalButtonTVC.xib in Resources */,
 				12C562602A7690120088E709 /* WWDiscoverIntentCVC.xib in Resources */,
 				12E4DB5B2A73F3050020F6C3 /* Source.storyboard in Resources */,
@@ -1399,6 +1487,7 @@
 				12E4DB612A73F32D0020F6C3 /* Profile.storyboard in Resources */,
 				12E4DB882A743E760020F6C3 /* WWLogoTVC.xib in Resources */,
 				12586AB82A6EF5C40086B315 /* Assets.xcassets in Resources */,
+				12E50E4F2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib in Resources */,
 				12E4DB5D2A73F30E0020F6C3 /* Map.storyboard in Resources */,
 				122DD4762A84F13700C8F962 /* WATRWELL_INTRO.mp4 in Resources */,
 				12E4DB8F2A7440990020F6C3 /* WWSingleLabelTVC.xib in Resources */,
@@ -1406,9 +1495,12 @@
 				12C562652A7695A60088E709 /* WWDiscoverInfoTextCVC.xib in Resources */,
 				12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */,
 				12E4DB252A73A29D0020F6C3 /* AppLanding.storyboard in Resources */,
+				125EE5802A8E71E6007B0F84 /* WWProfileSectionHeader.xib in Resources */,
 				1269E9002A75AF7D00B09FCB /* WWWatrGuideCVC.xib in Resources */,
+				125EE5772A8BA027007B0F84 /* WWProfilePicTVC.xib in Resources */,
 				120AB8222A78369B009B80C8 /* WWSelectSourceCVC.xib in Resources */,
 				1269E8EB2A759DF900B09FCB /* Europa-Light.ttf in Resources */,
+				12816E482A8E7C020062F32C /* WWAccountInfoTVC.xib in Resources */,
 				1269E9162A75C81A00B09FCB /* WWSingleTFTVC.xib in Resources */,
 				12E4DB2D2A73ACAD0020F6C3 /* Colors.xcassets in Resources */,
 				120AB8262A7836B0009B80C8 /* WWSelectedSourceCVC.xib in Resources */,
@@ -1505,13 +1597,16 @@
 				12E4DB8B2A743E9A0020F6C3 /* WWBaseCells.swift in Sources */,
 				12C562672A769AC00088E709 /* WWDiscoverVC + CollectionView.swift in Sources */,
 				1269E8F02A75A50B00B09FCB /* WWNavBarView.swift in Sources */,
+				125EE5712A8B9BBB007B0F84 /* WWProfileVM.swift in Sources */,
 				12E4DB402A73C87D0020F6C3 /* WWLabel.swift in Sources */,
 				120AB81A2A78350E009B80C8 /* WWSourceVM.swift in Sources */,
 				12E4DB292A73A5730020F6C3 /* WWColors.swift in Sources */,
 				12C562512A764A590088E709 /* WWDropDownView.swift in Sources */,
+				12E50E4E2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift in Sources */,
 				1269E9152A75C81A00B09FCB /* WWSingleTFTVC.swift in Sources */,
 				1269E91F2A75CD3400B09FCB /* WWStep1VC + TableView.swift in Sources */,
 				12E4DB202A739FDC0020F6C3 /* WWLandingVM.swift in Sources */,
+				125EE5792A8BA3B7007B0F84 /* WWProfileVC + TableView.swift in Sources */,
 				1269E94A2A763F4900B09FCB /* IQUIViewController+Additions.swift in Sources */,
 				1269E9462A763F4900B09FCB /* IQKeyboardManagerConstants.swift in Sources */,
 				12AEBC4D2A7AE80C009BCDFB /* WWUserDefaults.swift in Sources */,
@@ -1526,10 +1621,12 @@
 				12B0420E2A8AD10A0033FC80 /* Double + Extension.swift in Sources */,
 				12AEBC602A82D1D2009BCDFB /* WWWatrGuideDataModel.swift in Sources */,
 				12E4DBA22A746C950020F6C3 /* WWPaymentSlider.swift in Sources */,
+				12E50E492A8E9615000A88E5 /* WWAddressTVC.swift in Sources */,
 				12AEBC5C2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift in Sources */,
 				12E4DB952A7443890020F6C3 /* TableView + Extensions.swift in Sources */,
 				12AEBC552A7CF896009BCDFB /* WWSourcePopVM.swift in Sources */,
 				120AB8182A782B29009B80C8 /* WWStep4VM.swift in Sources */,
+				12816E472A8E7C020062F32C /* WWAccountInfoTVC.swift in Sources */,
 				120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */,
 				1269E9102A75C7B200B09FCB /* WWStep1VM.swift in Sources */,
 				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
@@ -1578,8 +1675,10 @@
 				12E4DB992A7461FF0020F6C3 /* UIView + Extension.swift in Sources */,
 				12B0420C2A8AB9940033FC80 /* WWOutletListing.swift in Sources */,
 				1269E8F82A75ADF400B09FCB /* WWWatrGuideVM.swift in Sources */,
+				125EE57E2A8E71CD007B0F84 /* WWProfileSectionHeader.swift in Sources */,
 				122DD46E2A840AE400C8F962 /* WWProfileVC.swift in Sources */,
 				1269E9492A763F4900B09FCB /* IQUIScrollView+Additions.swift in Sources */,
+				125EE57B2A8BEDD4007B0F84 /* WWImagePicker.swift in Sources */,
 				12E4DB972A7446300020F6C3 /* WWMenuVC + TableView.swift in Sources */,
 				12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */,
 				12E4DB872A743E760020F6C3 /* WWLogoTVC.swift in Sources */,
@@ -1592,6 +1691,7 @@
 				120AB8212A78369B009B80C8 /* WWSelectSourceCVC.swift in Sources */,
 				12E4DB732A73FBB10020F6C3 /* WWDiscoverVC.swift in Sources */,
 				12C5625F2A7690120088E709 /* WWDiscoverIntentCVC.swift in Sources */,
+				125EE5762A8BA027007B0F84 /* WWProfilePicTVC.swift in Sources */,
 				12C5626B2A769B330088E709 /* WWDiscoverDataModel.swift in Sources */,
 				12E4DB392A73C1A80020F6C3 /* NSObject_RX + Extension.swift in Sources */,
 				12E4DB1D2A6EFF870020F6C3 /* WWLandingVC.swift in Sources */,
@@ -1781,7 +1881,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
@@ -1821,7 +1921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
