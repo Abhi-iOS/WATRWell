@@ -14,7 +14,7 @@ struct WWRouter {
     
     func setRootScene() {
         if WWUserDefaults.value(forKey: .isLoggedIn).boolValue {
-            setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
+            setTabbarAsRoot(initialItem: .source, sourceType: WWUserModel.currentUser.subscriptionTypeString == nil ? .notSubscribed : .subscribed)
         } else {
             setLandingScene()
         }

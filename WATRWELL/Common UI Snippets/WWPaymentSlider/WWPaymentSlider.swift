@@ -50,6 +50,7 @@ class WWPaymentSlider: UISlider {
         let roundedValue: Float = (value >= 0.65) ? 1.0 : 0.0
         updateSliderValue(roundedValue)
         if roundedValue == 1 {
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
             completion?()
         }
     }

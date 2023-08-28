@@ -113,6 +113,17 @@ private extension WWMapVC {
         mapView.isMyLocationEnabled = true
         mapView.setMinZoom(5, maxZoom: 30)
         mapView.delegate = self
+        do {
+              // Set the map style by passing the URL of the local file.
+              if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+              } else {
+                NSLog("Unable to find style.json")
+              }
+            } catch {
+              NSLog("One or more of the map styles failed to load. \(error)")
+            }
+
     }
     
     func zoomToCurrentLocation(_ loc: CLLocationCoordinate2D) {
@@ -145,7 +156,9 @@ private extension WWMapVC {
         marker.icon = markerImage
         marker.setIconSize(scaledToSize: .init(width: 20, height: 40))
         marker.isFlat = false
-        marker.id = outlet.id
+        if let id = outlet.id {
+            marker.id = id
+        }
         marker.map = self.mapView
     }
 }

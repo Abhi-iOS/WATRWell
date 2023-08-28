@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     
@@ -49,9 +50,16 @@ extension String {
         return attributedString
     }
     
-    func applyColor(to value: [(String, WWColors)]) -> NSAttributedString? {
+    func applyColor(to value: [(String, WWColors)], font: UIFont, applyParaStyle: Bool = false) -> NSAttributedString? {
         let attributedString = NSMutableAttributedString(string: self,
-                                                         attributes: [.font: WWFonts.europaLight.withSize(17)])
+                                                         attributes: [.font: font])
+        if applyParaStyle {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 1
+            paragraphStyle.lineHeightMultiple = 1.5
+            paragraphStyle.alignment = .center
+            attributedString.addAttributes([.paragraphStyle: paragraphStyle], range: (self as NSString).range(of: self))
+        }
         value.forEach { textInfo in
             let range = (self as NSString).range(of: textInfo.0.uppercased())
             let attr: [NSAttributedString.Key: Any] = [.foregroundColor: textInfo.1.color]
@@ -101,7 +109,7 @@ extension NSAttributedString {
         while let range = self.string.range(of: value, options: .caseInsensitive, range: Range(searchRange, in: self.string)) {
             let nsRange = NSRange(range, in: self.string)
             let attributes: [NSAttributedString.Key: Any] = [
-                .font: WWFonts.europaRegular.withSize(17)
+                .font: WWFonts.europaRegular.withSize(12)
             ]
             attributedString.addAttributes(attributes, range: nsRange)
             

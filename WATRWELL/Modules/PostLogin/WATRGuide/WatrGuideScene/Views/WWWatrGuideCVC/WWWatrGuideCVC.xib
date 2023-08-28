@@ -85,13 +85,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="20.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-Y1-86w" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-KI-pXS" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <rect key="frame" x="172.33333333333331" y="0.0" width="100" height="20.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="Use-2q-Xp3"/>
                                                 </constraints>
@@ -111,13 +111,13 @@
                                         <rect key="frame" x="0.0" y="36.333333333333314" width="272.33333333333331" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-4N-lyU" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-dH-qvA" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <rect key="frame" x="172.33333333333331" y="0.0" width="100" height="20.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="1Qa-R2-C1X"/>
                                                 </constraints>
@@ -137,13 +137,13 @@
                                         <rect key="frame" x="0.0" y="72.666666666666686" width="272.33333333333331" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BELOW 200 LBS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waF-Kf-GuW" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-wy-5ad" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                                <rect key="frame" x="200.33333333333331" y="0.0" width="72" height="20.333333333333332"/>
+                                                <rect key="frame" x="172.33333333333331" y="0.0" width="100" height="20.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="hnX-UM-HKV"/>
                                                 </constraints>
@@ -196,6 +196,11 @@
                             <constraint firstAttribute="trailing" secondItem="ZHd-n1-xoV" secondAttribute="trailing" constant="16" id="wOV-L7-p8c"/>
                             <constraint firstItem="47m-aR-SYx" firstAttribute="trailing" secondItem="tFi-Ra-Qro" secondAttribute="trailing" id="x4v-pf-AiI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="47m-aR-SYx"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
             </view>

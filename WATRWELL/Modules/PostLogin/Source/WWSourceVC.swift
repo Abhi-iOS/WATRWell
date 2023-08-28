@@ -53,10 +53,6 @@ extension WWSourceVC {
         super.viewDidLayoutSubviews()
         collectionView.collectionViewLayout.invalidateLayout()
         navBar.frame = navContainerView.bounds
-        if viewModel.viewType == .notSubscribed, WWDeviceDetail.model == .Regular {
-            navHeight.constant = 44
-            sourceTop.constant = 0
-        }
     }
 }
 
@@ -64,12 +60,13 @@ private extension WWSourceVC {
     func setupScreenContent() {
         switch viewModel.viewType {
         case .notSubscribed:
-            titleLabel.text = "SELECT YOUR WATR SOURCE"
+            titleLabel.text = "SELECT YOUR SOURCE SUBSCRIPTION"
             bottomPageControl.isHidden = true
-        case .subscribed:
-            titleLabel.text = "YOUR WATR SOURCE"
             topPageControl.isHidden = false
-
+        case .subscribed:
+            titleLabel.text = "YOUR SOURCE"
+            topPageControl.isHidden = true
+            bottomPageControl.isHidden = WWUserModel.currentUser.subscriptionType.dataSource.endIndex < 2
         }
     }
     

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Europa-Regular.ttf">
+            <string>Europa-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WWDailyConsumptionCVC" id="gTV-IL-0wX" customClass="WWDailyConsumptionCVC" customModule="WATRWELL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="428"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="428"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-lX-Cag">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="428"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0c-oM-tSo" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="124" y="24" width="40" height="21"/>
+                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-d8-z2v">
+                                <rect key="frame" x="89" y="69" width="110" height="110"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bPe-hh-aWm">
+                                <rect key="frame" x="36" y="209" width="216" height="20.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieh-c8-LUL" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWK-Ux-eFk" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="174.66666666666666" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byv-yV-MBS">
+                                <rect key="frame" x="117" y="299.33333333333331" width="54" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="watrGuideInfo_ic_small"/>
+                                <connections>
+                                    <action selector="didTapInfoButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="PHR-iL-y4q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bPe-hh-aWm" firstAttribute="centerX" secondItem="hGy-d8-z2v" secondAttribute="centerX" id="3ek-AS-Wk1"/>
+                            <constraint firstItem="Byv-yV-MBS" firstAttribute="centerX" secondItem="bPe-hh-aWm" secondAttribute="centerX" id="8fO-zE-WDy"/>
+                            <constraint firstItem="b0c-oM-tSo" firstAttribute="centerX" secondItem="qxe-lX-Cag" secondAttribute="centerX" id="KHR-ro-9FM"/>
+                            <constraint firstItem="hGy-d8-z2v" firstAttribute="centerX" secondItem="b0c-oM-tSo" secondAttribute="centerX" id="OfF-LE-EW4"/>
+                            <constraint firstItem="Byv-yV-MBS" firstAttribute="top" secondItem="bPe-hh-aWm" secondAttribute="bottom" constant="70" id="P4y-Ol-eXH"/>
+                            <constraint firstItem="hGy-d8-z2v" firstAttribute="top" secondItem="b0c-oM-tSo" secondAttribute="bottom" constant="24" id="WWW-Uj-KIg"/>
+                            <constraint firstItem="bPe-hh-aWm" firstAttribute="width" secondItem="qxe-lX-Cag" secondAttribute="width" multiplier="0.75" id="f72-HS-kDQ"/>
+                            <constraint firstItem="bPe-hh-aWm" firstAttribute="top" secondItem="hGy-d8-z2v" secondAttribute="bottom" constant="30" id="nPg-Sd-TDB"/>
+                            <constraint firstItem="b0c-oM-tSo" firstAttribute="top" secondItem="qxe-lX-Cag" secondAttribute="top" constant="24" id="ud4-RN-meZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qxe-lX-Cag" secondAttribute="trailing" id="40R-6G-9vI"/>
+                <constraint firstItem="qxe-lX-Cag" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Cq1-KN-FxF"/>
+                <constraint firstAttribute="bottom" secondItem="qxe-lX-Cag" secondAttribute="bottom" id="Yse-BB-Z79"/>
+                <constraint firstItem="qxe-lX-Cag" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hLe-F1-dL3"/>
+            </constraints>
+            <size key="customSize" width="288" height="428"/>
+            <connections>
+                <outlet property="bodyImageView" destination="hGy-d8-z2v" id="Q1s-pI-nu6"/>
+                <outlet property="descLabel1" destination="Ieh-c8-LUL" id="hTX-ko-7qa"/>
+                <outlet property="descLabel2" destination="FWK-Ux-eFk" id="2Z0-s1-QWJ"/>
+                <outlet property="infoButton" destination="Byv-yV-MBS" id="mcK-bj-uKi"/>
+                <outlet property="titleLabel" destination="b0c-oM-tSo" id="V4x-Ms-q92"/>
+            </connections>
+            <point key="canvasLocation" x="233.58778625954199" y="152.81690140845072"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="11" width="110" height="110"/>
+        <image name="watrGuideInfo_ic_small" width="30" height="42"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -163,6 +163,23 @@
 		12E50E4A2A8E9615000A88E5 /* WWAddressTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E482A8E9615000A88E5 /* WWAddressTVC.xib */; };
 		12E50E4E2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */; };
 		12E50E4F2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */; };
+		12E50E522A921FF7000A88E5 /* WWSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E512A921FF7000A88E5 /* WWSupportVC.swift */; };
+		12E50E552A9227C2000A88E5 /* WWDiscoverPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E542A9227C2000A88E5 /* WWDiscoverPopupVC.swift */; };
+		12E50E5A2A922B67000A88E5 /* WWConsumptionOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E592A922B67000A88E5 /* WWConsumptionOnboardingVC.swift */; };
+		12E50E5D2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E5C2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift */; };
+		12E50E5F2A923445000A88E5 /* WWBodyMetricsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E5E2A923445000A88E5 /* WWBodyMetricsVM.swift */; };
+		12E50E612A92363B000A88E5 /* WWDailyConsumptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E602A92363B000A88E5 /* WWDailyConsumptionVC.swift */; };
+		12E50E642A923683000A88E5 /* WWDailyConsumptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E632A923683000A88E5 /* WWDailyConsumptionVM.swift */; };
+		12E50E662A92369F000A88E5 /* WWDailyConsumptionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E652A92369F000A88E5 /* WWDailyConsumptionDataModel.swift */; };
+		12E50E682A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E672A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift */; };
+		12E50E6C2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E6A2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift */; };
+		12E50E6D2A923B9D000A88E5 /* WWDailyConsumptionCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E6B2A923B9D000A88E5 /* WWDailyConsumptionCVC.xib */; };
+		12E50E702A92404C000A88E5 /* DailyConsumptionPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E6F2A92404C000A88E5 /* DailyConsumptionPopUpVC.swift */; };
+		12E50E732A9527EA000A88E5 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E50E722A9527EA000A88E5 /* MapStyle.json */; };
+		12E50E762A952A90000A88E5 /* WWPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E752A952A90000A88E5 /* WWPickerView.swift */; };
+		12E50E782A9D1602000A88E5 /* WWSubscriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E772A9D1602000A88E5 /* WWSubscriptionData.swift */; };
+		12E50E7B2A9D21AF000A88E5 /* WWSubscriptionPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E7A2A9D21AF000A88E5 /* WWSubscriptionPopupVC.swift */; };
+		12E50E7E2A9D21F5000A88E5 /* WWSubscriptionPopupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E50E7D2A9D21F5000A88E5 /* WWSubscriptionPopupVM.swift */; };
 		20E993D6E3BCB9991070DF4B /* Pods_WATRWELL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */; };
 /* End PBXBuildFile section */
 
@@ -345,6 +362,23 @@
 		12E50E482A8E9615000A88E5 /* WWAddressTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWAddressTVC.xib; sourceTree = "<group>"; };
 		12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWBodyMetricsTVC.swift; sourceTree = "<group>"; };
 		12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWBodyMetricsTVC.xib; sourceTree = "<group>"; };
+		12E50E512A921FF7000A88E5 /* WWSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSupportVC.swift; sourceTree = "<group>"; };
+		12E50E542A9227C2000A88E5 /* WWDiscoverPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDiscoverPopupVC.swift; sourceTree = "<group>"; };
+		12E50E592A922B67000A88E5 /* WWConsumptionOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWConsumptionOnboardingVC.swift; sourceTree = "<group>"; };
+		12E50E5C2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWConsumptionOnboardingVM.swift; sourceTree = "<group>"; };
+		12E50E5E2A923445000A88E5 /* WWBodyMetricsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWBodyMetricsVM.swift; sourceTree = "<group>"; };
+		12E50E602A92363B000A88E5 /* WWDailyConsumptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyConsumptionVC.swift; sourceTree = "<group>"; };
+		12E50E632A923683000A88E5 /* WWDailyConsumptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyConsumptionVM.swift; sourceTree = "<group>"; };
+		12E50E652A92369F000A88E5 /* WWDailyConsumptionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyConsumptionDataModel.swift; sourceTree = "<group>"; };
+		12E50E672A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WWDailyConsumptionVC + CollectionView.swift"; sourceTree = "<group>"; };
+		12E50E6A2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDailyConsumptionCVC.swift; sourceTree = "<group>"; };
+		12E50E6B2A923B9D000A88E5 /* WWDailyConsumptionCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWDailyConsumptionCVC.xib; sourceTree = "<group>"; };
+		12E50E6F2A92404C000A88E5 /* DailyConsumptionPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyConsumptionPopUpVC.swift; sourceTree = "<group>"; };
+		12E50E722A9527EA000A88E5 /* MapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
+		12E50E752A952A90000A88E5 /* WWPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWPickerView.swift; sourceTree = "<group>"; };
+		12E50E772A9D1602000A88E5 /* WWSubscriptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSubscriptionData.swift; sourceTree = "<group>"; };
+		12E50E7A2A9D21AF000A88E5 /* WWSubscriptionPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSubscriptionPopupVC.swift; sourceTree = "<group>"; };
+		12E50E7D2A9D21F5000A88E5 /* WWSubscriptionPopupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSubscriptionPopupVM.swift; sourceTree = "<group>"; };
 		1F976CBBE8EF06ED4FB314C5 /* Pods_WATRWELL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WATRWELL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19FB6FD22B668C6D48DEC0B /* Pods-WATRWELL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.release.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.release.xcconfig"; sourceTree = "<group>"; };
 		F0859A51DD2A09B19F6103DA /* Pods-WATRWELL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WATRWELL.debug.xcconfig"; path = "Target Support Files/Pods-WATRWELL/Pods-WATRWELL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -451,6 +485,7 @@
 		12586AAC2A6EF5C40086B315 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12E50E712A9527DC000A88E5 /* MapStyle */,
 				1269E8E52A759DDC00B09FCB /* Fonts */,
 				12586AAD2A6EF5C40086B315 /* Plist */,
 				12586AB12A6EF5C40086B315 /* AppDelegate */,
@@ -917,6 +952,7 @@
 		12E0B78F2A6EEF93002B7181 /* Common UI Snippets */ = {
 			isa = PBXGroup;
 			children = (
+				12E50E742A952A81000A88E5 /* WWPickerView */,
 				12C5624F2A764A460088E709 /* WWDropDownView */,
 				1269E8EE2A75A4DD00B09FCB /* WWNavBarView */,
 				12E4DBA02A746C800020F6C3 /* WWPaymentSlider */,
@@ -1122,6 +1158,7 @@
 		12E4DB672A73F9E00020F6C3 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				12E50E532A9227A8000A88E5 /* DiscoverPopup */,
 				12C5625B2A768F8A0088E709 /* Views */,
 				12E4DB712A73FBA20020F6C3 /* Models */,
 				12E4DB722A73FBB10020F6C3 /* WWDiscoverVC.swift */,
@@ -1143,6 +1180,7 @@
 		12E4DB6A2A73F9F90020F6C3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				12E50E792A9D218B000A88E5 /* SubscriptonPopUp */,
 				12AEBC502A7CF86A009BCDFB /* PopupScene */,
 				120AB81B2A783648009B80C8 /* Views */,
 				12E4DB6B2A73FA0A0020F6C3 /* Models */,
@@ -1156,6 +1194,7 @@
 			isa = PBXGroup;
 			children = (
 				120AB8192A78350E009B80C8 /* WWSourceVM.swift */,
+				12E50E772A9D1602000A88E5 /* WWSubscriptionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1181,6 +1220,8 @@
 		12E4DB772A7433BB0020F6C3 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				12E50E562A922B45000A88E5 /* Consumption */,
+				12E50E502A921FDA000A88E5 /* Support */,
 				122DD46A2A840AE400C8F962 /* Profile */,
 				12E4DB632A73F4710020F6C3 /* TabBar */,
 				12E4DB6A2A73F9F90020F6C3 /* Source */,
@@ -1349,8 +1390,122 @@
 			children = (
 				12E50E4C2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift */,
 				12E50E4D2A8E9A82000A88E5 /* WWBodyMetricsTVC.xib */,
+				12E50E5E2A923445000A88E5 /* WWBodyMetricsVM.swift */,
 			);
 			path = WWBodyMetricsCell;
+			sourceTree = "<group>";
+		};
+		12E50E502A921FDA000A88E5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E512A921FF7000A88E5 /* WWSupportVC.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		12E50E532A9227A8000A88E5 /* DiscoverPopup */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E542A9227C2000A88E5 /* WWDiscoverPopupVC.swift */,
+			);
+			path = DiscoverPopup;
+			sourceTree = "<group>";
+		};
+		12E50E562A922B45000A88E5 /* Consumption */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E6E2A924031000A88E5 /* PopUp */,
+				12E50E582A922B54000A88E5 /* PostOnboarding */,
+				12E50E572A922B4E000A88E5 /* Onboarding */,
+			);
+			path = Consumption;
+			sourceTree = "<group>";
+		};
+		12E50E572A922B4E000A88E5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E5B2A922B9E000A88E5 /* Models */,
+				12E50E592A922B67000A88E5 /* WWConsumptionOnboardingVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		12E50E582A922B54000A88E5 /* PostOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E692A923B7B000A88E5 /* Views */,
+				12E50E622A92366C000A88E5 /* Models */,
+				12E50E602A92363B000A88E5 /* WWDailyConsumptionVC.swift */,
+				12E50E672A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift */,
+			);
+			path = PostOnboarding;
+			sourceTree = "<group>";
+		};
+		12E50E5B2A922B9E000A88E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E5C2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12E50E622A92366C000A88E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E632A923683000A88E5 /* WWDailyConsumptionVM.swift */,
+				12E50E652A92369F000A88E5 /* WWDailyConsumptionDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12E50E692A923B7B000A88E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E6A2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift */,
+				12E50E6B2A923B9D000A88E5 /* WWDailyConsumptionCVC.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12E50E6E2A924031000A88E5 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E6F2A92404C000A88E5 /* DailyConsumptionPopUpVC.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		12E50E712A9527DC000A88E5 /* MapStyle */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E722A9527EA000A88E5 /* MapStyle.json */,
+			);
+			path = MapStyle;
+			sourceTree = "<group>";
+		};
+		12E50E742A952A81000A88E5 /* WWPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E752A952A90000A88E5 /* WWPickerView.swift */,
+			);
+			path = WWPickerView;
+			sourceTree = "<group>";
+		};
+		12E50E792A9D218B000A88E5 /* SubscriptonPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E7C2A9D21E7000A88E5 /* Models */,
+				12E50E7A2A9D21AF000A88E5 /* WWSubscriptionPopupVC.swift */,
+			);
+			path = SubscriptonPopUp;
+			sourceTree = "<group>";
+		};
+		12E50E7C2A9D21E7000A88E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12E50E7D2A9D21F5000A88E5 /* WWSubscriptionPopupVM.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1F7E47EABE139DAD20EB2BA7 /* Pods */ = {
@@ -1483,6 +1638,7 @@
 				12E4DB932A7441FE0020F6C3 /* WWVerticalButtonTVC.xib in Resources */,
 				12C562602A7690120088E709 /* WWDiscoverIntentCVC.xib in Resources */,
 				12E4DB5B2A73F3050020F6C3 /* Source.storyboard in Resources */,
+				12E50E732A9527EA000A88E5 /* MapStyle.json in Resources */,
 				12E4DB592A73F20B0020F6C3 /* Tabbar.storyboard in Resources */,
 				12E4DB612A73F32D0020F6C3 /* Profile.storyboard in Resources */,
 				12E4DB882A743E760020F6C3 /* WWLogoTVC.xib in Resources */,
@@ -1491,6 +1647,7 @@
 				12E4DB5D2A73F30E0020F6C3 /* Map.storyboard in Resources */,
 				122DD4762A84F13700C8F962 /* WATRWELL_INTRO.mp4 in Resources */,
 				12E4DB8F2A7440990020F6C3 /* WWSingleLabelTVC.xib in Resources */,
+				12E50E6D2A923B9D000A88E5 /* WWDailyConsumptionCVC.xib in Resources */,
 				1269E8E92A759DF900B09FCB /* Europa-Regular.ttf in Resources */,
 				12C562652A7695A60088E709 /* WWDiscoverInfoTextCVC.xib in Resources */,
 				12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */,
@@ -1599,16 +1756,20 @@
 				1269E8F02A75A50B00B09FCB /* WWNavBarView.swift in Sources */,
 				125EE5712A8B9BBB007B0F84 /* WWProfileVM.swift in Sources */,
 				12E4DB402A73C87D0020F6C3 /* WWLabel.swift in Sources */,
+				12E50E782A9D1602000A88E5 /* WWSubscriptionData.swift in Sources */,
 				120AB81A2A78350E009B80C8 /* WWSourceVM.swift in Sources */,
 				12E4DB292A73A5730020F6C3 /* WWColors.swift in Sources */,
 				12C562512A764A590088E709 /* WWDropDownView.swift in Sources */,
 				12E50E4E2A8E9A82000A88E5 /* WWBodyMetricsTVC.swift in Sources */,
 				1269E9152A75C81A00B09FCB /* WWSingleTFTVC.swift in Sources */,
+				12E50E7E2A9D21F5000A88E5 /* WWSubscriptionPopupVM.swift in Sources */,
 				1269E91F2A75CD3400B09FCB /* WWStep1VC + TableView.swift in Sources */,
 				12E4DB202A739FDC0020F6C3 /* WWLandingVM.swift in Sources */,
 				125EE5792A8BA3B7007B0F84 /* WWProfileVC + TableView.swift in Sources */,
 				1269E94A2A763F4900B09FCB /* IQUIViewController+Additions.swift in Sources */,
+				12E50E682A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift in Sources */,
 				1269E9462A763F4900B09FCB /* IQKeyboardManagerConstants.swift in Sources */,
+				12E50E552A9227C2000A88E5 /* WWDiscoverPopupVC.swift in Sources */,
 				12AEBC4D2A7AE80C009BCDFB /* WWUserDefaults.swift in Sources */,
 				12E4DB352A73B7600020F6C3 /* String + Extension.swift in Sources */,
 				1269E9412A763F4900B09FCB /* IQBarButtonItem.swift in Sources */,
@@ -1623,12 +1784,15 @@
 				12E4DBA22A746C950020F6C3 /* WWPaymentSlider.swift in Sources */,
 				12E50E492A8E9615000A88E5 /* WWAddressTVC.swift in Sources */,
 				12AEBC5C2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift in Sources */,
+				12E50E642A923683000A88E5 /* WWDailyConsumptionVM.swift in Sources */,
 				12E4DB952A7443890020F6C3 /* TableView + Extensions.swift in Sources */,
 				12AEBC552A7CF896009BCDFB /* WWSourcePopVM.swift in Sources */,
 				120AB8182A782B29009B80C8 /* WWStep4VM.swift in Sources */,
 				12816E472A8E7C020062F32C /* WWAccountInfoTVC.swift in Sources */,
 				120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */,
 				1269E9102A75C7B200B09FCB /* WWStep1VM.swift in Sources */,
+				12E50E5D2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift in Sources */,
+				12E50E6C2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift in Sources */,
 				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
 				12C562692A769B0E0088E709 /* WWDiscoverVM.swift in Sources */,
 				12E4DB172A6EFE6E0020F6C3 /* WWRouter.swift in Sources */,
@@ -1659,9 +1823,11 @@
 				12E4DB3D2A73C54C0020F6C3 /* WWTextField.swift in Sources */,
 				1269E9212A75D05700B09FCB /* WWStep1DataModel.swift in Sources */,
 				12AEBC452A798042009BCDFB /* JSON.swift in Sources */,
+				12E50E702A92404C000A88E5 /* DailyConsumptionPopUpVC.swift in Sources */,
 				12E4DB6D2A73FA1D0020F6C3 /* WWSourceVC.swift in Sources */,
 				12AEBC4B2A79973A009BCDFB /* Webservice + Prelogin.swift in Sources */,
 				12E4DB702A73FACA0020F6C3 /* WWMapVC.swift in Sources */,
+				12E50E5F2A923445000A88E5 /* WWBodyMetricsVM.swift in Sources */,
 				1269E8FA2A75AEE300B09FCB /* WWWatrGuideVC + CollectionView.swift in Sources */,
 				12C562722A77E1240088E709 /* WWStep3VM.swift in Sources */,
 				122DD4742A84ED2500C8F962 /* WWSplashVC.swift in Sources */,
@@ -1677,11 +1843,13 @@
 				1269E8F82A75ADF400B09FCB /* WWWatrGuideVM.swift in Sources */,
 				125EE57E2A8E71CD007B0F84 /* WWProfileSectionHeader.swift in Sources */,
 				122DD46E2A840AE400C8F962 /* WWProfileVC.swift in Sources */,
+				12E50E7B2A9D21AF000A88E5 /* WWSubscriptionPopupVC.swift in Sources */,
 				1269E9492A763F4900B09FCB /* IQUIScrollView+Additions.swift in Sources */,
 				125EE57B2A8BEDD4007B0F84 /* WWImagePicker.swift in Sources */,
 				12E4DB972A7446300020F6C3 /* WWMenuVC + TableView.swift in Sources */,
 				12E4DBB62A7487F60020F6C3 /* WWDailyBenifitsCVC.swift in Sources */,
 				12E4DB872A743E760020F6C3 /* WWLogoTVC.swift in Sources */,
+				12E50E762A952A90000A88E5 /* WWPickerView.swift in Sources */,
 				12E4DB2B2A73AA310020F6C3 /* WWGlobals.swift in Sources */,
 				1269E9472A763F4900B09FCB /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				1269E8F62A75ADE600B09FCB /* WWWatrGuideVC.swift in Sources */,
@@ -1690,6 +1858,7 @@
 				12E4DB572A73E2C70020F6C3 /* Bool + Extension.swift in Sources */,
 				120AB8212A78369B009B80C8 /* WWSelectSourceCVC.swift in Sources */,
 				12E4DB732A73FBB10020F6C3 /* WWDiscoverVC.swift in Sources */,
+				12E50E612A92363B000A88E5 /* WWDailyConsumptionVC.swift in Sources */,
 				12C5625F2A7690120088E709 /* WWDiscoverIntentCVC.swift in Sources */,
 				125EE5762A8BA027007B0F84 /* WWProfilePicTVC.swift in Sources */,
 				12C5626B2A769B330088E709 /* WWDiscoverDataModel.swift in Sources */,
@@ -1698,11 +1867,14 @@
 				1269E9442A763F4900B09FCB /* IQInvocation.swift in Sources */,
 				12E4DB4E2A73CBA30020F6C3 /* WWEnterOTPVM.swift in Sources */,
 				1269E94B2A763F4900B09FCB /* IQUITextFieldView+Additions.swift in Sources */,
+				12E50E5A2A922B67000A88E5 /* WWConsumptionOnboardingVC.swift in Sources */,
 				1269E93E2A763F4900B09FCB /* IQTextView.swift in Sources */,
 				12E4DB1B2A6EFF5D0020F6C3 /* WWBaseVC.swift in Sources */,
+				12E50E522A921FF7000A88E5 /* WWSupportVC.swift in Sources */,
 				12B042072A8AB30B0033FC80 /* WWLocationManager.swift in Sources */,
 				12C562642A7695A60088E709 /* WWDiscoverInfoTextCVC.swift in Sources */,
 				12E4DB492A73CA190020F6C3 /* WWEnterPhoneVM.swift in Sources */,
+				12E50E662A92369F000A88E5 /* WWDailyConsumptionDataModel.swift in Sources */,
 				12E4DB272A73A45F0020F6C3 /* WWStoryBoard.swift in Sources */,
 				12B0420A2A8AB93C0033FC80 /* Webservices + Map.swift in Sources */,
 				122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */,
@@ -1881,7 +2053,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
@@ -1921,7 +2093,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";

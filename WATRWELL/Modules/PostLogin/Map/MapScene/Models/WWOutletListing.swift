@@ -21,21 +21,21 @@ struct WWOutletData: Decodable {
         }
     }
     
-    let id: Int
-    let title: String
-    let subTitle: String
-    let logo: String
-    let address: String
-    private let latitude: Double
-    private let longitude: Double
-    private let source: String
+    let id: Int?
+    let title: String?
+    let subTitle: String?
+    let logo: String?
+    let address: String?
+    private let latitude: Double?
+    private let longitude: Double?
+    private let source: String?
     
     var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        return CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
     }
     
     var sourceType: SourceType {
-        return SourceType(rawValue: self.source) ?? .WILLO
+        return SourceType(rawValue: self.source ?? "") ?? .WILLO
     }
     
     enum CodingKeys: String, CodingKey {
@@ -57,19 +57,19 @@ struct WWOutletWatrSource: Decodable {
         case antiAging = "ANTI-AGING"
         case none
     }
-    private let name: String
-    private let storage: Double
+    private let name: String?
+    private let storage: Double?
     let id: String?
     
     var percent: String {
-        return "\(Int(storage))%"
+        return "\(Int(storage ?? 0))%"
     }
     
     var displayName: String {
-        return "+\(name)"
+        return "+\(name ?? "")"
     }
     
     var sourceType: SourceType {
-        return SourceType(rawValue: name) ?? .none
+        return SourceType(rawValue: name ?? "") ?? .none
     }
 }

@@ -75,7 +75,7 @@ private extension WWEnterOTPVC {
         if WWUserModel.currentUser.firstName == nil {
             moveToEnlistUser()
         } else {
-            WWRouter.shared.setTabbarAsRoot(sourceType: .notSubscribed)
+            WWRouter.shared.setTabbarAsRoot(sourceType: WWUserModel.currentUser.subscriptionTypeString == nil ? .notSubscribed : .subscribed)
         }
     }
     

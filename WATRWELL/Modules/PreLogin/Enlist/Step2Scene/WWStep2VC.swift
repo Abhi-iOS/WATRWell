@@ -25,7 +25,7 @@ final class WWStep2VC: WWBaseVC {
     
     // Properties
     private(set) var viewModel: WWStep2VM!
-    let pickerView = UIPickerView()
+    let pickerView = WWPickerView()
     let toolBar = UIToolbar()
     let selectedExpirySubject = PublishSubject<String>()
     var formattedExpiry: String = ""
@@ -124,7 +124,7 @@ private extension WWStep2VC {
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
         toolBar.barTintColor = WWColors.hexDF5509.color
-        toolBar.tintColor = WWColors.hexFFFFFF.color
+        toolBar.tintColor = WWColors.hex000000.color
         toolBar.isUserInteractionEnabled = true
         toolBar.sizeToFit()
         

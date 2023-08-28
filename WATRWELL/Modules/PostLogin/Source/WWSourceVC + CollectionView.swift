@@ -12,7 +12,7 @@ import Braintree
 extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if viewModel.viewType == .subscribed {
-            return 3
+            return WWUserModel.currentUser.subscriptionType.dataSource.endIndex
         } else {
             return 2
         }
@@ -35,7 +35,8 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueCell(with: WWSelectSourceCVC.self, indexPath: indexPath)
         cell.setData(indexPath.item)
         cell.paymentSlider.completion = { [weak self, weak cell] in
-            self?.makePayment()
+            let subscriptionType: SubscriptionType = indexPath.item == 0 ? .everything : .onlyElectrolytes
+            self?.makePayment(for: subscriptionType)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {[weak cell] in
                 cell?.paymentSlider.value = 0
             })
@@ -48,6 +49,10 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     private func getSelectedSourceCell(for collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> WWSelectedSourceCVC {
         let cell = collectionView.dequeueCell(with: WWSelectedSourceCVC.self, indexPath: indexPath)
+        cell.setData(WWUserModel.currentUser.subscriptionType.dataSource[indexPath.row])
+        cell.showUpdatePopup = { [weak self] in
+            self?.showUpdateSubscription()
+        }
         return cell
     }
     
@@ -63,8 +68,11 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
 }
 
 private extension WWSourceVC {
-    func makePayment() {
-        showDropIn(clientTokenOrTokenizationKey: WWGlobals.brainTreeAuthorization)
+    func makePayment(for subscription: SubscriptionType) {
+        //TODO: - change this with actual api
+        WWUserModel.currentUser.subscriptionTypeString = subscription.rawValue
+        reloadOnSubscriptionComplete()
+//        showDropIn(clientTokenOrTokenizationKey: WWGlobals.brainTreeAuthorization)
     }
     
     func showDropIn(clientTokenOrTokenizationKey: String) {
@@ -85,9 +93,18 @@ private extension WWSourceVC {
         self.present(dropIn!, animated: true, completion: nil)
     }
     
+    func reloadOnSubscriptionComplete() {
+        WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
+    }
+    
     func showDescription(for item: Int) {
         let incomingCase: WWSourcePopVM.IncomingCase = item == 0 ? .all : .electrolyte
         let scene = WWSourcePopupVC.create(with: WWSourcePopVM(incomingCase: incomingCase))
+        tabBarController?.present(scene, animated: true)
+    }
+    
+    func showUpdateSubscription() {
+        let scene = WWSubscriptionPopupVC.create(with: WWSubscriptionPopupVM())
         tabBarController?.present(scene, animated: true)
     }
 

@@ -93,7 +93,7 @@ extension WWWatrSourceInfoVC: WWControllerType {
 private extension WWWatrSourceInfoVC {
     func setupData() {
         let outletDetail = viewModel.outletDetail
-        locLogoImageView.setImage(outletDetail.logo, placeHolder: nil)
+        locLogoImageView.setImage(outletDetail.logo ?? "", placeHolder: nil)
         locTitleLabel.text = outletDetail.title
         locSubtitleLabel.text = outletDetail.subTitle
         locStreetAddLabel.text = outletDetail.address

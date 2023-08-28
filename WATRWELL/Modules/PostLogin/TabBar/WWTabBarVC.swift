@@ -93,7 +93,9 @@ class WWTabBarVC: UITabBarController {
     private func setupTabs(initial index: Int) {
         // Assign the view controllers to the tab bar
         self.viewControllers = tabBarControllers
-        
+        let tabBarAppearance = UITabBarItem.appearance()
+        tabBarAppearance.setTitleTextAttributes([.font: WWFonts.europaRegular.withSize(14)], for: .selected)
+        tabBarAppearance.setTitleTextAttributes([.font: WWFonts.europaRegular.withSize(14)], for: .normal)
         tabBar.tintColor = WWColors.hexDF5509.color
         
         // Adjust the vertical position of the title for each tab bar item

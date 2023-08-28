@@ -74,6 +74,11 @@
                             <constraint firstItem="fRR-Om-REI" firstAttribute="leading" secondItem="Y6t-qc-v1j" secondAttribute="leading" id="qVZ-yE-FwR"/>
                             <constraint firstItem="Y6t-qc-v1j" firstAttribute="bottom" secondItem="lA8-te-2LL" secondAttribute="bottom" id="sqB-3w-Bed"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fRR-Om-REI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="navBarContainerView" destination="vkC-cF-Lmk" id="39Q-qP-Pcx"/>

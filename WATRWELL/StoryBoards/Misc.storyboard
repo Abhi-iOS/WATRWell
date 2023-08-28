@@ -11,6 +11,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Europa-Bold.ttf">
+            <string>Europa-Bold</string>
+        </array>
+        <array key="Europa-Light.ttf">
+            <string>Europa-Light</string>
+        </array>
         <array key="Europa-Regular.ttf">
             <string>Europa-Regular</string>
         </array>
@@ -25,14 +31,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-2K-gB5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="ISm-bZ-XpT"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eQc-Y4-fzi">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tzc-En-kec">
                                     <size key="itemSize" width="128" height="128"/>
@@ -91,14 +97,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSO-tS-ENu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="jYF-n3-tYV"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-0p-kH1">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dfo-QB-kcZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -156,14 +162,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-33-o0W">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-33-o0W">
                                 <rect key="frame" x="23.5" y="172.5" width="328" height="342.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aqs-rl-5zY">
-                                        <rect key="frame" x="43.5" y="106.5" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqs-rl-5zY">
+                                        <rect key="frame" x="0.0" y="106.5" width="328" height="128"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-xM-RAw">
-                                        <rect key="frame" x="163.5" y="170.5" width="0.0" height="0.0"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-xM-RAw">
+                                        <rect key="frame" x="0.0" y="170.5" width="328" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="8TH-Fi-7rQ"/>
                                         </constraints>
@@ -244,9 +250,375 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
             </objects>
             <point key="canvasLocation" x="1562" y="-2"/>
         </scene>
+        <!--SupportVC-->
+        <scene sceneID="MON-KC-8S0">
+            <objects>
+                <viewController storyboardIdentifier="WWSupportVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hms-hG-uWe" customClass="WWSupportVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9so-E5-hIX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3w-7L-RRL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1EN-aA-RUO"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="support" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-jH-8Gp">
+                                <rect key="frame" x="137.5" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="RyR-9E-gKQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="UAO-bb-7Gy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-gE-oTq" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="140" y="218" width="95" height="29"/>
+                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS6-Ul-9zz">
+                                <rect key="frame" x="140" y="251" width="95" height="1.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="I7a-DV-ST8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE ARE HERE TO SERVE YOU, AND SUPPORT YOU IN HAVING THE HIGHEST QUALITY EXPERIENCE." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csY-v6-fA7" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="276.5" width="300" height="51.5"/>
+                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT US AT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRg-iB-KbH" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="152.5" y="352" width="70.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-4Z-252">
+                                <rect key="frame" x="37.5" y="387" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kh9-dB-TLv"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="+1-(305)-456-9978" image="text.bubble" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="text.bubble" catalog="system" title="+1-(305)-456-9978"/>
+                                <connections>
+                                    <action selector="didTapPhone:" destination="hms-hG-uWe" eventType="touchUpInside" id="Svf-7p-Wpo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="styStrng" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-SS-8jc">
+                                <rect key="frame" x="127.5" y="532" width="120" height="15"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mvm-J0-enf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="leading" secondItem="WnP-gE-oTq" secondAttribute="leading" id="09Q-hb-7i6"/>
+                            <constraint firstItem="VRg-iB-KbH" firstAttribute="top" secondItem="csY-v6-fA7" secondAttribute="bottom" constant="24" id="1DR-gv-sD3"/>
+                            <constraint firstItem="Mvm-J0-enf" firstAttribute="bottom" secondItem="C5p-SS-8jc" secondAttribute="bottom" constant="120" id="5bd-MD-1Om"/>
+                            <constraint firstItem="i3w-7L-RRL" firstAttribute="top" secondItem="Mvm-J0-enf" secondAttribute="top" id="7Ri-m3-rAR"/>
+                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="trailing" secondItem="WnP-gE-oTq" secondAttribute="trailing" id="925-Ev-GWO"/>
+                            <constraint firstItem="j8t-4Z-252" firstAttribute="top" secondItem="VRg-iB-KbH" secondAttribute="bottom" constant="18" id="Chy-ua-YKj"/>
+                            <constraint firstItem="csY-v6-fA7" firstAttribute="width" secondItem="9so-E5-hIX" secondAttribute="width" multiplier="0.8" id="Gi1-4Q-cQx"/>
+                            <constraint firstItem="csY-v6-fA7" firstAttribute="top" secondItem="PS6-Ul-9zz" secondAttribute="bottom" constant="24" id="Go6-Xf-3di"/>
+                            <constraint firstItem="VRg-iB-KbH" firstAttribute="centerX" secondItem="csY-v6-fA7" secondAttribute="centerX" id="NbD-ic-g4I"/>
+                            <constraint firstItem="j8t-4Z-252" firstAttribute="centerX" secondItem="csY-v6-fA7" secondAttribute="centerX" id="Xmp-yP-qAu"/>
+                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="top" secondItem="WnP-gE-oTq" secondAttribute="bottom" constant="4" id="Ymw-RA-wE5"/>
+                            <constraint firstItem="WnP-gE-oTq" firstAttribute="centerX" secondItem="Dm7-jH-8Gp" secondAttribute="centerX" id="Yoo-Ks-O7Q"/>
+                            <constraint firstItem="Dm7-jH-8Gp" firstAttribute="top" secondItem="i3w-7L-RRL" secondAttribute="bottom" constant="24" id="cFg-Ou-ZUY"/>
+                            <constraint firstItem="WnP-gE-oTq" firstAttribute="top" secondItem="Dm7-jH-8Gp" secondAttribute="bottom" constant="24" id="euC-1h-RHz"/>
+                            <constraint firstItem="Dm7-jH-8Gp" firstAttribute="centerX" secondItem="i3w-7L-RRL" secondAttribute="centerX" id="gb9-gh-Ljn"/>
+                            <constraint firstItem="csY-v6-fA7" firstAttribute="centerX" secondItem="PS6-Ul-9zz" secondAttribute="centerX" id="gpQ-SB-Opb"/>
+                            <constraint firstItem="j8t-4Z-252" firstAttribute="width" secondItem="csY-v6-fA7" secondAttribute="width" id="k4F-cc-HPq"/>
+                            <constraint firstItem="Mvm-J0-enf" firstAttribute="trailing" secondItem="i3w-7L-RRL" secondAttribute="trailing" id="kHV-lc-eUw"/>
+                            <constraint firstItem="i3w-7L-RRL" firstAttribute="leading" secondItem="Mvm-J0-enf" secondAttribute="leading" id="lg8-W5-Zv8"/>
+                            <constraint firstItem="C5p-SS-8jc" firstAttribute="centerX" secondItem="i3w-7L-RRL" secondAttribute="centerX" id="rgR-cp-diB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBarView" destination="i3w-7L-RRL" id="K4Q-OS-8Xb"/>
+                        <outlet property="phoneButton" destination="j8t-4Z-252" id="wAX-Za-U7Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHA-Mw-BCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="-2"/>
+        </scene>
+        <!--Consumption OnboardingVC-->
+        <scene sceneID="VMn-TT-PBA">
+            <objects>
+                <viewController storyboardIdentifier="WWConsumptionOnboardingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XF2-Xw-74R" customClass="WWConsumptionOnboardingVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t8M-UH-P1i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VS-SZ-kkr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ljl-a6-rNE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2m-63-ozb" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="94" width="300" height="49"/>
+                                <string key="text">YOUR DAILY CONSUMPTION
+ONBOARDING</string>
+                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z23-Rr-rsb">
+                                <rect key="frame" x="27.5" y="179" width="320" height="250.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="cVJ-LJ-9YN">
+                                        <rect key="frame" x="0.0" y="16" width="320" height="218.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T1p-1M-3SV">
+                                                <rect key="frame" x="24" y="0.0" width="272" height="68.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE OF BIRTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-pv-Knk" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                        <rect key="frame" x="85" y="0.0" width="102.5" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vzE-dr-o3q">
+                                                        <rect key="frame" x="0.0" y="34.5" width="272" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugw-zx-sS6" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="t0w-Iu-4BR"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MONTH" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-3y-kPD" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
+                                                                <rect key="frame" x="94.5" y="0.0" width="83" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="hzw-0p-vvu"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YEAR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1An-cN-cN9" customClass="WWTextField" customModule="WATRWELL" customModuleProvider="target">
+                                                                <rect key="frame" x="189.5" y="0.0" width="82.5" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="Oh7-2b-OEm"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pK0-ql-Wzw">
+                                                <rect key="frame" x="22" y="116.5" width="276" height="102"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BODY WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2T-k2-6Cc" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                        <rect key="frame" x="89" y="0.0" width="98.5" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="OKW-ox-AfN">
+                                                        <rect key="frame" x="-2" y="34.5" width="280" height="31"/>
+                                                        <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="maximumTrackTintColor" name="pageIndicatorGray"/>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="50 LBS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G4-c7-DlJ" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                                        <rect key="frame" x="112.5" y="80.5" width="51" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ugw-zx-sS6" firstAttribute="width" secondItem="OKW-ox-AfN" secondAttribute="width" multiplier="0.3" id="xi5-1Z-X6I"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cVJ-LJ-9YN" firstAttribute="leading" secondItem="Z23-Rr-rsb" secondAttribute="leading" id="2Ge-QI-QnA"/>
+                                    <constraint firstItem="cVJ-LJ-9YN" firstAttribute="top" secondItem="Z23-Rr-rsb" secondAttribute="top" constant="16" id="54w-nG-ZvQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="cVJ-LJ-9YN" secondAttribute="bottom" constant="16" id="79w-9G-Tse"/>
+                                    <constraint firstAttribute="trailing" secondItem="cVJ-LJ-9YN" secondAttribute="trailing" id="K0s-bC-IwO"/>
+                                    <constraint firstItem="OKW-ox-AfN" firstAttribute="width" secondItem="Z23-Rr-rsb" secondAttribute="width" multiplier="0.8" constant="20" id="qfz-cT-MtB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb9-Jy-OUo" customClass="WWFilledButton" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="529.5" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eqx-i4-3tk"/>
+                                    <constraint firstAttribute="height" constant="36" id="rz1-or-DxQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SAVE"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C98-sT-Qlh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N2m-63-ozb" firstAttribute="width" secondItem="8VS-SZ-kkr" secondAttribute="width" multiplier="0.8" id="0Zg-de-MH4"/>
+                            <constraint firstItem="Z23-Rr-rsb" firstAttribute="top" secondItem="N2m-63-ozb" secondAttribute="bottom" constant="36" id="7kw-qY-aH5"/>
+                            <constraint firstItem="N2m-63-ozb" firstAttribute="top" secondItem="8VS-SZ-kkr" secondAttribute="bottom" constant="24" id="FXc-q4-18o"/>
+                            <constraint firstItem="Qb9-Jy-OUo" firstAttribute="centerX" secondItem="Z23-Rr-rsb" secondAttribute="centerX" id="Hnw-aN-Kdj"/>
+                            <constraint firstItem="Z23-Rr-rsb" firstAttribute="centerX" secondItem="N2m-63-ozb" secondAttribute="centerX" id="KFS-oh-fSU"/>
+                            <constraint firstItem="Qb9-Jy-OUo" firstAttribute="top" secondItem="Z23-Rr-rsb" secondAttribute="bottom" constant="100" id="QZc-xL-kCP"/>
+                            <constraint firstItem="8VS-SZ-kkr" firstAttribute="leading" secondItem="C98-sT-Qlh" secondAttribute="leading" id="StR-w1-tqA"/>
+                            <constraint firstItem="8VS-SZ-kkr" firstAttribute="top" secondItem="C98-sT-Qlh" secondAttribute="top" id="bFm-LD-qNi"/>
+                            <constraint firstItem="N2m-63-ozb" firstAttribute="centerX" secondItem="8VS-SZ-kkr" secondAttribute="centerX" id="cxL-QG-kBF"/>
+                            <constraint firstItem="Z23-Rr-rsb" firstAttribute="width" secondItem="N2m-63-ozb" secondAttribute="width" multiplier="1.06667" id="jEQ-yW-eeU"/>
+                            <constraint firstItem="C98-sT-Qlh" firstAttribute="trailing" secondItem="8VS-SZ-kkr" secondAttribute="trailing" id="wzJ-mA-aSm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateTF" destination="Ugw-zx-sS6" id="Bfw-jt-agn"/>
+                        <outlet property="monthTF" destination="TYU-3y-kPD" id="VLu-wW-tVg"/>
+                        <outlet property="navContainerView" destination="8VS-SZ-kkr" id="XMO-56-Rbc"/>
+                        <outlet property="saveButton" destination="Qb9-Jy-OUo" id="Zf7-2O-Tg8"/>
+                        <outlet property="weightLabel" destination="0G4-c7-DlJ" id="bJm-3s-xnV"/>
+                        <outlet property="weightSlider" destination="OKW-ox-AfN" id="Njq-H6-HwR"/>
+                        <outlet property="yearTF" destination="1An-cN-cN9" id="Tcg-5E-xFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6q-GP-OKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3034" y="-2"/>
+        </scene>
+        <!--Daily ConsumptionVC-->
+        <scene sceneID="Npo-VG-yuA">
+            <objects>
+                <viewController storyboardIdentifier="WWDailyConsumptionVC" id="nhE-9Z-cPq" customClass="WWDailyConsumptionVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YO3-DL-zhp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcx-FE-Bp4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="teG-CO-Og2"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cEe-GZ-pBk">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J4U-Po-oZF">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hZV-wx-a3v">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="13I-5o-SfY">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Okm-In-Qt4">
+                                <rect key="frame" x="0.0" y="621" width="375" height="26"/>
+                                <color key="pageIndicatorTintColor" name="pageIndicatorGray"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xCO-w8-SyJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xCO-w8-SyJ" firstAttribute="bottom" secondItem="cEe-GZ-pBk" secondAttribute="bottom" id="93N-eJ-JXV"/>
+                            <constraint firstItem="cEe-GZ-pBk" firstAttribute="leading" secondItem="xCO-w8-SyJ" secondAttribute="leading" id="94g-Zb-f72"/>
+                            <constraint firstItem="xCO-w8-SyJ" firstAttribute="trailing" secondItem="Okm-In-Qt4" secondAttribute="trailing" id="9fJ-xV-bKV"/>
+                            <constraint firstItem="xCO-w8-SyJ" firstAttribute="bottom" secondItem="Okm-In-Qt4" secondAttribute="bottom" constant="20" id="JIi-1u-IMA"/>
+                            <constraint firstItem="cEe-GZ-pBk" firstAttribute="top" secondItem="Fcx-FE-Bp4" secondAttribute="bottom" id="LMz-SH-W7w"/>
+                            <constraint firstItem="Fcx-FE-Bp4" firstAttribute="top" secondItem="xCO-w8-SyJ" secondAttribute="top" id="YKJ-iH-ofB"/>
+                            <constraint firstItem="xCO-w8-SyJ" firstAttribute="trailing" secondItem="cEe-GZ-pBk" secondAttribute="trailing" id="dNt-84-yFR"/>
+                            <constraint firstItem="Fcx-FE-Bp4" firstAttribute="leading" secondItem="xCO-w8-SyJ" secondAttribute="leading" id="dXP-A1-iwU"/>
+                            <constraint firstItem="xCO-w8-SyJ" firstAttribute="trailing" secondItem="Fcx-FE-Bp4" secondAttribute="trailing" id="n9Q-hh-uU5"/>
+                            <constraint firstItem="Okm-In-Qt4" firstAttribute="leading" secondItem="xCO-w8-SyJ" secondAttribute="leading" id="ptO-Et-n4V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cEe-GZ-pBk" id="Mk9-QL-5bV"/>
+                        <outlet property="navBarContainerView" destination="Fcx-FE-Bp4" id="qis-1f-rPc"/>
+                        <outlet property="pageControl" destination="Okm-In-Qt4" id="xa8-Wa-OgY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKs-sY-nwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3732" y="-2"/>
+        </scene>
+        <!--Daily Consumption Pop UpVC-->
+        <scene sceneID="0gW-1c-W40">
+            <objects>
+                <viewController storyboardIdentifier="DailyConsumptionPopUpVC" id="2wB-br-xEh" customClass="DailyConsumptionPopUpVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6y-Wo-Osk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dc_popup" translatesAutoresizingMaskIntoConstraints="NO" id="pch-Ve-NyY">
+                                <rect key="frame" x="20" y="128.5" width="335" height="410"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-Rw-s2O">
+                                <rect key="frame" x="20" y="468.5" width="335" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="oGg-3G-yRs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="didTapClose:" destination="2wB-br-xEh" eventType="touchUpInside" id="lsE-Xh-bv2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kc8-lS-7EB"/>
+                        <color key="backgroundColor" name="menuBG"/>
+                        <constraints>
+                            <constraint firstItem="pch-Ve-NyY" firstAttribute="centerY" secondItem="Kc8-lS-7EB" secondAttribute="centerY" id="Etl-b1-VZt"/>
+                            <constraint firstItem="SlS-Rw-s2O" firstAttribute="leading" secondItem="pch-Ve-NyY" secondAttribute="leading" id="HUs-6G-b0R"/>
+                            <constraint firstItem="pch-Ve-NyY" firstAttribute="centerX" secondItem="Kc8-lS-7EB" secondAttribute="centerX" id="Thq-tX-MlZ"/>
+                            <constraint firstItem="SlS-Rw-s2O" firstAttribute="bottom" secondItem="pch-Ve-NyY" secondAttribute="bottom" id="h49-AG-KMU"/>
+                            <constraint firstItem="SlS-Rw-s2O" firstAttribute="trailing" secondItem="pch-Ve-NyY" secondAttribute="trailing" id="xM5-d7-80f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uo-xp-MB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="-2"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="1An-cN-cN9">
+            <size key="intrinsicContentSize" width="63.5" height="34"/>
+        </designable>
+        <designable name="Qb9-Jy-OUo">
+            <size key="intrinsicContentSize" width="65.5" height="34.5"/>
+        </designable>
+        <designable name="TYU-3y-kPD">
+            <size key="intrinsicContentSize" width="80" height="34"/>
+        </designable>
+        <designable name="Ugw-zx-sS6">
+            <size key="intrinsicContentSize" width="63" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Cancel" width="24" height="24"/>
+        <image name="dc_popup" width="335" height="410"/>
+        <image name="styStrng" width="120" height="15"/>
+        <image name="support" width="58" height="57"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
         <image name="watrGuideInfo_ic" width="46" height="65"/>
         <namedColor name="menuBG">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>

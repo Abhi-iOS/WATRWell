@@ -53,39 +53,46 @@ extension WWMenuVC: UITableViewDataSource, UITableViewDelegate {
 
 private extension WWMenuVC{
     func cellTapAction(for item: WWMenuVM.DataSourceElements) {
+        if item != .exit || item != .instagram {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
+        }
         switch item {
         case .logo:
             return
-        case .source:
-            dismiss(animated: true) {
-                WWRouter.shared.setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
-            }
-
-        case .map:
-            dismiss(animated: true) {
-                WWRouter.shared.setTabbarAsRoot(initialItem: .map)
-            }
-
-        case .discover:
-            dismiss(animated: true) {
-                WWRouter.shared.setTabbarAsRoot(initialItem: .discover)
-            }
+//        case .source:
+//            dismiss(animated: true) {
+//                WWRouter.shared.setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
+//            }
+//
+//        case .map:
+//            dismiss(animated: true) {
+//                WWRouter.shared.setTabbarAsRoot(initialItem: .map)
+//            }
+//
+//        case .discover:
+//            dismiss(animated: true) {
+//                WWRouter.shared.setTabbarAsRoot(initialItem: .discover)
+//            }
             
         case .dailyBenifits:
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
             showDailyBenifits()
             
         case .watrGuide:
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tabbarReset"), object: nil)
             showWatrGuide()
             
         case .conusmption:
             showConsumption()
             
-        case .profile:
-            dismiss(animated: true) {
-                WWRouter.shared.setTabbarAsRoot(initialItem: .profile)
-            }
+//        case .profile:
+//            dismiss(animated: true) {
+//                WWRouter.shared.setTabbarAsRoot(initialItem: .profile)
+//            }
+            
+        case .sourceSubscription:
+            break
+            
+        case .support:
+            showSupport()
             
         case .exit:
             dismiss(animated: true)
@@ -100,7 +107,10 @@ private extension WWMenuVC{
     }
     
     func showConsumption() {
-        
+        dismiss(animated: true) {
+            let consumptionOnboardingScene = WWConsumptionOnboardingVC.create(with: WWConsumptionOnboardingVM())
+            sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(consumptionOnboardingScene, animated: true)
+        }
     }
     
     func showWatrGuide() {
@@ -116,4 +126,12 @@ private extension WWMenuVC{
             sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(dailyBenefitsScene, animated: true)
         }
     }
+    
+    func showSupport() {
+        dismiss(animated: true) {
+            let dailyBenefitsScene = WWSupportVC.instantiate(fromAppStoryboard: .Misc)
+            sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(dailyBenefitsScene, animated: true)
+        }
+    }
+    
 }
