@@ -10,9 +10,28 @@ import RxSwift
 import RxCocoa
 
 final class WWEnterPhoneVM {
-    private var mobileNumber: String = ""
+    enum IncomingCase {
+        case access
+        case updateNumber
+        
+        var title: String {
+            switch self {
+            case .access: return "Please enter your mobile phone #:".uppercased()
+            case .updateNumber: return "Please enter your new mobile phone #:".uppercased()
+            }
+        }
+    }
+    
+    private(set) var mobileNumber: String = ""
     private let proceedToOTPSubject = PublishSubject<String>()
     private let disposeBag = DisposeBag()
+    let incomingCase: IncomingCase
+    let id: String?
+    
+    init(incomingCase: IncomingCase = .access, userId: String? = nil) {
+        self.incomingCase = incomingCase
+        self.id = userId
+    }
 }
 
 extension WWEnterPhoneVM: WWViewModelProtocol {
@@ -60,7 +79,11 @@ private extension WWEnterPhoneVM {
         WebServices.loginUser(parameters: ["users[phone_number]": mobileNumber.simplifyPhoneNumber()], response: { [weak self] response in
             switch response {
             case .success(let id):
-                self?.proceedToOTPSubject.onNext((id))
+                if let userId = self?.id {
+                    self?.proceedToOTPSubject.onNext((userId))
+                } else {
+                    self?.proceedToOTPSubject.onNext((id))
+                }
             case .failure(let err):
                 SKToast.show(withMessage: err.localizedDescription)
             }

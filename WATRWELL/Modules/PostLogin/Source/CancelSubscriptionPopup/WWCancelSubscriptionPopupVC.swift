@@ -39,7 +39,8 @@ private extension WWCancelSubscriptionPopupVC {
     }
     
     func cancelSubscription() {
-        WebServices.updateSubscription(with: .canelSubscription) { [weak self] response in
+        let params: JSONDictionary = ["subscription_id" : WWUserDefaults.value(forKey: .subscriptionId).intValue]
+        WebServices.updateSubscription(parameters: params, endpoint: .canelSubscription) { [weak self] response in
             switch response {
             case .success(_):
                 WWUserModel.currentUser.subscriptionTypeValue = nil

@@ -10,8 +10,8 @@ import RxSwift
 import RxCocoa
 
 enum SubscriptionType: Int {
-    case onlyElectrolytes = 1
-    case everything = 2
+    case onlyElectrolytes = 2
+    case everything = 3
     case none = -1
     
     var dataSource: [WWSubscriptionData] {
@@ -36,7 +36,8 @@ final class WWSourceVM {
     let viewType: IncomingCase
     var subscriptionType: SubscriptionType?
     private let reloadOnSubscriptionComplete = PublishSubject<Void>()
-    
+    private let resetTabbarSubject = PublishSubject<Void>()
+
     init(viewType: IncomingCase) {
         self.viewType = viewType
         getSubscription()
@@ -56,6 +57,7 @@ extension WWSourceVM: WWViewModelProtocol {
     
     struct Output {
         let reloadOnSubscription: Driver<Void>
+        let resetTabbar: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -63,7 +65,8 @@ extension WWSourceVM: WWViewModelProtocol {
             self?.createSubscription()
         }).disposed(by: disposeBag)
         
-        return Output(reloadOnSubscription: reloadOnSubscriptionComplete.asDriverOnErrorJustComplete())
+        return Output(reloadOnSubscription: reloadOnSubscriptionComplete.asDriverOnErrorJustComplete(),
+                      resetTabbar: resetTabbarSubject.asDriverOnErrorJustComplete())
     }
 }
 
@@ -86,7 +89,7 @@ extension WWSourceVM {
             switch response {
             case .success(_):
                 WWUserModel.currentUser.subscriptionTypeValue = subscriptionType.planId
-                self?.reloadOnSubscriptionComplete.onNext(())
+                self?.resetTabbarSubject.onNext(())
             case .failure(_): break
             }
         }
@@ -94,11 +97,18 @@ extension WWSourceVM {
     
     func updateSubscription(with type: SubscriptionType) {
         let endpoint: WebServices.EndPoint = type == .everything ? .upgrade : .downGrade
-        WebServices.updateSubscription(with: endpoint) { [weak self] response in
+        let params: JSONDictionary = ["subscription_id" : WWUserDefaults.value(forKey: .subscriptionId).intValue,
+                                      "plan_id" : type.planId]
+        WebServices.updateSubscription(parameters: params, endpoint: endpoint) { [weak self] response in
+            guard let self else { return }
             switch response {
             case .success(_):
                 WWUserModel.currentUser.subscriptionTypeValue = type.planId
-                self?.reloadOnSubscriptionComplete.onNext(())
+                if self.viewType == .modifySubscription {
+                    self.resetTabbarSubject.onNext(())
+                } else {
+                    self.reloadOnSubscriptionComplete.onNext(())
+                }
             case .failure(_): break
             }
         }

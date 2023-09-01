@@ -76,4 +76,15 @@ extension WebServices {
             }
         }
     }
+    
+    static func updatePhoneNumber(parameters: JSONDictionary, response : @escaping ((Result<Void,Error>) ->())) {
+        commonPostAPI(parameters: parameters, endPoint: .updatePhonenumber) { result in
+            switch result {
+            case .success(_):
+                response(.success(()))
+            case .failure(let error):
+                response(.failure(error))
+            }
+        }
+    }
 }

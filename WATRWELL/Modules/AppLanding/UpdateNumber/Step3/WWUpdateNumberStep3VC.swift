@@ -49,8 +49,8 @@ extension WWUpdateNumberStep3VC: WWControllerType {
             self?.navigationController?.popViewController(animated: true)
         }).disposed(by: rx.disposeBag)
         
-        output.moveToNext.drive(onNext: { [weak self] in
-            self?.moveToNextStep()
+        output.moveToNext.drive(onNext: { [weak self] id in
+            self?.moveToNextStep(id)
         }).disposed(by: rx.disposeBag)
     }
 }
@@ -61,8 +61,9 @@ private extension WWUpdateNumberStep3VC {
         last4TF.placeholder = "Last 4 Digits Of Card".uppercased()
     }
     
-    func moveToNextStep() {
-        
+    func moveToNextStep(_ id: String) {
+        let phoneNumberScene = WWEnterPhoneVC.create(with: WWEnterPhoneVM(incomingCase: .updateNumber, userId: id))
+        navigationController?.pushViewController(phoneNumberScene, animated: true)
     }
 }
 

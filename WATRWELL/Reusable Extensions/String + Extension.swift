@@ -147,3 +147,9 @@ enum ValidityExression : String {
     case CardNumber = "^[0-9]{16}"
     case Number = "^[0-9]{0,15}$"
 }
+
+extension Int {
+    var stringValue: String {
+        return "\(self)"
+    }
+}

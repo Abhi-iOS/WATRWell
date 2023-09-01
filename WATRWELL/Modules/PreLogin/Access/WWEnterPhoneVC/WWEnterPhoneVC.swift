@@ -22,6 +22,7 @@ final class WWEnterPhoneVC: WWBaseVC {
     // Overriden functions
     override func setupViews() {
         super.setupViews()
+        titleLabel.text = viewModel.incomingCase.title
         phoneNumberTextField.delegate = self
         phoneNumberTextField.keyboardType = .numberPad
         configure(with: viewModel)
@@ -60,7 +61,7 @@ extension WWEnterPhoneVC: WWControllerType {
 
 private extension WWEnterPhoneVC {
     func navigateToOTPConfirmation(with id: String) {
-        let scene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, incomingCase: .access))
+        let scene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, phone: viewModel.mobileNumber, incomingCase: viewModel.incomingCase == .access ? .access : .updateNumber))
         navigationController?.pushViewController(scene, animated: true)
     }
 }

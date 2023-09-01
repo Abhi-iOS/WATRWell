@@ -272,14 +272,14 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
                                     <constraint firstAttribute="height" constant="100" id="UAO-bb-7Gy"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-gE-oTq" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="140" y="218" width="95" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARE TEAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-gE-oTq" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                <rect key="frame" x="128.5" y="218" width="118" height="29"/>
                                 <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS6-Ul-9zz">
-                                <rect key="frame" x="140" y="251" width="95" height="1.5"/>
+                                <rect key="frame" x="128.5" y="251" width="118" height="1.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1.5" id="I7a-DV-ST8"/>
@@ -601,16 +601,16 @@ ONBOARDING</string>
     </scenes>
     <designables>
         <designable name="1An-cN-cN9">
-            <size key="intrinsicContentSize" width="63.5" height="34"/>
+            <size key="intrinsicContentSize" width="63.5" height="42.5"/>
         </designable>
         <designable name="Qb9-Jy-OUo">
             <size key="intrinsicContentSize" width="65.5" height="34.5"/>
         </designable>
         <designable name="TYU-3y-kPD">
-            <size key="intrinsicContentSize" width="80" height="34"/>
+            <size key="intrinsicContentSize" width="80" height="42.5"/>
         </designable>
         <designable name="Ugw-zx-sS6">
-            <size key="intrinsicContentSize" width="63" height="34"/>
+            <size key="intrinsicContentSize" width="63" height="42.5"/>
         </designable>
     </designables>
     <resources>

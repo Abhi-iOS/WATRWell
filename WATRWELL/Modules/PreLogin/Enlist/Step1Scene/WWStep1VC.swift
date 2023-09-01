@@ -65,7 +65,7 @@ private extension WWStep1VC {
         if viewModel.isNumberVerified {
             nextScene = WWStep2VC.create(with: WWStep2VM(dataModel: viewModel.dataModel))
         } else {
-            nextScene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, incomingCase: .enlist))
+            nextScene = WWEnterOTPVC.create(with: WWEnterOTPVM(id: id, phone: viewModel.dataModel.mobile ?? "", incomingCase: .enlist))
         }
         navigationController?.pushViewController(nextScene, animated: true)
     }

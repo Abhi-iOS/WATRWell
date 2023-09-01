@@ -13,8 +13,10 @@ final class WWEnterOTPVM {
     private let disposeBag = DisposeBag()
     private var otp: String = ""
     private let id: String
+    private let phoneNumber: String
     private let verificationSuccessSubject = PublishSubject<Void>()
-    
+    private let popToRootSubject = PublishSubject<Void>()
+
     // Timer Setup
     private var timer = Timer()
     private var counter = 30 // in seconds, timer counter for resend otp
@@ -22,9 +24,10 @@ final class WWEnterOTPVM {
     private let hideResendSubject = PublishSubject<Bool>()
     let incomingCase: IncomingCase
     var isOnce: Bool = false
-    init(id: String, incomingCase: IncomingCase) {
+    init(id: String,phone: String, incomingCase: IncomingCase) {
         self.id = id
         self.incomingCase = incomingCase
+        self.phoneNumber = phone
         setupTimer()
     }
 }
@@ -33,6 +36,7 @@ extension WWEnterOTPVM: WWViewModelProtocol {
     enum IncomingCase {
         case access
         case enlist
+        case updateNumber
     }
     
     struct Input {
@@ -46,6 +50,7 @@ extension WWEnterOTPVM: WWViewModelProtocol {
         let hideResendButton: Observable<Bool>
         let otpVerificationSuccess: Driver<Void>
         let editMobileNumber: Driver<Void>
+        let popToRoot: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -67,7 +72,8 @@ extension WWEnterOTPVM: WWViewModelProtocol {
         return Output(updatedTimerValue: updatedTimeSubject.asObservable(),
                       hideResendButton: hideResendSubject.asObservable(),
                       otpVerificationSuccess: verificationSuccessSubject.asDriverOnErrorJustComplete(),
-                      editMobileNumber: input.exitDidTap.asDriverOnErrorJustComplete())
+                      editMobileNumber: input.exitDidTap.asDriverOnErrorJustComplete(),
+                      popToRoot: popToRootSubject.asDriverOnErrorJustComplete())
     }
 }
 
@@ -114,6 +120,19 @@ private extension WWEnterOTPVM {
             case .success(let data):
                 self?.verificationSuccessSubject.onNext(())
                 print(data)
+            case .failure(_): break
+            }
+        }
+    }
+}
+
+extension WWEnterOTPVM {
+    func updateNumber() {
+        let params: JSONDictionary = ["id":id,
+                                      "phone_number":phoneNumber.simplifyPhoneNumber()]
+        WebServices.updatePhoneNumber(parameters: params) { [weak self] response in
+            switch response {
+            case .success(_): self?.popToRootSubject.onNext(())
             case .failure(_): break
             }
         }

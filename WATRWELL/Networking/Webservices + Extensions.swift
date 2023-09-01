@@ -20,6 +20,7 @@ extension WebServices {
         case upgrade = "subscriptions/upgrade"
         case downGrade = "subscriptions/downgrade"
         case canelSubscription = "subscriptions/cancel_subscription"
+        case updatePhonenumber = "update_phone_number"
         
         // MARK: - API url path
         var path : String {

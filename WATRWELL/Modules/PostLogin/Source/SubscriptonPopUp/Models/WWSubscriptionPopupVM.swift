@@ -56,7 +56,9 @@ extension WWSubscriptionPopupVM: WWViewModelProtocol {
 extension WWSubscriptionPopupVM {
     func updateSubscription(with type: SubscriptionType) {
         let endpoint: WebServices.EndPoint = type == .everything ? .upgrade : .downGrade
-        WebServices.updateSubscription(with: endpoint) { [weak self] response in
+        let params: JSONDictionary = ["subscription_id" : WWUserDefaults.value(forKey: .subscriptionId).intValue,
+                                      "plan_id" : type.planId]
+        WebServices.updateSubscription(parameters: params, endpoint: endpoint) { [weak self] response in
             switch response {
             case .success(_):
                 WWUserModel.currentUser.subscriptionTypeValue = type.planId

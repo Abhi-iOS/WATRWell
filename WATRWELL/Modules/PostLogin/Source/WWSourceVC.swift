@@ -51,6 +51,10 @@ extension WWSourceVC: WWControllerType {
         output.reloadOnSubscription.drive(onNext: { [weak self] in
             self?.reloadOnSubscriptionComplete()
         }).disposed(by: rx.disposeBag)
+        
+        output.resetTabbar.drive(onNext: { _ in
+            WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
+        }).disposed(by: rx.disposeBag)
     }
 }
 
@@ -110,14 +114,8 @@ private extension WWSourceVC {
     }
     
     func reloadOnSubscriptionComplete() {
-        
-        if let tabBarController = tabBarController as? WWTabBarVC {
-            if tabBarController.sourceType == viewModel.viewType {
-                collectionView.reloadData()
-            }
-        } else {
-            WWRouter.shared.setTabbarAsRoot(sourceType: viewModel.viewType)
-        }
+        setupScreenContent()
+        collectionView.reloadData()
     }
 }
 

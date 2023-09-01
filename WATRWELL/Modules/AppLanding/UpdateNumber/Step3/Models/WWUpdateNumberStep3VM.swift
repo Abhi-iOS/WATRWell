@@ -11,7 +11,7 @@ import RxCocoa
 
 final class WWUpdateNumberStep3VM {
     private let disposeBag = DisposeBag()
-    private let nextTapSuccess = PublishSubject<Void>()
+    private let nextTapSuccess = PublishSubject<String>()
     var updateNumberModel: WWUpdateNumberModel
     
     init(updateNumberModel: WWUpdateNumberModel) {
@@ -27,7 +27,7 @@ extension WWUpdateNumberStep3VM: WWViewModelProtocol {
     
     struct Output {
         let popBack: Driver<Void>
-        let moveToNext: Driver<Void>
+        let moveToNext: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -55,7 +55,8 @@ private extension WWUpdateNumberStep3VM {
     func validateUser() {
         WebServices.validateUser(parameters: updateNumberModel.params) { [weak self] result in
             switch result {
-            case .success(_): self?.nextTapSuccess.onNext(())
+            case .success(let id):
+                self?.nextTapSuccess.onNext(id)
             case .failure(_): break
             }
         }
