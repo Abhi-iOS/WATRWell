@@ -14,14 +14,16 @@ final class WWLandingVC: WWBaseVC {
     // Outlets
     @IBOutlet weak var accessButton: WWFilledButton!
     @IBOutlet weak var enlistButton: WWFilledButton!
+    @IBOutlet weak var updateNumberButton: UIButton!
     
     // Properties
     private(set) var viewModel: WWLandingVM!
     
     // Overriden functions
-        override func setupViews() {
+    override func setupViews() {
         super.setupViews()
         configure(with: viewModel)
+        setupUpdateButton()
     }
 }
 
@@ -36,7 +38,8 @@ extension WWLandingVC: WWControllerType {
 
     func configure(with viewModel: WWLandingVM){
         let input = WWLandingVM.Input(accessDidTap: accessButton.rx.tap.asObservable(),
-                                      enlistDidTap: enlistButton.rx.tap.asObservable())
+                                      enlistDidTap: enlistButton.rx.tap.asObservable(),
+                                      updateDidTap: updateNumberButton.rx.tap.asObservable())
         
         let output = viewModel.transform(input: input)
         
@@ -61,6 +64,15 @@ private extension WWLandingVC {
             WWUserDefaults.removeAllValues()
             let scene = WWStep1VC.create(with: WWStep1VM())
             navigationController?.pushViewController(scene, animated: true)
+        case .updateNumber:
+            WWUserDefaults.removeAllValues()
+            let scene = WWUpdateNumberStep1VC.create(with: WWUpdateNumberStep1VM())
+            navigationController?.pushViewController(scene, animated: true)
         }
+    }
+    
+    func setupUpdateButton() {
+        let attributedTitle = "New Number? Update your profile".uppercased().underlinedString("Update your profile".uppercased())
+        updateNumberButton.setAttributedTitle(attributedTitle, for: .normal)
     }
 }

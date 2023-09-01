@@ -35,6 +35,8 @@ final class WWStep2VC: WWBaseVC {
     // Overriden functions
     override func setupViews() {
         configure(with: viewModel)
+        month = viewModel.monthsArray[0]
+        year = "\(viewModel.yearsArray[0]%100)"
         selectCardButton.configuration?.imagePadding = 8
         setupDropDown()
         setupTextFields()

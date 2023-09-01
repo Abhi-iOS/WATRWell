@@ -22,6 +22,7 @@ struct WWEnlistUserModel {
     var cardNumber: String?
     var expiry: String?
     var cvv: String?
+    var tokenKey: String?
     var saStreet1: String?
     var saStreet2: String?
     var saCity: String?
@@ -54,13 +55,15 @@ struct WWEnlistUserModel {
         dict["shipping_address[city]"] = saCity
         dict["shipping_address[state]"] = saState
         dict["shipping_address[zip_code]"] = saZip
+        dict["shipping_address[address_type]"] = "Shipping-Address"
         dict["billing_address[street1]"] = baStreet1
         dict["billing_address[street2]"] = baStreet2
         dict["billing_address[city]"] = baCity
         dict["billing_address[state]"] = baState
         dict["billing_address[zip_code]"] = baZip
+        dict["billing_address[address_type]"] = "Billing-Address"
         dict["users[weight]"] = weight
-        
+        dict["users[payment_method_nonce]"] = tokenKey
         return dict
     }
 }

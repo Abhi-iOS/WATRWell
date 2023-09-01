@@ -17,7 +17,7 @@ class WWTabBarVC: UITabBarController {
     }
     
     private let initialScene: SceneType
-    private let sourceType: WWSourceVM.IncomingCase?
+    let sourceType: WWSourceVM.IncomingCase?
     let tabBarAppearance = UITabBarItem.appearance()
     
     private let backgroundImageView: UIImageView = {

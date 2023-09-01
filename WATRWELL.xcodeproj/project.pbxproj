@@ -20,6 +20,8 @@
 		122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD46D2A840AE400C8F962 /* WWUserModel.swift */; };
 		122DD4742A84ED2500C8F962 /* WWSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD4732A84ED2500C8F962 /* WWSplashVC.swift */; };
 		122DD4762A84F13700C8F962 /* WATRWELL_INTRO.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 122DD4752A84F13700C8F962 /* WATRWELL_INTRO.mp4 */; };
+		124FB0A92AA210AB00B53B2B /* Webservice + Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FB0A82AA210AB00B53B2B /* Webservice + Source.swift */; };
+		124FB0AC2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FB0AB2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift */; };
 		12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12586AB22A6EF5C40086B315 /* AppDelegate.swift */; };
 		12586AB82A6EF5C40086B315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12586AB42A6EF5C40086B315 /* Assets.xcassets */; };
 		12586ABB2A6EF6370086B315 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12586ABA2A6EF6370086B315 /* PreLogin.storyboard */; };
@@ -72,6 +74,13 @@
 		1269E94D2A763F4900B09FCB /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */; };
 		12816E472A8E7C020062F32C /* WWAccountInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12816E452A8E7C020062F32C /* WWAccountInfoTVC.swift */; };
 		12816E482A8E7C020062F32C /* WWAccountInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12816E462A8E7C020062F32C /* WWAccountInfoTVC.xib */; };
+		12AE577C2A9FAE2E00179FF6 /* WWUpdateNumberStep1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE577B2A9FAE2E00179FF6 /* WWUpdateNumberStep1VC.swift */; };
+		12AE577E2A9FAE7800179FF6 /* WWUpdateNumberStep1VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE577D2A9FAE7800179FF6 /* WWUpdateNumberStep1VM.swift */; };
+		12AE57802A9FB19500179FF6 /* WWUpdateNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE577F2A9FB19500179FF6 /* WWUpdateNumberModel.swift */; };
+		12AE57842A9FB6C600179FF6 /* WWUpdateNumberStep2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE57832A9FB6C600179FF6 /* WWUpdateNumberStep2VC.swift */; };
+		12AE57862A9FB70E00179FF6 /* WWUpdateNumberStep2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE57852A9FB70E00179FF6 /* WWUpdateNumberStep2VM.swift */; };
+		12AE578A2A9FBA8400179FF6 /* WWUpdateNumberStep3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE57892A9FBA8400179FF6 /* WWUpdateNumberStep3VC.swift */; };
+		12AE578C2A9FBB1300179FF6 /* WWUpdateNumberStep3VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE578B2A9FBB1300179FF6 /* WWUpdateNumberStep3VM.swift */; };
 		12AEBC432A797FCB009BCDFB /* WWNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC422A797FCB009BCDFB /* WWNetworking.swift */; };
 		12AEBC452A798042009BCDFB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC442A798042009BCDFB /* JSON.swift */; };
 		12AEBC472A7987A6009BCDFB /* WWWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEBC462A7987A6009BCDFB /* WWWebservice.swift */; };
@@ -214,6 +223,8 @@
 		122DD46D2A840AE400C8F962 /* WWUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWUserModel.swift; sourceTree = "<group>"; };
 		122DD4732A84ED2500C8F962 /* WWSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSplashVC.swift; sourceTree = "<group>"; };
 		122DD4752A84F13700C8F962 /* WATRWELL_INTRO.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WATRWELL_INTRO.mp4; sourceTree = "<group>"; };
+		124FB0A82AA210AB00B53B2B /* Webservice + Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservice + Source.swift"; sourceTree = "<group>"; };
+		124FB0AB2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWCancelSubscriptionPopupVC.swift; sourceTree = "<group>"; };
 		12586AAE2A6EF5C40086B315 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12586AB22A6EF5C40086B315 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12586AB42A6EF5C40086B315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +279,13 @@
 		1269E93D2A763F4900B09FCB /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		12816E452A8E7C020062F32C /* WWAccountInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAccountInfoTVC.swift; sourceTree = "<group>"; };
 		12816E462A8E7C020062F32C /* WWAccountInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWAccountInfoTVC.xib; sourceTree = "<group>"; };
+		12AE577B2A9FAE2E00179FF6 /* WWUpdateNumberStep1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep1VC.swift; sourceTree = "<group>"; };
+		12AE577D2A9FAE7800179FF6 /* WWUpdateNumberStep1VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep1VM.swift; sourceTree = "<group>"; };
+		12AE577F2A9FB19500179FF6 /* WWUpdateNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberModel.swift; sourceTree = "<group>"; };
+		12AE57832A9FB6C600179FF6 /* WWUpdateNumberStep2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep2VC.swift; sourceTree = "<group>"; };
+		12AE57852A9FB70E00179FF6 /* WWUpdateNumberStep2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep2VM.swift; sourceTree = "<group>"; };
+		12AE57892A9FBA8400179FF6 /* WWUpdateNumberStep3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep3VC.swift; sourceTree = "<group>"; };
+		12AE578B2A9FBB1300179FF6 /* WWUpdateNumberStep3VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWUpdateNumberStep3VM.swift; sourceTree = "<group>"; };
 		12AEBC422A797FCB009BCDFB /* WWNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWNetworking.swift; sourceTree = "<group>"; };
 		12AEBC442A798042009BCDFB /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		12AEBC462A7987A6009BCDFB /* WWWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWebservice.swift; sourceTree = "<group>"; };
@@ -480,6 +498,14 @@
 				122DD4732A84ED2500C8F962 /* WWSplashVC.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		124FB0AA2AA2310300B53B2B /* CancelSubscriptionPopup */ = {
+			isa = PBXGroup;
+			children = (
+				124FB0AB2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift */,
+			);
+			path = CancelSubscriptionPopup;
 			sourceTree = "<group>";
 		};
 		12586AAC2A6EF5C40086B315 /* Resources */ = {
@@ -778,6 +804,68 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		12AE57782A9FADE200179FF6 /* UpdateNumber */ = {
+			isa = PBXGroup;
+			children = (
+				12AE57872A9FBA6B00179FF6 /* Step3 */,
+				12AE57812A9FB6A500179FF6 /* Step2 */,
+				12AE57792A9FADFE00179FF6 /* Step1 */,
+			);
+			path = UpdateNumber;
+			sourceTree = "<group>";
+		};
+		12AE57792A9FADFE00179FF6 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				12AE577A2A9FAE0D00179FF6 /* Models */,
+				12AE577B2A9FAE2E00179FF6 /* WWUpdateNumberStep1VC.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		12AE577A2A9FAE0D00179FF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12AE577D2A9FAE7800179FF6 /* WWUpdateNumberStep1VM.swift */,
+				12AE577F2A9FB19500179FF6 /* WWUpdateNumberModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12AE57812A9FB6A500179FF6 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				12AE57822A9FB6B000179FF6 /* Models */,
+				12AE57832A9FB6C600179FF6 /* WWUpdateNumberStep2VC.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		12AE57822A9FB6B000179FF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12AE57852A9FB70E00179FF6 /* WWUpdateNumberStep2VM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12AE57872A9FBA6B00179FF6 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				12AE57882A9FBA7400179FF6 /* Models */,
+				12AE57892A9FBA8400179FF6 /* WWUpdateNumberStep3VC.swift */,
+			);
+			path = Step3;
+			sourceTree = "<group>";
+		};
+		12AE57882A9FBA7400179FF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12AE578B2A9FBB1300179FF6 /* WWUpdateNumberStep3VM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		12AEBC412A797FAB009BCDFB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1115,7 @@
 		12E4DB1E2A6EFF960020F6C3 /* AppLanding */ = {
 			isa = PBXGroup;
 			children = (
+				12AE57782A9FADE200179FF6 /* UpdateNumber */,
 				122DD4722A84ED1500C8F962 /* Splash */,
 				12E4DB212A739FE30020F6C3 /* Models */,
 				12E4DB1C2A6EFF870020F6C3 /* WWLandingVC.swift */,
@@ -1180,6 +1269,8 @@
 		12E4DB6A2A73F9F90020F6C3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				124FB0A82AA210AB00B53B2B /* Webservice + Source.swift */,
+				124FB0AA2AA2310300B53B2B /* CancelSubscriptionPopup */,
 				12E50E792A9D218B000A88E5 /* SubscriptonPopUp */,
 				12AEBC502A7CF86A009BCDFB /* PopupScene */,
 				120AB81B2A783648009B80C8 /* Views */,
@@ -1752,7 +1843,9 @@
 			files = (
 				12E4DB8E2A7440990020F6C3 /* WWSingleLabelTVC.swift in Sources */,
 				12E4DB8B2A743E9A0020F6C3 /* WWBaseCells.swift in Sources */,
+				12AE577E2A9FAE7800179FF6 /* WWUpdateNumberStep1VM.swift in Sources */,
 				12C562672A769AC00088E709 /* WWDiscoverVC + CollectionView.swift in Sources */,
+				12AE578C2A9FBB1300179FF6 /* WWUpdateNumberStep3VM.swift in Sources */,
 				1269E8F02A75A50B00B09FCB /* WWNavBarView.swift in Sources */,
 				125EE5712A8B9BBB007B0F84 /* WWProfileVM.swift in Sources */,
 				12E4DB402A73C87D0020F6C3 /* WWLabel.swift in Sources */,
@@ -1778,6 +1871,7 @@
 				12C562702A77E1100088E709 /* WWStep3VC.swift in Sources */,
 				12E4DB372A73BFAD0020F6C3 /* Observable + Extension.swift in Sources */,
 				12E4DBB92A748A970020F6C3 /* DailyBenifitsModel.swift in Sources */,
+				12AE57862A9FB70E00179FF6 /* WWUpdateNumberStep2VM.swift in Sources */,
 				12AEBC5E2A7D19C0009BCDFB /* WWSourcePopupDataModel.swift in Sources */,
 				12B0420E2A8AD10A0033FC80 /* Double + Extension.swift in Sources */,
 				12AEBC602A82D1D2009BCDFB /* WWWatrGuideDataModel.swift in Sources */,
@@ -1785,12 +1879,14 @@
 				12E50E492A8E9615000A88E5 /* WWAddressTVC.swift in Sources */,
 				12AEBC5C2A7CFE9B009BCDFB /* WWSourcePopupVC + CollectionView.swift in Sources */,
 				12E50E642A923683000A88E5 /* WWDailyConsumptionVM.swift in Sources */,
+				124FB0AC2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift in Sources */,
 				12E4DB952A7443890020F6C3 /* TableView + Extensions.swift in Sources */,
 				12AEBC552A7CF896009BCDFB /* WWSourcePopVM.swift in Sources */,
 				120AB8182A782B29009B80C8 /* WWStep4VM.swift in Sources */,
 				12816E472A8E7C020062F32C /* WWAccountInfoTVC.swift in Sources */,
 				120AB82A2A78490D009B80C8 /* WWDeviceDetail.swift in Sources */,
 				1269E9102A75C7B200B09FCB /* WWStep1VM.swift in Sources */,
+				12AE57842A9FB6C600179FF6 /* WWUpdateNumberStep2VC.swift in Sources */,
 				12E50E5D2A922BB1000A88E5 /* WWConsumptionOnboardingVM.swift in Sources */,
 				12E50E6C2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift in Sources */,
 				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
@@ -1812,6 +1908,8 @@
 				1269E8ED2A75A2EF00B09FCB /* WWFonts.swift in Sources */,
 				1269E94C2A763F4900B09FCB /* IQUIView+Hierarchy.swift in Sources */,
 				1269E93F2A763F4900B09FCB /* IQPreviousNextView.swift in Sources */,
+				12AE57802A9FB19500179FF6 /* WWUpdateNumberModel.swift in Sources */,
+				12AE577C2A9FAE2E00179FF6 /* WWUpdateNumberStep1VC.swift in Sources */,
 				1269E9252A763D5A00B09FCB /* WWStep2VC.swift in Sources */,
 				12E4DBA82A7481930020F6C3 /* DailyBenifitsMasterVC.swift in Sources */,
 				12E4DB232A73A0160020F6C3 /* WWControllerType.swift in Sources */,
@@ -1840,6 +1938,7 @@
 				1269E94D2A763F4900B09FCB /* IQNSArray+Sort.swift in Sources */,
 				12E4DB992A7461FF0020F6C3 /* UIView + Extension.swift in Sources */,
 				12B0420C2A8AB9940033FC80 /* WWOutletListing.swift in Sources */,
+				12AE578A2A9FBA8400179FF6 /* WWUpdateNumberStep3VC.swift in Sources */,
 				1269E8F82A75ADF400B09FCB /* WWWatrGuideVM.swift in Sources */,
 				125EE57E2A8E71CD007B0F84 /* WWProfileSectionHeader.swift in Sources */,
 				122DD46E2A840AE400C8F962 /* WWProfileVC.swift in Sources */,
@@ -1878,6 +1977,7 @@
 				12E4DB272A73A45F0020F6C3 /* WWStoryBoard.swift in Sources */,
 				12B0420A2A8AB93C0033FC80 /* Webservices + Map.swift in Sources */,
 				122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */,
+				124FB0A92AA210AB00B53B2B /* Webservice + Source.swift in Sources */,
 				12E4DB9F2A7464400020F6C3 /* WWWatrSourceInfoVM.swift in Sources */,
 				12E4DB922A7441FE0020F6C3 /* WWVerticalButtonTVC.swift in Sources */,
 				12E4DB472A73CA0B0020F6C3 /* WWEnterPhoneVC.swift in Sources */,

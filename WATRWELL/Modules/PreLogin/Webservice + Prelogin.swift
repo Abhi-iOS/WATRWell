@@ -26,7 +26,13 @@ extension WebServices {
             case .success(let data):
                 let userData = try! data["data"]["user"].rawData()
                 let userModel = try! JSONDecoder().decode(WWUserModel.self, from: userData)
+                let userAddresses = try! data["data"]["addresses"].rawData()
+                let userAddressModel = try! JSONDecoder().decode([WWUserAddressModel].self, from: userAddresses)
+                let userPaymentInfo = try! data["data"]["payment_informations"].rawData()
+                let userPaymentInfoModel = try! JSONDecoder().decode([WWPaymentModel].self, from: userPaymentInfo)
                 WWUserModel.currentUser = userModel
+                WWUserAddressDataSource.currentAddresses.addresses = userAddressModel
+                WWUserPaymentDataSource.userPaymentInfo.paymentInfo = userPaymentInfoModel
                 if userModel.firstName != nil {
                     WWUserDefaults.save(value: true, forKey: .isLoggedIn)
                 }
@@ -54,6 +60,17 @@ extension WebServices {
             switch result {
             case .success(_):
                 response(.success(()))
+            case .failure(let error):
+                response(.failure(error))
+            }
+        }
+    }
+    
+    static func validateUser(parameters: JSONDictionary, response : @escaping ((Result<String,Error>) ->())) {
+        commonPostAPI(parameters: parameters, endPoint: .validateUser) { result in
+            switch result {
+            case .success(let data):
+                response(.success(data["data"]["id"].stringValue))
             case .failure(let error):
                 response(.failure(error))
             }

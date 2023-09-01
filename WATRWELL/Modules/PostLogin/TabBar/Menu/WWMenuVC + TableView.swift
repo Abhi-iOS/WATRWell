@@ -59,20 +59,6 @@ private extension WWMenuVC{
         switch item {
         case .logo:
             return
-//        case .source:
-//            dismiss(animated: true) {
-//                WWRouter.shared.setTabbarAsRoot(initialItem: .source, sourceType: .notSubscribed)
-//            }
-//
-//        case .map:
-//            dismiss(animated: true) {
-//                WWRouter.shared.setTabbarAsRoot(initialItem: .map)
-//            }
-//
-//        case .discover:
-//            dismiss(animated: true) {
-//                WWRouter.shared.setTabbarAsRoot(initialItem: .discover)
-//            }
             
         case .dailyBenifits:
             showDailyBenifits()
@@ -82,14 +68,9 @@ private extension WWMenuVC{
             
         case .conusmption:
             showConsumption()
-            
-//        case .profile:
-//            dismiss(animated: true) {
-//                WWRouter.shared.setTabbarAsRoot(initialItem: .profile)
-//            }
-            
+
         case .sourceSubscription:
-            break
+            showSourceSubscription()
             
         case .support:
             showSupport()
@@ -131,6 +112,18 @@ private extension WWMenuVC{
         dismiss(animated: true) {
             let dailyBenefitsScene = WWSupportVC.instantiate(fromAppStoryboard: .Misc)
             sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(dailyBenefitsScene, animated: true)
+        }
+    }
+    
+    func showSourceSubscription() {
+        dismiss(animated: true) {
+            if let _ = WWUserDefaults.value(forKey: .subscriptionId).int {
+                let sourceSubscriptionScene = WWSourceVC.create(with: WWSourceVM(viewType: .modifySubscription))
+                sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(sourceSubscriptionScene, animated: true)
+            } else {
+                SKToast.show(withMessage: "NO SUBSCRIPTIONS FOUND")
+                return
+            }
         }
     }
     

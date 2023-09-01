@@ -12,6 +12,7 @@ import RxCocoa
 final class WWSubscriptionPopupVC: WWBaseVC {
     
     // Outlets
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: WWLabel!
     @IBOutlet weak var paymentSlider: WWPaymentSlider!
     @IBOutlet weak var closeButton: WWVerticalImageTextButton!
@@ -23,6 +24,7 @@ final class WWSubscriptionPopupVC: WWBaseVC {
     override func setupViews() {
         setInfo()
         configure(with: viewModel)
+        containerView.cornerRadius = 20
     }
 }
 
@@ -45,23 +47,33 @@ extension WWSubscriptionPopupVC: WWControllerType {
         paymentSlider.completion = { [weak self] in
             self?.updateSubscription()
         }
+        
+        let input = WWSubscriptionPopupVM.Input()
+        let output = viewModel.transform(input: input)
+        
+        output.dismissPopup.drive(onNext: { [weak self] in
+            self?.dismissAndSetRoot()
+        }).disposed(by: rx.disposeBag)
     }
 }
 
 private extension WWSubscriptionPopupVC {
     func updateSubscription() {
         switch WWUserModel.currentUser.subscriptionType {
-        case .everything: WWUserModel.currentUser.subscriptionTypeString = SubscriptionType.onlyElectrolytes.rawValue
-        case .onlyElectrolytes: WWUserModel.currentUser.subscriptionTypeString = SubscriptionType.everything.rawValue
+        case .everything: viewModel.updateSubscription(with: .onlyElectrolytes)
+        case .onlyElectrolytes: viewModel.updateSubscription(with: .everything)
         default: break
-        }
-        dismiss(animated: true) {
-            WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
         }
     }
     
     func setInfo() {
         titleLabel.attributedText = viewModel.getInfoText()
+    }
+    
+    func dismissAndSetRoot() {
+        dismiss(animated: true) {
+            WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
+        }
     }
 }
 

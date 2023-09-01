@@ -23,6 +23,7 @@ final class WWSourceVC: WWBaseVC {
     // Properties
     private(set) var viewModel: WWSourceVM!
     private let navBar: WWNavBarView = .fromNib()
+    let createSubscriptionSubject = PublishSubject<Void>()
     
     // Overriden functions
     override func setupViews() {
@@ -43,7 +44,13 @@ extension WWSourceVC: WWControllerType {
     }
 
     func configure(with viewModel: WWSourceVM){
-
+        let input = WWSourceVM.Input(createSubscription: createSubscriptionSubject.asObserver())
+        
+        let output = viewModel.transform(input: input)
+        
+        output.reloadOnSubscription.drive(onNext: { [weak self] in
+            self?.reloadOnSubscriptionComplete()
+        }).disposed(by: rx.disposeBag)
     }
 }
 
@@ -67,6 +74,10 @@ private extension WWSourceVC {
             titleLabel.text = "YOUR SOURCE"
             topPageControl.isHidden = true
             bottomPageControl.isHidden = WWUserModel.currentUser.subscriptionType.dataSource.endIndex < 2
+        case .modifySubscription:
+            titleLabel.text = "Mange\nYour Current Source Subscriptions".uppercased()
+            bottomPageControl.isHidden = true
+            topPageControl.isHidden = false
         }
     }
     
@@ -96,6 +107,17 @@ private extension WWSourceVC {
     func showMenu() {
         let menuScene = WWMenuVC.create(with: WWMenuVM())
         tabBarController?.present(menuScene, animated: true)
+    }
+    
+    func reloadOnSubscriptionComplete() {
+        
+        if let tabBarController = tabBarController as? WWTabBarVC {
+            if tabBarController.sourceType == viewModel.viewType {
+                collectionView.reloadData()
+            }
+        } else {
+            WWRouter.shared.setTabbarAsRoot(sourceType: viewModel.viewType)
+        }
     }
 }
 

@@ -69,5 +69,8 @@ extension WWUserDefaults {
         case isLoggedIn
         case userAuth
         case userData
+        case userAddress
+        case userPayments
+        case subscriptionId
     }
 }

@@ -24,7 +24,7 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch viewModel.viewType {
-        case .notSubscribed:
+        case .notSubscribed, .modifySubscription:
             return getSelectSourceCell(for: collectionView, cellForItemAt: indexPath)
         case .subscribed:
             return getSelectedSourceCell(for: collectionView, cellForItemAt: indexPath)
@@ -33,7 +33,7 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     private func getSelectSourceCell(for collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> WWSelectSourceCVC {
         let cell = collectionView.dequeueCell(with: WWSelectSourceCVC.self, indexPath: indexPath)
-        cell.setData(indexPath.item)
+        cell.setData(indexPath.item, viewType: viewModel.viewType)
         cell.paymentSlider.completion = { [weak self, weak cell] in
             let subscriptionType: SubscriptionType = indexPath.item == 0 ? .everything : .onlyElectrolytes
             self?.makePayment(for: subscriptionType)
@@ -43,6 +43,10 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         }
         cell.tapHandler = { [weak self] in
             self?.showDescription(for: indexPath.item)
+        }
+        
+        cell.cancelHandler = { [weak self] in
+            self?.showCancelPopUp()
         }
         return cell
     }
@@ -59,7 +63,7 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentPage = scrollView.contentOffset.x / UIScreen.main.bounds.size.width
         switch viewModel.viewType {
-        case .notSubscribed:
+        case .notSubscribed, .modifySubscription:
             topPageControl.currentPage = Int(currentPage)
         case .subscribed:
             bottomPageControl.currentPage = Int(currentPage)
@@ -69,38 +73,40 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
 
 private extension WWSourceVC {
     func makePayment(for subscription: SubscriptionType) {
-        //TODO: - change this with actual api
-        WWUserModel.currentUser.subscriptionTypeString = subscription.rawValue
-        reloadOnSubscriptionComplete()
-//        showDropIn(clientTokenOrTokenizationKey: WWGlobals.brainTreeAuthorization)
-    }
-    
-    func showDropIn(clientTokenOrTokenizationKey: String) {
-        let request =  BTDropInRequest()
-        let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request)
-        { (controller, result, error) in
-            if (error != nil) {
-                print("ERROR")
-            } else if let result = result {
-                // Use the BTDropInResult properties to update your UI
-                // result.<SDKMatcher sdk="ios:v4">paymentOptionType</SDKMatcher><SDKMatcher sdk="ios:v5">paymentMethodType</SDKMatcher>
-                // result.paymentMethod
-                // result.paymentIcon
-                // result.paymentDescription
+        switch viewModel.viewType {
+        case .modifySubscription:
+            switch WWUserModel.currentUser.subscriptionType {
+            case .everything: viewModel.updateSubscription(with: .onlyElectrolytes)
+            case .onlyElectrolytes: viewModel.updateSubscription(with: .everything)
+            default: break
             }
-            controller.dismiss(animated: true, completion: nil)
+        case .notSubscribed:
+            viewModel.subscriptionType = subscription
+            createSubscriptionSubject.onNext(())
+        default: break
         }
-        self.present(dropIn!, animated: true, completion: nil)
-    }
-    
-    func reloadOnSubscriptionComplete() {
-        WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
     }
     
     func showDescription(for item: Int) {
-        let incomingCase: WWSourcePopVM.IncomingCase = item == 0 ? .all : .electrolyte
+        var incomingCase: WWSourcePopVM.IncomingCase
+        if viewModel.viewType == .modifySubscription {
+            if WWUserModel.currentUser.subscriptionType == .onlyElectrolytes {
+                incomingCase = item == 0 ? .electrolyte : .all
+            } else {
+                incomingCase = item == 0 ? .all : .electrolyte
+            }
+        } else {
+        incomingCase = item == 0 ? .all : .electrolyte
+        }
         let scene = WWSourcePopupVC.create(with: WWSourcePopVM(incomingCase: incomingCase))
         tabBarController?.present(scene, animated: true)
+    }
+    
+    func showCancelPopUp() {
+        let cancelScene = WWCancelSubscriptionPopupVC.instantiate(fromAppStoryboard: .Source)
+        cancelScene.modalTransitionStyle = .crossDissolve
+        cancelScene.modalPresentationStyle = .overFullScreen
+        tabBarController?.present(cancelScene, animated: true)
     }
     
     func showUpdateSubscription() {

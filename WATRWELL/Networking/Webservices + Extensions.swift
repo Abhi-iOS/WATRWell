@@ -14,7 +14,12 @@ extension WebServices {
         case users = "users"
         case validateOtp = "users/verify_otp"
         case resendOtp = "users/resend_otp"
+        case validateUser = "users/validate"
         case outlets = "outlets"
+        case subscriptions = "subscriptions"
+        case upgrade = "subscriptions/upgrade"
+        case downGrade = "subscriptions/downgrade"
+        case canelSubscription = "subscriptions/cancel_subscription"
         
         // MARK: - API url path
         var path : String {

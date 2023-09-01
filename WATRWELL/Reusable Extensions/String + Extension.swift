@@ -79,6 +79,23 @@ extension String {
         return attributedString
     }
     
+    func underlinedString(_ string: String) -> NSAttributedString {
+        let output = NSMutableAttributedString(string: self,
+                                               attributes: [.font: WWFonts.europaRegular.withSize(14)])
+        let underlineRange = (self as NSString).range(of: string)
+        let attr: [NSAttributedString.Key: Any] = [.underlineColor: WWColors.hex000000.color,
+                                                   .underlineStyle: NSUnderlineStyle.single.rawValue]
+        output.addAttributes(attr, range: underlineRange)
+
+        return output
+    }
+    
+    func simplifyPhoneNumber() -> String {
+        var string = self
+        string = self.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "").replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
+        return string
+    }
+    
     func formatPhoneNumber() -> String {
         let mask = "(XXX) XXX - XXXX"
         let numbers = self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)

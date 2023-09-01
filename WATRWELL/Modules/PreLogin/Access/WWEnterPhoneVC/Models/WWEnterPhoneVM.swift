@@ -57,7 +57,7 @@ private extension WWEnterPhoneVM {
     }
     
     func requestOTP() {
-        WebServices.loginUser(parameters: ["users[phone_number]": mobileNumber], response: { [weak self] response in
+        WebServices.loginUser(parameters: ["users[phone_number]": mobileNumber.simplifyPhoneNumber()], response: { [weak self] response in
             switch response {
             case .success(let id):
                 self?.proceedToOTPSubject.onNext((id))

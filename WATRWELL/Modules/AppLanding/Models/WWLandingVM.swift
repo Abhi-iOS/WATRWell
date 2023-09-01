@@ -18,11 +18,13 @@ extension WWLandingVM: WWViewModelProtocol {
     enum TransitionTo {
         case access
         case enlist
+        case updateNumber
     }
     
     struct Input {
         let accessDidTap: Observable<Void>
         let enlistDidTap: Observable<Void>
+        let updateDidTap: Observable<Void>
     }
     
     struct Output {
@@ -38,6 +40,11 @@ extension WWLandingVM: WWViewModelProtocol {
         input.enlistDidTap.subscribe(onNext: { [weak self] _ in
             guard let self else { return }
             self.shouldNavigateSubject.onNext(.enlist)
+        }).disposed(by: disposeBag)
+        
+        input.updateDidTap.subscribe(onNext: { [weak self] _ in
+            guard let self else { return }
+            self.shouldNavigateSubject.onNext(.updateNumber)
         }).disposed(by: disposeBag)
 
         return Output(navigateTo: shouldNavigateSubject.asDriverOnErrorJustComplete())

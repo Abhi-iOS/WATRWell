@@ -109,7 +109,7 @@ private extension WWStep1VM {
     }
     
     func requestOTPService() {
-        guard let mobile = dataModel.mobile else { return }
+        guard let mobile = dataModel.mobile?.simplifyPhoneNumber() else { return }
         WebServices.loginUser(parameters: ["users[phone_number]": mobile], response: { [weak self] response in
             switch response {
             case .success(let id):
@@ -120,3 +120,52 @@ private extension WWStep1VM {
         })
     }
 }
+
+
+//{
+//    addresses =     (
+//                {
+//            "address_type" = "Shipping-Address";
+//            city = asdfasdf;
+//            id = 23;
+//            state = sdfasdf;
+//            street1 = asfadsfasdf;
+//            street2 = asdfadsdsf;
+//            "zip_code" = 123123;
+//        },
+//                {
+//            "address_type" = "Billing-Address";
+//            city = asdf;
+//            id = 24;
+//            state = arwer;
+//            street1 = abcded;
+//            street2 = dafasdf;
+//            "zip_code" = 123123;
+//        }
+//    );
+//    "payment_informations" =     (
+//                {
+//            "card_type" = UnionPay;
+//            "default_card" = 1;
+//            "expiration_month" = 11;
+//            "expiration_year" = 2089;
+//            id = 4;
+//            "last_4" = 7766;
+//            "name_on_card" = cardName;
+//        }
+//    );
+//    user =     {
+//        "bt_customer_id" = 51765761771;
+//        "created_at" = "2023-08-29T08:49:17.103Z";
+//        email = "sahil.pruthi@techqware.com";
+//        "first_name" = Sahil;
+//        id = 14;
+//        "last_name" = Pruthi;
+//        otp = "<null>";
+//        "phone_number" = 1234567899;
+//        "profile_picture" = "<null>";
+//        status = Active;
+//        "updated_at" = "2023-08-30T15:54:24.652Z";
+//        weight = 10;
+//    };
+//}

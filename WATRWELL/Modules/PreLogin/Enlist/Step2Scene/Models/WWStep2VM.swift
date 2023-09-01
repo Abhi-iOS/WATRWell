@@ -8,10 +8,13 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Braintree
 
 final class WWStep2VM {
     private let disposeBag = DisposeBag()
     private(set) var dataModel: WWEnlistUserModel
+    private let braintreeClient = BTAPIClient(authorization: WWGlobals.brainTreeAuthorization)!
+    private var cardClient: BTCardClient { BTCardClient(apiClient: braintreeClient) }
     
     let monthsArray: [String] = {
         var monthsArray: [String] = []
@@ -80,7 +83,7 @@ extension WWStep2VM: WWViewModelProtocol {
 private extension WWStep2VM {
     func moveToNextStep() {
         guard verifyDataValidity() else { return }
-        shouldMoveToNextSubject.onNext(())
+        registerCard()
     }
     
     private func verifyDataValidity() -> Bool {
@@ -104,6 +107,24 @@ private extension WWStep2VM {
             return false
         }
         return true
+    }
+    
+    private func registerCard() {
+        let card = BTCard()
+        card.cardholderName = dataModel.nameOnCard
+        card.number = dataModel.cardNumber
+        let month = dataModel.expiry?.components(separatedBy: "/").first ?? ""
+        let year = "20" + (dataModel.expiry?.components(separatedBy: "/").last ?? "")
+        card.expirationMonth = month
+        card.expirationYear = year
+        cardClient.tokenizeCard(card) { [weak self] (tokenizedCard, error) in
+            if let tokenizedCard {
+                self?.dataModel.tokenKey = tokenizedCard.nonce
+                self?.shouldMoveToNextSubject.onNext(())
+            } else {
+                SKToast.show(withMessage: error?.localizedDescription ?? "")
+            }
+        }
     }
 }
 

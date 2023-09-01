@@ -11,7 +11,7 @@ import RxCocoa
 
 final class WWSubscriptionPopupVM {
     private let disposeBag = DisposeBag()
-    
+    private let dismissSubject = PublishSubject<Void>()
 }
 
 extension WWSubscriptionPopupVM: WWViewModelProtocol {
@@ -19,10 +19,11 @@ extension WWSubscriptionPopupVM: WWViewModelProtocol {
     }
     
     struct Output {
+        let dismissPopup: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
-        return Output()
+        return Output(dismissPopup: dismissSubject.asDriverOnErrorJustComplete())
     }
     
     private func getUpgradeString() -> String {
@@ -52,3 +53,16 @@ extension WWSubscriptionPopupVM: WWViewModelProtocol {
     }
 }
 
+extension WWSubscriptionPopupVM {
+    func updateSubscription(with type: SubscriptionType) {
+        let endpoint: WebServices.EndPoint = type == .everything ? .upgrade : .downGrade
+        WebServices.updateSubscription(with: endpoint) { [weak self] response in
+            switch response {
+            case .success(_):
+                WWUserModel.currentUser.subscriptionTypeValue = type.planId
+                self?.dismissSubject.onNext(())
+            case .failure(_): break
+            }
+        }
+    }
+}
