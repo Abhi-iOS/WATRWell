@@ -58,9 +58,6 @@ extension WWEnterOTPVC: WWControllerType {
         
         output.hideResendButton.bind(to: resendButton.rx.isHidden).disposed(by: rx.disposeBag)
         output.updatedTimerValue.bind(to: resendLabel.rx.text).disposed(by: rx.disposeBag)
-        output.popToRoot.drive(onNext: { _ in
-            WWRouter.shared.setRootScene()
-        }).disposed(by: rx.disposeBag)
     }
 }
 
@@ -72,7 +69,7 @@ private extension WWEnterOTPVC {
         case .enlist:
             moveToNextStep()
         case .updateNumber:
-            viewModel.updateNumber()
+            WWRouter.shared.setRootScene()
         }
     }
     

@@ -59,7 +59,9 @@ private extension WWMenuVC{
         switch item {
         case .logo:
             return
-            
+        case .tutorial:
+            showTutorial()
+
         case .dailyBenifits:
             showDailyBenifits()
             
@@ -124,6 +126,13 @@ private extension WWMenuVC{
                 SKToast.show(withMessage: "NO SUBSCRIPTIONS FOUND")
                 return
             }
+        }
+    }
+    
+    func showTutorial() {
+        dismiss(animated: true) {
+            let tutorialScene = WWTutorialVC.instantiate(fromAppStoryboard: .Misc)
+            sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(tutorialScene, animated: true)
         }
     }
     

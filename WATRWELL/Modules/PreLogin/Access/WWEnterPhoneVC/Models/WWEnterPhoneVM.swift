@@ -69,7 +69,11 @@ private extension WWEnterPhoneVM {
         }
         
         if mobileNumber.checkValidity(.MobileNumber) {
-            requestOTP()
+            if let id {
+                requestOTPForNumberUpdate(with: id)
+            } else {
+                requestOTP()
+            }
         } else {
             SKToast.show(withMessage: "Please enter valid mobile number")
         }
@@ -79,14 +83,21 @@ private extension WWEnterPhoneVM {
         WebServices.loginUser(parameters: ["users[phone_number]": mobileNumber.simplifyPhoneNumber()], response: { [weak self] response in
             switch response {
             case .success(let id):
-                if let userId = self?.id {
-                    self?.proceedToOTPSubject.onNext((userId))
-                } else {
-                    self?.proceedToOTPSubject.onNext((id))
-                }
+                self?.proceedToOTPSubject.onNext((id))
             case .failure(let err):
                 SKToast.show(withMessage: err.localizedDescription)
             }
         })
+    }
+    
+    func requestOTPForNumberUpdate(with id: String) {
+        WebServices.resendOTP(parameters: ["id": id]) { [weak self] response in
+            switch response {
+            case .success(_):
+                self?.proceedToOTPSubject.onNext(id)
+            case .failure(let err):
+                SKToast.show(withMessage: err.localizedDescription)
+            }
+        }
     }
 }

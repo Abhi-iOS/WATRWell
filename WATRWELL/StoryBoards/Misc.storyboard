@@ -265,78 +265,88 @@ FOR EXAMPLE, IF YOU ARE AN ATHLETE OR ENGAGE IN FREQUENT PHYSICAL FITNESS, OR PH
                                     <constraint firstAttribute="height" constant="70" id="1EN-aA-RUO"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="support" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-jH-8Gp">
-                                <rect key="frame" x="137.5" y="94" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-R3-gnd">
+                                <rect key="frame" x="0.0" y="83" width="375" height="501"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="support" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-jH-8Gp">
+                                        <rect key="frame" x="157.5" y="0.0" width="60" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="RyR-9E-gKQ"/>
+                                            <constraint firstAttribute="height" constant="100" id="UAO-bb-7Gy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARE TEAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-gE-oTq" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="128.5" y="124" width="118" height="29"/>
+                                        <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS6-Ul-9zz">
+                                        <rect key="frame" x="128.5" y="161" width="118" height="1.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="I7a-DV-ST8"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE ARE HERE TO SERVE YOU, AND SUPPORT YOU IN HAVING THE HIGHEST QUALITY EXPERIENCE." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csY-v6-fA7" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="202.5" width="319" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT US AT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRg-iB-KbH" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="152.5" y="277" width="70.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-4Z-252">
+                                        <rect key="frame" x="84" y="302" width="207" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Kh9-dB-TLv"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="+1-(305)-456-9978" image="text.bubble" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="text.bubble" catalog="system" title="+1-(305)-456-9978"/>
+                                        <connections>
+                                            <action selector="didTapPhone:" destination="hms-hG-uWe" eventType="touchUpInside" id="Svf-7p-Wpo"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="styStrng" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-SS-8jc">
+                                        <rect key="frame" x="127.5" y="462" width="120" height="15"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="RyR-9E-gKQ"/>
-                                    <constraint firstAttribute="height" constant="100" id="UAO-bb-7Gy"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARE TEAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-gE-oTq" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="128.5" y="218" width="118" height="29"/>
-                                <fontDescription key="fontDescription" name="Europa-Bold" family="Europa-Bold" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS6-Ul-9zz">
-                                <rect key="frame" x="128.5" y="251" width="118" height="1.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1.5" id="I7a-DV-ST8"/>
+                                    <constraint firstItem="VRg-iB-KbH" firstAttribute="top" secondItem="csY-v6-fA7" secondAttribute="bottom" constant="40" id="3cr-yh-rGN"/>
+                                    <constraint firstItem="WnP-gE-oTq" firstAttribute="top" secondItem="Dm7-jH-8Gp" secondAttribute="bottom" constant="24" id="Ffa-aP-XFe"/>
+                                    <constraint firstAttribute="bottom" secondItem="C5p-SS-8jc" secondAttribute="bottom" constant="24" id="HnW-Ly-mOx"/>
+                                    <constraint firstItem="C5p-SS-8jc" firstAttribute="centerX" secondItem="j8t-4Z-252" secondAttribute="centerX" id="I4D-kR-qhT"/>
+                                    <constraint firstItem="csY-v6-fA7" firstAttribute="width" secondItem="Cfz-R3-gnd" secondAttribute="width" multiplier="0.85" id="Kou-0v-A5s"/>
+                                    <constraint firstItem="PS6-Ul-9zz" firstAttribute="top" secondItem="WnP-gE-oTq" secondAttribute="bottom" constant="8" id="LbS-Xw-IUf"/>
+                                    <constraint firstItem="j8t-4Z-252" firstAttribute="centerX" secondItem="VRg-iB-KbH" secondAttribute="centerX" id="Mhw-Ph-jVb"/>
+                                    <constraint firstItem="PS6-Ul-9zz" firstAttribute="centerX" secondItem="WnP-gE-oTq" secondAttribute="centerX" id="PbK-xg-G5H"/>
+                                    <constraint firstItem="csY-v6-fA7" firstAttribute="top" secondItem="PS6-Ul-9zz" secondAttribute="bottom" constant="40" id="Ugs-nz-WC7"/>
+                                    <constraint firstItem="csY-v6-fA7" firstAttribute="centerX" secondItem="PS6-Ul-9zz" secondAttribute="centerX" id="YZf-tc-yZU"/>
+                                    <constraint firstItem="Dm7-jH-8Gp" firstAttribute="centerX" secondItem="Cfz-R3-gnd" secondAttribute="centerX" id="YuO-Ve-vNv"/>
+                                    <constraint firstItem="Dm7-jH-8Gp" firstAttribute="top" secondItem="Cfz-R3-gnd" secondAttribute="top" id="bxQ-rT-vgq"/>
+                                    <constraint firstItem="PS6-Ul-9zz" firstAttribute="width" secondItem="WnP-gE-oTq" secondAttribute="width" id="dKe-Sk-rFM"/>
+                                    <constraint firstItem="WnP-gE-oTq" firstAttribute="centerX" secondItem="Dm7-jH-8Gp" secondAttribute="centerX" id="h4s-3I-UFe"/>
+                                    <constraint firstItem="VRg-iB-KbH" firstAttribute="centerX" secondItem="csY-v6-fA7" secondAttribute="centerX" id="lwE-AQ-TEK"/>
+                                    <constraint firstItem="j8t-4Z-252" firstAttribute="top" secondItem="VRg-iB-KbH" secondAttribute="bottom" constant="8" id="nTA-ww-VfQ"/>
+                                    <constraint firstItem="j8t-4Z-252" firstAttribute="bottom" secondItem="C5p-SS-8jc" secondAttribute="top" constant="-120" id="sHw-N0-Oiv"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE ARE HERE TO SERVE YOU, AND SUPPORT YOU IN HAVING THE HIGHEST QUALITY EXPERIENCE." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csY-v6-fA7" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="276.5" width="300" height="51.5"/>
-                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT US AT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRg-iB-KbH" customClass="WWLabel" customModule="WATRWELL" customModuleProvider="target">
-                                <rect key="frame" x="152.5" y="352" width="70.5" height="17"/>
-                                <fontDescription key="fontDescription" name="Europa-Light" family="Europa" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-4Z-252">
-                                <rect key="frame" x="37.5" y="387" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Kh9-dB-TLv"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="+1-(305)-456-9978" image="text.bubble" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="text.bubble" catalog="system" title="+1-(305)-456-9978"/>
-                                <connections>
-                                    <action selector="didTapPhone:" destination="hms-hG-uWe" eventType="touchUpInside" id="Svf-7p-Wpo"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="styStrng" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-SS-8jc">
-                                <rect key="frame" x="127.5" y="532" width="120" height="15"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mvm-J0-enf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="leading" secondItem="WnP-gE-oTq" secondAttribute="leading" id="09Q-hb-7i6"/>
-                            <constraint firstItem="VRg-iB-KbH" firstAttribute="top" secondItem="csY-v6-fA7" secondAttribute="bottom" constant="24" id="1DR-gv-sD3"/>
-                            <constraint firstItem="Mvm-J0-enf" firstAttribute="bottom" secondItem="C5p-SS-8jc" secondAttribute="bottom" constant="120" id="5bd-MD-1Om"/>
                             <constraint firstItem="i3w-7L-RRL" firstAttribute="top" secondItem="Mvm-J0-enf" secondAttribute="top" id="7Ri-m3-rAR"/>
-                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="trailing" secondItem="WnP-gE-oTq" secondAttribute="trailing" id="925-Ev-GWO"/>
-                            <constraint firstItem="j8t-4Z-252" firstAttribute="top" secondItem="VRg-iB-KbH" secondAttribute="bottom" constant="18" id="Chy-ua-YKj"/>
-                            <constraint firstItem="csY-v6-fA7" firstAttribute="width" secondItem="9so-E5-hIX" secondAttribute="width" multiplier="0.8" id="Gi1-4Q-cQx"/>
-                            <constraint firstItem="csY-v6-fA7" firstAttribute="top" secondItem="PS6-Ul-9zz" secondAttribute="bottom" constant="24" id="Go6-Xf-3di"/>
-                            <constraint firstItem="VRg-iB-KbH" firstAttribute="centerX" secondItem="csY-v6-fA7" secondAttribute="centerX" id="NbD-ic-g4I"/>
-                            <constraint firstItem="j8t-4Z-252" firstAttribute="centerX" secondItem="csY-v6-fA7" secondAttribute="centerX" id="Xmp-yP-qAu"/>
-                            <constraint firstItem="PS6-Ul-9zz" firstAttribute="top" secondItem="WnP-gE-oTq" secondAttribute="bottom" constant="4" id="Ymw-RA-wE5"/>
-                            <constraint firstItem="WnP-gE-oTq" firstAttribute="centerX" secondItem="Dm7-jH-8Gp" secondAttribute="centerX" id="Yoo-Ks-O7Q"/>
-                            <constraint firstItem="Dm7-jH-8Gp" firstAttribute="top" secondItem="i3w-7L-RRL" secondAttribute="bottom" constant="24" id="cFg-Ou-ZUY"/>
-                            <constraint firstItem="WnP-gE-oTq" firstAttribute="top" secondItem="Dm7-jH-8Gp" secondAttribute="bottom" constant="24" id="euC-1h-RHz"/>
-                            <constraint firstItem="Dm7-jH-8Gp" firstAttribute="centerX" secondItem="i3w-7L-RRL" secondAttribute="centerX" id="gb9-gh-Ljn"/>
-                            <constraint firstItem="csY-v6-fA7" firstAttribute="centerX" secondItem="PS6-Ul-9zz" secondAttribute="centerX" id="gpQ-SB-Opb"/>
-                            <constraint firstItem="j8t-4Z-252" firstAttribute="width" secondItem="csY-v6-fA7" secondAttribute="width" id="k4F-cc-HPq"/>
+                            <constraint firstItem="Cfz-R3-gnd" firstAttribute="centerY" secondItem="Mvm-J0-enf" secondAttribute="centerY" id="9RW-OC-tRg"/>
+                            <constraint firstItem="Cfz-R3-gnd" firstAttribute="trailing" secondItem="i3w-7L-RRL" secondAttribute="trailing" id="E4K-sP-Wir"/>
+                            <constraint firstItem="Cfz-R3-gnd" firstAttribute="leading" secondItem="i3w-7L-RRL" secondAttribute="leading" id="cC0-Bo-wfR"/>
                             <constraint firstItem="Mvm-J0-enf" firstAttribute="trailing" secondItem="i3w-7L-RRL" secondAttribute="trailing" id="kHV-lc-eUw"/>
                             <constraint firstItem="i3w-7L-RRL" firstAttribute="leading" secondItem="Mvm-J0-enf" secondAttribute="leading" id="lg8-W5-Zv8"/>
-                            <constraint firstItem="C5p-SS-8jc" firstAttribute="centerX" secondItem="i3w-7L-RRL" secondAttribute="centerX" id="rgR-cp-diB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -598,19 +608,84 @@ ONBOARDING</string>
             </objects>
             <point key="canvasLocation" x="4406" y="-2"/>
         </scene>
+        <!--TutorialVC-->
+        <scene sceneID="NO3-AS-hDq">
+            <objects>
+                <viewController storyboardIdentifier="WWTutorialVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vs0-7f-tsN" customClass="WWTutorialVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piJ-vW-h6d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqA-Fs-p4f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dv2-Dx-EAp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW IT WORKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-PK-ah8">
+                                <rect key="frame" x="101.5" y="90" width="172" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Europa-Regular" family="Europa" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-xQ-Tch">
+                                <rect key="frame" x="0.0" y="139.5" width="375" height="527.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OOP-QW-dO3">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="80r-nq-dQq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yph-N1-Osv">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Jh-aN-BMt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="urQ-PK-ah8" firstAttribute="top" secondItem="EqA-Fs-p4f" secondAttribute="bottom" constant="20" id="0Oo-rn-f3c"/>
+                            <constraint firstItem="urQ-PK-ah8" firstAttribute="centerX" secondItem="EqA-Fs-p4f" secondAttribute="centerX" id="5TZ-sR-xtm"/>
+                            <constraint firstItem="EqA-Fs-p4f" firstAttribute="top" secondItem="7Jh-aN-BMt" secondAttribute="top" id="5ag-6P-wpP"/>
+                            <constraint firstItem="qYx-xQ-Tch" firstAttribute="leading" secondItem="7Jh-aN-BMt" secondAttribute="leading" id="6AL-M0-NYh"/>
+                            <constraint firstItem="7Jh-aN-BMt" firstAttribute="trailing" secondItem="qYx-xQ-Tch" secondAttribute="trailing" id="T29-UV-hds"/>
+                            <constraint firstItem="7Jh-aN-BMt" firstAttribute="trailing" secondItem="EqA-Fs-p4f" secondAttribute="trailing" id="apg-mW-QVl"/>
+                            <constraint firstItem="7Jh-aN-BMt" firstAttribute="bottom" secondItem="qYx-xQ-Tch" secondAttribute="bottom" id="bzJ-Kv-PCq"/>
+                            <constraint firstItem="EqA-Fs-p4f" firstAttribute="leading" secondItem="7Jh-aN-BMt" secondAttribute="leading" id="gYh-7T-vA5"/>
+                            <constraint firstItem="qYx-xQ-Tch" firstAttribute="top" secondItem="urQ-PK-ah8" secondAttribute="bottom" constant="20" id="u5j-8N-2uh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qYx-xQ-Tch" id="JuH-uP-FcV"/>
+                        <outlet property="navBarContainerView" destination="EqA-Fs-p4f" id="uKw-Wx-BOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14C-ZW-QYT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3732" y="690"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="1An-cN-cN9">
-            <size key="intrinsicContentSize" width="63.5" height="42.5"/>
+            <size key="intrinsicContentSize" width="63.5" height="34"/>
         </designable>
         <designable name="Qb9-Jy-OUo">
             <size key="intrinsicContentSize" width="65.5" height="34.5"/>
         </designable>
         <designable name="TYU-3y-kPD">
-            <size key="intrinsicContentSize" width="80" height="42.5"/>
+            <size key="intrinsicContentSize" width="80" height="34"/>
         </designable>
         <designable name="Ugw-zx-sS6">
-            <size key="intrinsicContentSize" width="63" height="42.5"/>
+            <size key="intrinsicContentSize" width="63" height="34"/>
         </designable>
     </designables>
     <resources>

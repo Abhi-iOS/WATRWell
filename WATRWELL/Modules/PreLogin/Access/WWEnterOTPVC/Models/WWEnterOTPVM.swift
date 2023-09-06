@@ -15,7 +15,6 @@ final class WWEnterOTPVM {
     private let id: String
     private let phoneNumber: String
     private let verificationSuccessSubject = PublishSubject<Void>()
-    private let popToRootSubject = PublishSubject<Void>()
 
     // Timer Setup
     private var timer = Timer()
@@ -50,7 +49,6 @@ extension WWEnterOTPVM: WWViewModelProtocol {
         let hideResendButton: Observable<Bool>
         let otpVerificationSuccess: Driver<Void>
         let editMobileNumber: Driver<Void>
-        let popToRoot: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -59,7 +57,11 @@ extension WWEnterOTPVM: WWViewModelProtocol {
             self.otp = otp
             if otp.count == 6, self.isOnce.not() {
                 self.isOnce = true
-                self.verifyOTP()
+                if self.incomingCase == .updateNumber {
+                    self.updateNumber()
+                } else {
+                    self.verifyOTP()
+                }
             } else {
                 self.isOnce = false
             }
@@ -72,8 +74,7 @@ extension WWEnterOTPVM: WWViewModelProtocol {
         return Output(updatedTimerValue: updatedTimeSubject.asObservable(),
                       hideResendButton: hideResendSubject.asObservable(),
                       otpVerificationSuccess: verificationSuccessSubject.asDriverOnErrorJustComplete(),
-                      editMobileNumber: input.exitDidTap.asDriverOnErrorJustComplete(),
-                      popToRoot: popToRootSubject.asDriverOnErrorJustComplete())
+                      editMobileNumber: input.exitDidTap.asDriverOnErrorJustComplete())
     }
 }
 
@@ -117,22 +118,21 @@ private extension WWEnterOTPVM {
     func verifyOTP() {
         WebServices.validateUserOTP(parameters: ["otp": otp, "id": id]) { [weak self] response in
             switch response {
-            case .success(let data):
+            case .success(_):
                 self?.verificationSuccessSubject.onNext(())
-                print(data)
             case .failure(_): break
             }
         }
     }
-}
-
-extension WWEnterOTPVM {
+    
     func updateNumber() {
         let params: JSONDictionary = ["id":id,
-                                      "phone_number":phoneNumber.simplifyPhoneNumber()]
+                                      "phone_number":phoneNumber.simplifyPhoneNumber(),
+                                      "otp": otp]
         WebServices.updatePhoneNumber(parameters: params) { [weak self] response in
             switch response {
-            case .success(_): self?.popToRootSubject.onNext(())
+            case .success(_):
+                self?.verificationSuccessSubject.onNext(())
             case .failure(_): break
             }
         }

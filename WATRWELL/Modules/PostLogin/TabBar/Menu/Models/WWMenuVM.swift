@@ -17,15 +17,12 @@ final class WWMenuVM {
 extension WWMenuVM: WWViewModelProtocol {
     enum DataSourceElements: String, CaseIterable {
         case logo
-//        case source = "SOURCE"
-//        case map = "MAP"
-//        case discover = "DISCOVER"
-        case dailyBenifits = "DAILY BENIFITS"
+        case tutorial = "HOW IT WORKS"
+        case dailyBenifits = "DAILY BENEFITS"
         case watrGuide = "WATR GUIDE"
         case conusmption = "CONSUMPTION"
-//        case profile = "PROFILE"
         case sourceSubscription = "SOURCE SUBSCRIPTION"
-        case support = "SUPPORT"
+        case support = "CARE TEAM"
         case exit = "EXIT"
         case instagram
         
