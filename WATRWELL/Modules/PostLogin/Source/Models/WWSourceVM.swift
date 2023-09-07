@@ -13,18 +13,7 @@ enum SubscriptionType: Int {
     case onlyElectrolytes = 2
     case everything = 3
     case none = -1
-    
-    var dataSource: [WWSubscriptionData] {
-        switch self {
-        case .onlyElectrolytes:
-            return WWSubscriptionData.getOnlyElectrolyteData()
-        case .everything:
-            return WWSubscriptionData.getAllData()
-        case .none:
-            return []
-        }
-    }
-    
+        
     var planId: Int {
         return rawValue
     }
@@ -33,14 +22,30 @@ enum SubscriptionType: Int {
 
 final class WWSourceVM {
     private let disposeBag = DisposeBag()
-    let viewType: IncomingCase
-    var subscriptionType: SubscriptionType?
+    private(set) var viewType: IncomingCase
+    var subscriptionType: SubscriptionType? {
+        didSet {
+            dataSource = setDataSource()
+        }
+    }
     private let reloadOnSubscriptionComplete = PublishSubject<Void>()
     private let resetTabbarSubject = PublishSubject<Void>()
+    var dataSource: [WWSubscriptionData] = []
 
     init(viewType: IncomingCase) {
         self.viewType = viewType
         getSubscription()
+    }
+    
+    func setDataSource() -> [WWSubscriptionData] {
+        switch subscriptionType {
+        case .onlyElectrolytes:
+            return WWSubscriptionData.getOnlyElectrolyteData()
+        case .everything:
+            return WWSubscriptionData.getAllData()
+        default:
+            return []
+        }
     }
 }
 
@@ -76,6 +81,10 @@ extension WWSourceVM {
         WebServices.getSubscriptions { [weak self] response in
             switch response {
             case .success(_):
+                if let planId = WWUserModel.currentUser.subscriptionTypeValue {
+                    self?.viewType = .subscribed
+                    self?.subscriptionType = SubscriptionType(rawValue: planId) ?? SubscriptionType.none
+                }
                 self?.reloadOnSubscriptionComplete.onNext(())
             case .failure(_): break
             }
@@ -97,6 +106,7 @@ extension WWSourceVM {
     
     func updateSubscription(with type: SubscriptionType) {
         let endpoint: WebServices.EndPoint = type == .everything ? .upgrade : .downGrade
+        subscriptionType = type
         let params: JSONDictionary = ["subscription_id" : WWUserDefaults.value(forKey: .subscriptionId).intValue,
                                       "plan_id" : type.planId]
         WebServices.updateSubscription(parameters: params, endpoint: endpoint) { [weak self] response in

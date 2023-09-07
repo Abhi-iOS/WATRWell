@@ -12,7 +12,7 @@ import Braintree
 extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if viewModel.viewType == .subscribed {
-            return WWUserModel.currentUser.subscriptionType.dataSource.endIndex
+            return viewModel.dataSource.endIndex
         } else {
             return 2
         }
@@ -53,9 +53,13 @@ extension WWSourceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     private func getSelectedSourceCell(for collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> WWSelectedSourceCVC {
         let cell = collectionView.dequeueCell(with: WWSelectedSourceCVC.self, indexPath: indexPath)
-        cell.setData(WWUserModel.currentUser.subscriptionType.dataSource[indexPath.row])
+        cell.setData(viewModel.dataSource[indexPath.row])
         cell.showUpdatePopup = { [weak self] in
             self?.showUpdateSubscription()
+        }
+        
+        cell.didSelectHandler = { [weak self] in
+            self?.setupTimer(for: indexPath.item)
         }
         return cell
     }
@@ -112,6 +116,42 @@ private extension WWSourceVC {
     func showUpdateSubscription() {
         let scene = WWSubscriptionPopupVC.create(with: WWSubscriptionPopupVM())
         tabBarController?.present(scene, animated: true)
+    }
+    
+    func setupTimer(for index: Int) {
+        viewModel.dataSource[index].isSelected = true
+        switch index {
+        case 0:
+            if timer0.isValid.not() {
+                timer0 = Timer.scheduledTimer(timeInterval: 40, target: self, selector: #selector(setSelectedState(_:)), userInfo: nil, repeats: false)
+            }
+        case 1:
+            if timer1.isValid.not() {
+                timer1 = Timer.scheduledTimer(timeInterval: 40, target: self, selector: #selector(setSelectedState(_:)), userInfo: nil, repeats: false)
+            }
+        case 2:
+            if timer2.isValid.not() {
+                timer2 = Timer.scheduledTimer(timeInterval: 40, target: self, selector: #selector(setSelectedState(_:)), userInfo: nil, repeats: false)
+            }
+        default: break
+        }
+        collectionView.reloadData()
+    }
+    
+    @objc func setSelectedState(_ sender: Timer) {
+        switch sender {
+        case timer0:
+            timer0.invalidate()
+            viewModel.dataSource[0].isSelected = false
+        case timer1:
+            timer1.invalidate()
+            viewModel.dataSource[1].isSelected = false
+        case timer2:
+            timer2.invalidate()
+            viewModel.dataSource[2].isSelected = false
+        default: break
+        }
+        collectionView.reloadData()
     }
 
 }

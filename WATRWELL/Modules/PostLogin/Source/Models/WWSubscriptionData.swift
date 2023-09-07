@@ -11,6 +11,7 @@ struct WWSubscriptionData {
     let title: String
     let normalImage: UIImage?
     let highlightedImage: UIImage?
+    var isSelected: Bool = false
 }
 
 extension WWSubscriptionData {

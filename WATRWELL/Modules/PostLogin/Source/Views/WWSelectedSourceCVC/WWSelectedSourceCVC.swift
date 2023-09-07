@@ -14,9 +14,15 @@ class WWSelectedSourceCVC: WWBaseCVC {
     @IBOutlet private weak var upgradeDegradeButton: UIButton!
     
     var showUpdatePopup: (() -> ())?
+    var didSelectHandler: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        sourceTypeButton.isSelected = false
     }
     
     @IBAction private func updateSubscriptionTap(_ sender: UIButton) {
@@ -24,10 +30,14 @@ class WWSelectedSourceCVC: WWBaseCVC {
     }
     
     func setData(_ model: WWSubscriptionData) {
+        sourceTypeButton.isSelected = model.isSelected
         sourceTypeButton.setImage(model.normalImage, for: .normal)
-        sourceTypeButton.setImage(model.highlightedImage, for: .highlighted)
+        sourceTypeButton.setImage(model.highlightedImage, for: .selected)
         titleLabel.text = model.title
     }
     
-
+    @IBAction private func sourceTypeDidTap(_ sender: UIButton) {
+        didSelectHandler?()
+    }
+    
 }

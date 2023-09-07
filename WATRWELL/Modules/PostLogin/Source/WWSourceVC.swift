@@ -24,6 +24,9 @@ final class WWSourceVC: WWBaseVC {
     private(set) var viewModel: WWSourceVM!
     private let navBar: WWNavBarView = .fromNib()
     let createSubscriptionSubject = PublishSubject<Void>()
+    var timer0 = Timer()
+    var timer1 = Timer()
+    var timer2 = Timer()
     
     // Overriden functions
     override func setupViews() {
@@ -31,6 +34,12 @@ final class WWSourceVC: WWBaseVC {
         setNavBar()
         setupScreenContent()
         setupCollectionView()
+    }
+    
+    deinit {
+        timer0.invalidate()
+        timer1.invalidate()
+        timer2.invalidate()
     }
 }
 
@@ -77,9 +86,9 @@ private extension WWSourceVC {
         case .subscribed:
             titleLabel.text = "YOUR SOURCE"
             topPageControl.isHidden = true
-            bottomPageControl.isHidden = WWUserModel.currentUser.subscriptionType.dataSource.endIndex < 2
+            bottomPageControl.isHidden = viewModel.dataSource.endIndex < 2
         case .modifySubscription:
-            titleLabel.text = "Mange\nYour Current Source Subscriptions".uppercased()
+            titleLabel.text = "Manage\nYour Current Source Subscriptions".uppercased()
             bottomPageControl.isHidden = true
             topPageControl.isHidden = false
         }

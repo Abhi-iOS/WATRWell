@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,9 +30,12 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAf-0b-i5g">
                                         <rect key="frame" x="83.666666666666686" y="44.333333333333314" width="170" height="221"/>
-                                        <color key="tintColor" name="appOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="subs_empty"/>
+                                        <connections>
+                                            <action selector="sourceTypeDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="8F6-qu-ubf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,8 +78,5 @@
         <image name="staystrng_ic" width="130" height="17"/>
         <image name="subs_empty" width="146" height="207"/>
         <image name="watrGear" width="35.666667938232422" height="45"/>
-        <namedColor name="appOrange">
-            <color red="0.87450980392156863" green="0.33333333333333331" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
