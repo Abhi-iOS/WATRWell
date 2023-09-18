@@ -20,6 +20,9 @@
 		122DD46F2A840AE400C8F962 /* WWUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD46D2A840AE400C8F962 /* WWUserModel.swift */; };
 		122DD4742A84ED2500C8F962 /* WWSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DD4732A84ED2500C8F962 /* WWSplashVC.swift */; };
 		122DD4762A84F13700C8F962 /* WATRWELL_INTRO.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 122DD4752A84F13700C8F962 /* WATRWELL_INTRO.mp4 */; };
+		122F1E1A2AB8AC040066B6A7 /* Webservice+Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F1E192AB8AC040066B6A7 /* Webservice+Consumption.swift */; };
+		122F1E1D2AB8CC440066B6A7 /* WWActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F1E1C2AB8CC440066B6A7 /* WWActivityIndicatorView.swift */; };
+		122F1E1F2AB8CD0B0066B6A7 /* yegoa6grz7xa1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 122F1E1E2AB8CD0B0066B6A7 /* yegoa6grz7xa1.gif */; };
 		124FB0A92AA210AB00B53B2B /* Webservice + Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FB0A82AA210AB00B53B2B /* Webservice + Source.swift */; };
 		124FB0AC2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FB0AB2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift */; };
 		12586AB72A6EF5C40086B315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12586AB22A6EF5C40086B315 /* AppDelegate.swift */; };
@@ -227,6 +230,9 @@
 		122DD46D2A840AE400C8F962 /* WWUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWUserModel.swift; sourceTree = "<group>"; };
 		122DD4732A84ED2500C8F962 /* WWSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSplashVC.swift; sourceTree = "<group>"; };
 		122DD4752A84F13700C8F962 /* WATRWELL_INTRO.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WATRWELL_INTRO.mp4; sourceTree = "<group>"; };
+		122F1E192AB8AC040066B6A7 /* Webservice+Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservice+Consumption.swift"; sourceTree = "<group>"; };
+		122F1E1C2AB8CC440066B6A7 /* WWActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWActivityIndicatorView.swift; sourceTree = "<group>"; };
+		122F1E1E2AB8CD0B0066B6A7 /* yegoa6grz7xa1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = yegoa6grz7xa1.gif; sourceTree = "<group>"; };
 		124FB0A82AA210AB00B53B2B /* Webservice + Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webservice + Source.swift"; sourceTree = "<group>"; };
 		124FB0AB2AA2313200B53B2B /* WWCancelSubscriptionPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWCancelSubscriptionPopupVC.swift; sourceTree = "<group>"; };
 		12586AAE2A6EF5C40086B315 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -508,6 +514,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		122F1E1B2AB8CC2C0066B6A7 /* WWLoader */ = {
+			isa = PBXGroup;
+			children = (
+				122F1E1C2AB8CC440066B6A7 /* WWActivityIndicatorView.swift */,
+			);
+			path = WWLoader;
+			sourceTree = "<group>";
+		};
 		124FB0AA2AA2310300B53B2B /* CancelSubscriptionPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +561,7 @@
 		12586AB32A6EF5C40086B315 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				122F1E1E2AB8CD0B0066B6A7 /* yegoa6grz7xa1.gif */,
 				122DD4752A84F13700C8F962 /* WATRWELL_INTRO.mp4 */,
 				12586AB42A6EF5C40086B315 /* Assets.xcassets */,
 				12E4DB2C2A73ACAD0020F6C3 /* Colors.xcassets */,
@@ -1048,6 +1063,7 @@
 		12E0B78F2A6EEF93002B7181 /* Common UI Snippets */ = {
 			isa = PBXGroup;
 			children = (
+				122F1E1B2AB8CC2C0066B6A7 /* WWLoader */,
 				12E50E742A952A81000A88E5 /* WWPickerView */,
 				12C5624F2A764A460088E709 /* WWDropDownView */,
 				1269E8EE2A75A4DD00B09FCB /* WWNavBarView */,
@@ -1517,6 +1533,7 @@
 				12E50E6E2A924031000A88E5 /* PopUp */,
 				12E50E582A922B54000A88E5 /* PostOnboarding */,
 				12E50E572A922B4E000A88E5 /* Onboarding */,
+				122F1E192AB8AC040066B6A7 /* Webservice+Consumption.swift */,
 			);
 			path = Consumption;
 			sourceTree = "<group>";
@@ -1751,6 +1768,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122F1E1F2AB8CD0B0066B6A7 /* yegoa6grz7xa1.gif in Resources */,
 				1269E8EA2A759DF900B09FCB /* Europa-Bold.ttf in Resources */,
 				12E4DBAA2A7481E60020F6C3 /* Misc.storyboard in Resources */,
 				12E50E4A2A8E9615000A88E5 /* WWAddressTVC.xib in Resources */,
@@ -1890,6 +1908,7 @@
 				12E4DB202A739FDC0020F6C3 /* WWLandingVM.swift in Sources */,
 				125EE5792A8BA3B7007B0F84 /* WWProfileVC + TableView.swift in Sources */,
 				1269E94A2A763F4900B09FCB /* IQUIViewController+Additions.swift in Sources */,
+				122F1E1A2AB8AC040066B6A7 /* Webservice+Consumption.swift in Sources */,
 				12E50E682A923AD6000A88E5 /* WWDailyConsumptionVC + CollectionView.swift in Sources */,
 				12F73B812AA901E600A48484 /* WWTutorialVC+CollectionView.swift in Sources */,
 				1269E9462A763F4900B09FCB /* IQKeyboardManagerConstants.swift in Sources */,
@@ -1922,6 +1941,7 @@
 				12E50E6C2A923B9D000A88E5 /* WWDailyConsumptionCVC.swift in Sources */,
 				120AB8252A7836B0009B80C8 /* WWSelectedSourceCVC.swift in Sources */,
 				12C562692A769B0E0088E709 /* WWDiscoverVM.swift in Sources */,
+				122F1E1D2AB8CC440066B6A7 /* WWActivityIndicatorView.swift in Sources */,
 				12E4DB172A6EFE6E0020F6C3 /* WWRouter.swift in Sources */,
 				12F73B7E2AA9014F00A48484 /* WWTutorialCVC.swift in Sources */,
 				12AEBC492A799661009BCDFB /* Webservices + Extensions.swift in Sources */,
@@ -2185,7 +2205,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";
@@ -2225,7 +2245,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 28WRCJ4FCD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WATRWELL/Resources/Plist/Info.plist";

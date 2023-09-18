@@ -37,7 +37,7 @@ extension WebServices {
     }
     
     static func updateSubscription(parameters: JSONDictionary, endpoint: WebServices.EndPoint, response : @escaping ((Result<Void,Error>) ->())) {
-        commonPutWithRawJSONAPI(parameters: parameters, endPoint: endpoint) { result in
+        commonPutWithRawJSONAPI(parameters: parameters, endPoint: endpoint, loader: true) { result in
             switch result {
             case .success(_):
                 response(.success(()))

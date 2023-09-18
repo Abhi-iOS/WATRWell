@@ -79,6 +79,10 @@ extension WWConsumptionOnboardingVM: WWViewModelProtocol {
             self.weightUpdateSubject.onNext("\(weight) LBS")
         }).disposed(by: disposeBag)
         
+        input.completeTap.subscribe(onNext: { [weak self] in
+            self?.saveOnboardingInfo()
+        }).disposed(by: disposeBag)
+        
         return Output(weightLabelText: weightUpdateSubject.asObservable(),
                       goToNext: input.completeTap.asDriverOnErrorJustComplete())
     }
@@ -88,6 +92,17 @@ extension WWConsumptionOnboardingVM: WWViewModelProtocol {
         case .year: selectedYear = string
         case .month: selectedMonth = string
         case .day: selectedDay = string
+        }
+    }
+}
+
+private extension WWConsumptionOnboardingVM {
+    func saveOnboardingInfo() {
+        WebServices.enlistUserData(parameters: WWUserModel.currentUser.parameters, userId: WWUserModel.currentUser.id) { response in
+            switch response {
+            case .success(_): break
+            case .failure(_): break
+            }
         }
     }
 }

@@ -77,8 +77,9 @@ extension WebServices {
         }
     }
     
-    static func updatePhoneNumber(parameters: JSONDictionary, response : @escaping ((Result<Void,Error>) ->())) {
-        commonPostAPI(parameters: parameters, endPoint: .updatePhonenumber) { result in
+    static func updatePhoneNumber(id: String, parameters: JSONDictionary, response : @escaping ((Result<Void,Error>) ->())) {
+        let toAppendPath = "\(id)/update_phone_number"
+        commonPutWithRawJSONAPI(parameters: parameters, endPoint: .users, toAppend: toAppendPath) { result in
             switch result {
             case .success(_):
                 response(.success(()))

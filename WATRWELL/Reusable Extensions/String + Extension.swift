@@ -153,3 +153,11 @@ extension Int {
         return "\(self)"
     }
 }
+
+extension Date {
+    func currentFormattedDate(_ format: String = "yyyy-MM-dd") -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+}

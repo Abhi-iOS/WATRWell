@@ -91,7 +91,7 @@ private extension WWMenuVC{
     
     func showConsumption() {
         dismiss(animated: true) {
-            let consumptionOnboardingScene = WWConsumptionOnboardingVC.create(with: WWConsumptionOnboardingVM())
+            let consumptionOnboardingScene = WWDailyConsumptionVC.create(with: WWDailyConsumptionVM())
             sharedAppDelegate.window?.currentViewController?.navigationController?.pushViewController(consumptionOnboardingScene, animated: true)
         }
     }

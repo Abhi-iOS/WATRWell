@@ -52,6 +52,7 @@ enum WWColors: String {
     case hexD9D9D9 // light gray
     case hex203D75 // watrBlue
     case hexB3E6B5 // watrGreen
+    case loaderBG
     
     
     private var hexValue: String {

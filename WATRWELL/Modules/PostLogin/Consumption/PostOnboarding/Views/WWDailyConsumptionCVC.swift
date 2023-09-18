@@ -22,7 +22,7 @@ class WWDailyConsumptionCVC: WWBaseCVC {
         super.awakeFromNib()
     }
     
-    func setData(_ data: WWDailyConsumptionDataModel) {
+    func setData(_ data: WWDailyConsumptionType) {
         titleLabel.attributedText = data.title
         bodyImageView.image = data.image
         descLabel1.attributedText = data.desc1Text

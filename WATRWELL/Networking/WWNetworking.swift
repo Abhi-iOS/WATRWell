@@ -430,14 +430,16 @@ enum AppNetworking {
 extension AppNetworking {
     
     static func showLoader() {
+//        WWActivityIndicatorView.shared.startAnimating()
         NVActivityIndicatorView.DEFAULT_TYPE = .ballBeat
         NVActivityIndicatorView.DEFAULT_COLOR = WWColors.hexDF5509.color
-        
+
         let activityData = ActivityData()
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
     
     static func hideLoader() {
+//        WWActivityIndicatorView.shared.stopAnimatingAndRemove()
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
 }

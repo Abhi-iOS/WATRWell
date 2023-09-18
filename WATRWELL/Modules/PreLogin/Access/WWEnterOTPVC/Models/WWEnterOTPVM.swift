@@ -129,9 +129,10 @@ private extension WWEnterOTPVM {
         let params: JSONDictionary = ["id":id,
                                       "phone_number":phoneNumber.simplifyPhoneNumber(),
                                       "otp": otp]
-        WebServices.updatePhoneNumber(parameters: params) { [weak self] response in
+        WebServices.updatePhoneNumber(id: id, parameters: params) { [weak self] response in
             switch response {
             case .success(_):
+                SKToast.show(withMessage: "Phone number updated, Proceed to Login")
                 self?.verificationSuccessSubject.onNext(())
             case .failure(_): break
             }

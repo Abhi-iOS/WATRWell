@@ -39,7 +39,13 @@ extension WWDailyConsumptionVC: WWControllerType {
     }
     
     func configure(with viewModel: WWDailyConsumptionVM){
+        let input = WWDailyConsumptionVM.Input()
         
+        let output = viewModel.transform(input: input)
+        
+        output.reloadCollection.asDriver().drive(onNext: { [weak self] in
+            self?.collectionView.reloadData()
+        }).disposed(by: rx.disposeBag)
     }
 }
 

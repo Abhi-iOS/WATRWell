@@ -292,10 +292,12 @@ extension WebServices {
     // MARK:- Common PUT API with raw JSON
     static func commonPutWithRawJSONAPI(parameters: JSONDictionary,
                                         endPoint: EndPoint,
+                                        toAppend : String = "",
                                         loader: Bool = true,
                                         response : @escaping APIResponse) {
         
-        AppNetworking.PUTWithRawJSON(endPoint: endPoint.path, parameters: parameters, loader: loader) { (result) in
+        let path = toAppend.isEmpty ? endPoint.path : endPoint.path + "/\(toAppend)"
+        AppNetworking.PUTWithRawJSON(endPoint: path, parameters: parameters, loader: loader) { (result) in
             switch result{
             case .success(let json):
                 let code = WWApiCode(rawValue: json["status"].intValue) ?? .undetermined
