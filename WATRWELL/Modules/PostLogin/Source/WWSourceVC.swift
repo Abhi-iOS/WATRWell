@@ -64,6 +64,10 @@ extension WWSourceVC: WWControllerType {
         output.resetTabbar.drive(onNext: { _ in
             WWRouter.shared.setTabbarAsRoot(sourceType: .subscribed)
         }).disposed(by: rx.disposeBag)
+        
+        output.showPopup.drive(onNext: { [weak self] _ in
+            self?.showPopup()
+        }).disposed(by: rx.disposeBag)
     }
 }
 
@@ -120,6 +124,13 @@ private extension WWSourceVC {
     func showMenu() {
         let menuScene = WWMenuVC.create(with: WWMenuVM())
         tabBarController?.present(menuScene, animated: true)
+    }
+    
+    func showPopup() {
+        let popupScene = WWPreSourcePopUpVC.instantiate(fromAppStoryboard: .Source)
+        popupScene.modalTransitionStyle = .crossDissolve
+        popupScene.modalPresentationStyle = .overFullScreen
+        tabBarController?.present(popupScene, animated: true)
     }
     
     func reloadOnSubscriptionComplete() {

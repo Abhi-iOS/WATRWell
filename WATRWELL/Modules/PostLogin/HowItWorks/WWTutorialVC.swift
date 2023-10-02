@@ -14,13 +14,15 @@ final class WWTutorialVC: WWBaseVC {
     // Outlets
     @IBOutlet weak var navBarContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     // Properties
     private let navBar: WWNavBarView = .fromNib()
-    let dataSourceImages: [UIImage?] = [UIImage(named: "tt1"),UIImage(named: "tt2"),UIImage(named: "tt3"),UIImage(named: "tt4"),UIImage(named: "tt5")]
+    let dataSourceImages: [UIImage?] = [UIImage(named: "tt1"),UIImage(named: "tt2"),UIImage(named: "tt3"),UIImage(named: "tt4"),UIImage(named: "tt5"), UIImage(named: "tt6")]
     
     // Overriden functions
     override func setupViews() {
+        pageControl.numberOfPages = dataSourceImages.endIndex
         setNavBar()
         setupCollectionView()
     }

@@ -85,34 +85,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="willo_poupup" translatesAutoresizingMaskIntoConstraints="NO" id="hVb-d9-hmv">
-                                <rect key="frame" x="20" y="35.5" width="335" height="596"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1G-ZF-xeA">
-                                <rect key="frame" x="20" y="561.5" width="335" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-yV-Ooy">
+                                <rect key="frame" x="37.5" y="69.5" width="300" height="528"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="build-with-google-black.png" translatesAutoresizingMaskIntoConstraints="NO" id="TmS-dB-X3Y">
+                                        <rect key="frame" x="90" y="24" width="120" height="14"/>
+                                    </imageView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f5r-qn-8xf">
+                                        <rect key="frame" x="12" y="62" width="276" height="276"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="f5r-qn-8xf" secondAttribute="height" id="P87-kA-esg"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zL8-eP-NnA">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Yi-8h-RuA">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P0g-vG-5gD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-fn-Id6">
+                                        <rect key="frame" x="101" y="338" width="98.5" height="26"/>
+                                        <color key="pageIndicatorTintColor" name="pageIndicatorGray"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.01889045944" green="0.019077493689999999" blue="0.019077493689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </pageControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discover_willo" translatesAutoresizingMaskIntoConstraints="NO" id="jPJ-te-rCt">
+                                        <rect key="frame" x="114.5" y="376" width="71" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="hBp-Fh-mr5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md3-Aw-sY9" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="446" width="90.5" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="1pG-Cy-Fcw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Cancel" title="CLOSE">
+                                            <fontDescription key="titleFontDescription" name="Europa-Regular" family="Europa" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closePopupTap:" destination="Osh-h6-bQE" eventType="touchUpInside" id="cRL-kX-Cqw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="N93-0k-wZm"/>
+                                    <constraint firstItem="Md3-Aw-sY9" firstAttribute="centerX" secondItem="jPJ-te-rCt" secondAttribute="centerX" id="B5i-7e-hqh"/>
+                                    <constraint firstItem="jPJ-te-rCt" firstAttribute="top" secondItem="cmV-fn-Id6" secondAttribute="bottom" constant="12" id="FS1-so-40q"/>
+                                    <constraint firstItem="f5r-qn-8xf" firstAttribute="top" secondItem="TmS-dB-X3Y" secondAttribute="bottom" constant="24" id="OoW-Wg-9Ev"/>
+                                    <constraint firstItem="cmV-fn-Id6" firstAttribute="top" secondItem="f5r-qn-8xf" secondAttribute="bottom" id="PSB-UY-faf"/>
+                                    <constraint firstAttribute="trailing" secondItem="f5r-qn-8xf" secondAttribute="trailing" constant="12" id="X32-31-B48"/>
+                                    <constraint firstItem="f5r-qn-8xf" firstAttribute="leading" secondItem="d0O-yV-Ooy" secondAttribute="leading" constant="12" id="bSf-Wb-fHB"/>
+                                    <constraint firstItem="jPJ-te-rCt" firstAttribute="centerX" secondItem="cmV-fn-Id6" secondAttribute="centerX" id="iax-Be-2WK"/>
+                                    <constraint firstItem="Md3-Aw-sY9" firstAttribute="top" secondItem="jPJ-te-rCt" secondAttribute="bottom" id="mUk-CL-Gkj"/>
+                                    <constraint firstItem="TmS-dB-X3Y" firstAttribute="top" secondItem="d0O-yV-Ooy" secondAttribute="top" constant="24" id="pZZ-9r-UBj"/>
+                                    <constraint firstItem="cmV-fn-Id6" firstAttribute="centerX" secondItem="f5r-qn-8xf" secondAttribute="centerX" id="qBU-ti-f9d"/>
+                                    <constraint firstAttribute="bottom" secondItem="Md3-Aw-sY9" secondAttribute="bottom" constant="7" id="suI-2h-S48"/>
+                                    <constraint firstItem="TmS-dB-X3Y" firstAttribute="centerX" secondItem="d0O-yV-Ooy" secondAttribute="centerX" id="x5R-AP-S58"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="closePopupTap:" destination="Osh-h6-bQE" eventType="touchUpInside" id="huz-Xy-C97"/>
-                                </connections>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k7a-wI-NZb"/>
                         <color key="backgroundColor" name="menuBG"/>
                         <constraints>
-                            <constraint firstItem="W1G-ZF-xeA" firstAttribute="leading" secondItem="hVb-d9-hmv" secondAttribute="leading" id="7bm-Yp-Sbh"/>
-                            <constraint firstItem="W1G-ZF-xeA" firstAttribute="bottom" secondItem="hVb-d9-hmv" secondAttribute="bottom" id="M4L-hm-r0J"/>
-                            <constraint firstItem="hVb-d9-hmv" firstAttribute="centerY" secondItem="k7a-wI-NZb" secondAttribute="centerY" id="OLp-vK-lWi"/>
-                            <constraint firstItem="W1G-ZF-xeA" firstAttribute="trailing" secondItem="hVb-d9-hmv" secondAttribute="trailing" id="QHJ-wL-ajh"/>
-                            <constraint firstItem="hVb-d9-hmv" firstAttribute="centerX" secondItem="k7a-wI-NZb" secondAttribute="centerX" id="aCe-Ct-5YM"/>
+                            <constraint firstItem="d0O-yV-Ooy" firstAttribute="centerY" secondItem="k7a-wI-NZb" secondAttribute="centerY" id="8z4-US-zxu"/>
+                            <constraint firstItem="d0O-yV-Ooy" firstAttribute="width" secondItem="kLG-Vu-9Rh" secondAttribute="width" multiplier="0.8" id="klF-n1-moP"/>
+                            <constraint firstItem="d0O-yV-Ooy" firstAttribute="centerX" secondItem="k7a-wI-NZb" secondAttribute="centerX" id="sY3-6E-zKs"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="popupCloseButton" destination="W1G-ZF-xeA" id="BjF-0A-e8I"/>
-                        <outlet property="popupImage" destination="hVb-d9-hmv" id="DOb-hL-bhG"/>
+                        <outlet property="collectionView" destination="f5r-qn-8xf" id="3Eo-bP-EcU"/>
+                        <outlet property="outletTypeBottomImageView" destination="jPJ-te-rCt" id="Txi-vm-eyJ"/>
+                        <outlet property="outletTypeImageView" destination="TmS-dB-X3Y" id="yAV-HZ-kOr"/>
+                        <outlet property="pageControl" destination="cmV-fn-Id6" id="90T-HU-nA5"/>
+                        <outlet property="popupCloseButton" destination="Md3-Aw-sY9" id="Eik-zT-y6P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXo-H3-EJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,7 +188,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="willo_poupup" width="335" height="596"/>
+        <image name="Cancel" width="24" height="24"/>
+        <image name="build-with-google-black.png" width="120" height="14"/>
+        <image name="discover_willo" width="71" height="107"/>
         <namedColor name="menuBG">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

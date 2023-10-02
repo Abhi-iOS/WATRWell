@@ -29,6 +29,7 @@ final class WWSourceVM {
         }
     }
     private let reloadOnSubscriptionComplete = PublishSubject<Void>()
+    private let presentPopUpSubject = PublishSubject<Void>()
     private let resetTabbarSubject = PublishSubject<Void>()
     var dataSource: [WWSubscriptionData] = []
 
@@ -63,6 +64,7 @@ extension WWSourceVM: WWViewModelProtocol {
     struct Output {
         let reloadOnSubscription: Driver<Void>
         let resetTabbar: Driver<Void>
+        let showPopup: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -71,7 +73,8 @@ extension WWSourceVM: WWViewModelProtocol {
         }).disposed(by: disposeBag)
         
         return Output(reloadOnSubscription: reloadOnSubscriptionComplete.asDriverOnErrorJustComplete(),
-                      resetTabbar: resetTabbarSubject.asDriverOnErrorJustComplete())
+                      resetTabbar: resetTabbarSubject.asDriverOnErrorJustComplete(),
+                      showPopup: presentPopUpSubject.asDriverOnErrorJustComplete())
     }
 }
 
@@ -84,6 +87,11 @@ extension WWSourceVM {
                 if let planId = WWUserModel.currentUser.subscriptionTypeValue {
                     self?.viewType = .subscribed
                     self?.subscriptionType = SubscriptionType(rawValue: planId) ?? SubscriptionType.none
+                } else {
+                    if WWUserDefaults.value(forKey: .didShowPrePopup).boolValue.not() {
+                        self?.presentPopUpSubject.onNext(())
+                        WWUserDefaults.save(value: true, forKey: .didShowPrePopup)
+                    }
                 }
                 self?.reloadOnSubscriptionComplete.onNext(())
             case .failure(_): break

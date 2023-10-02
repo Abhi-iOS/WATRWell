@@ -34,7 +34,7 @@ extension WWDiscoverDataModel {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            applyParaStyle: true)?
                     .boldString(value: "CACTUS"),
                                     logoTint: nil,
-                                    buttonLogo: UIImage(named: "discover_willo")),
+                                    buttonLogo: UIImage(named: "discover_cactus")),
                 WWDiscoverDataModel(title: "+ELECTROLYTES",
                                     descText: electrolyteAttrString(),
                                     logoTint: WWColors.hex203D75.color,

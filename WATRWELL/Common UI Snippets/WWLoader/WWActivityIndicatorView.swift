@@ -50,7 +50,7 @@ class WWActivityIndicatorView: UIView {
     
     // MARK: - GIF Animation
     func startAnimating() {
-        guard let gifURL = Bundle.main.url(forResource: "yegoa6grz7xa1", withExtension: "gif"),
+        guard let gifURL = Bundle.main.url(forResource: "drop", withExtension: "gif"),
               let source = CGImageSourceCreateWithURL(gifURL as NSURL, nil) else {
             return
         }
@@ -66,7 +66,7 @@ class WWActivityIndicatorView: UIView {
         }
         
         gifImageView?.animationImages = images
-        gifImageView?.animationDuration = TimeInterval(frameCount) * 0.1 // Adjust the speed of animation
+        gifImageView?.animationDuration = TimeInterval(frameCount) * 0.02 // Adjust the speed of animation
         gifImageView?.startAnimating()
         
         isHidden = false

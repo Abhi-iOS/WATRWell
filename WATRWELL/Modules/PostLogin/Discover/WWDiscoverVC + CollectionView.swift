@@ -41,14 +41,13 @@ extension WWDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 
 private extension WWDiscoverVC {
     func goToDetailView(for index: Int) {
-        var image: UIImage?
+        var incomingCase: WWDiscoverPopupVC.IncomingCase = .willo
         switch index {
-        case 1: image = UIImage(named: "willo_poupup")
-        case 2: image = UIImage(named: "cactus_popup")
+        case 1: incomingCase = .willo
+        case 2: incomingCase = .cactus
         default: break
         }
-        let popUpScene = WWDiscoverPopupVC.create(with: image)
+        let popUpScene = WWDiscoverPopupVC.create(with: incomingCase)
         tabBarController?.present(popUpScene, animated: true)
     }
 }
-

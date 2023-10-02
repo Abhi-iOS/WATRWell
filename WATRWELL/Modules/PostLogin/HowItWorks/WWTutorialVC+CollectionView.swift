@@ -21,4 +21,9 @@ extension WWTutorialVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         cell.setData(with: dataSourceImages[indexPath.item])
         return cell
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentPage = scrollView.contentOffset.x / UIScreen.main.bounds.size.width
+        pageControl.currentPage = Int(currentPage)
+    }
 }

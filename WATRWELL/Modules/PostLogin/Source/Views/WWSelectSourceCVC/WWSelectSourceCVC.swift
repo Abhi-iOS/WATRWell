@@ -40,7 +40,7 @@ class WWSelectSourceCVC: WWBaseCVC {
             case 0:
                 immunityStackView.isHidden = false
                 antiAgingStackView.isHidden = false
-                priceLabel.text = "$30\nMONTHLY"
+                priceLabel.text = "$30"
             case 1:
                 immunityStackView.isHidden = true
                 antiAgingStackView.isHidden = true
@@ -55,13 +55,13 @@ class WWSelectSourceCVC: WWBaseCVC {
         case 0:
             immunityStackView.isHidden = WWUserModel.currentUser.subscriptionType == .onlyElectrolytes
             antiAgingStackView.isHidden = WWUserModel.currentUser.subscriptionType == .onlyElectrolytes
-            priceLabel.text = WWUserModel.currentUser.subscriptionType == .onlyElectrolytes ? "$20\nMONTHLY" : "$30\nMONTHLY"
+            priceLabel.text = WWUserModel.currentUser.subscriptionType == .onlyElectrolytes ? "$20" : "$30"
             cancelButton.isHidden = false
             sliderStackView.isHidden = true
         case 1:
             immunityStackView.isHidden = WWUserModel.currentUser.subscriptionType != .onlyElectrolytes
             antiAgingStackView.isHidden = WWUserModel.currentUser.subscriptionType != .onlyElectrolytes
-            priceLabel.text = WWUserModel.currentUser.subscriptionType != .onlyElectrolytes ? "$20\nMONTHLY" : "$30\nMONTHLY"
+            priceLabel.text = WWUserModel.currentUser.subscriptionType != .onlyElectrolytes ? "$20" : "$30"
             cancelButton.isHidden = true
             sliderStackView.isHidden = false
         default: break

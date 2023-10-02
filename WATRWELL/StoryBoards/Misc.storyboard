@@ -649,6 +649,11 @@ ONBOARDING</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ag4-BJ-v6Q">
+                                <rect key="frame" x="0.0" y="641" width="375" height="26"/>
+                                <color key="pageIndicatorTintColor" name="pageIndicatorGray"/>
+                                <color key="currentPageIndicatorTintColor" red="0.01889045944" green="0.019077493689999999" blue="0.019077493689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Jh-aN-BMt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -657,16 +662,20 @@ ONBOARDING</string>
                             <constraint firstItem="urQ-PK-ah8" firstAttribute="centerX" secondItem="EqA-Fs-p4f" secondAttribute="centerX" id="5TZ-sR-xtm"/>
                             <constraint firstItem="EqA-Fs-p4f" firstAttribute="top" secondItem="7Jh-aN-BMt" secondAttribute="top" id="5ag-6P-wpP"/>
                             <constraint firstItem="qYx-xQ-Tch" firstAttribute="leading" secondItem="7Jh-aN-BMt" secondAttribute="leading" id="6AL-M0-NYh"/>
+                            <constraint firstItem="ag4-BJ-v6Q" firstAttribute="bottom" secondItem="qYx-xQ-Tch" secondAttribute="bottom" id="QhG-re-wRB"/>
                             <constraint firstItem="7Jh-aN-BMt" firstAttribute="trailing" secondItem="qYx-xQ-Tch" secondAttribute="trailing" id="T29-UV-hds"/>
                             <constraint firstItem="7Jh-aN-BMt" firstAttribute="trailing" secondItem="EqA-Fs-p4f" secondAttribute="trailing" id="apg-mW-QVl"/>
                             <constraint firstItem="7Jh-aN-BMt" firstAttribute="bottom" secondItem="qYx-xQ-Tch" secondAttribute="bottom" id="bzJ-Kv-PCq"/>
                             <constraint firstItem="EqA-Fs-p4f" firstAttribute="leading" secondItem="7Jh-aN-BMt" secondAttribute="leading" id="gYh-7T-vA5"/>
+                            <constraint firstItem="ag4-BJ-v6Q" firstAttribute="leading" secondItem="qYx-xQ-Tch" secondAttribute="leading" id="kGL-3S-D52"/>
                             <constraint firstItem="qYx-xQ-Tch" firstAttribute="top" secondItem="urQ-PK-ah8" secondAttribute="bottom" constant="20" id="u5j-8N-2uh"/>
+                            <constraint firstItem="ag4-BJ-v6Q" firstAttribute="trailing" secondItem="qYx-xQ-Tch" secondAttribute="trailing" id="vrY-Dm-DiP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="qYx-xQ-Tch" id="JuH-uP-FcV"/>
                         <outlet property="navBarContainerView" destination="EqA-Fs-p4f" id="uKw-Wx-BOV"/>
+                        <outlet property="pageControl" destination="ag4-BJ-v6Q" id="fhk-8L-VMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14C-ZW-QYT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

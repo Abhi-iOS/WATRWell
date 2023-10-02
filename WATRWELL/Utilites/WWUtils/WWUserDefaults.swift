@@ -59,6 +59,7 @@ enum WWUserDefaults {
         UserDefaults.standard.removePersistentDomain(forName: appDomain)
         UserDefaults.standard.synchronize()
         save(value: false, forKey: .isLoggedIn)
+        save(value: false, forKey: .didShowPrePopup)
     }
 }
 
@@ -72,5 +73,6 @@ extension WWUserDefaults {
         case userAddress
         case userPayments
         case subscriptionId
+        case didShowPrePopup
     }
 }

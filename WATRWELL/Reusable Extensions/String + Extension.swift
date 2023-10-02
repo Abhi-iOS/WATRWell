@@ -79,11 +79,11 @@ extension String {
         return attributedString
     }
     
-    func underlinedString(_ string: String) -> NSAttributedString {
+    func underlinedString(_ string: String, color: UIColor = WWColors.hex000000.color) -> NSAttributedString {
         let output = NSMutableAttributedString(string: self,
                                                attributes: [.font: WWFonts.europaRegular.withSize(14)])
         let underlineRange = (self as NSString).range(of: string)
-        let attr: [NSAttributedString.Key: Any] = [.underlineColor: WWColors.hex000000.color,
+        let attr: [NSAttributedString.Key: Any] = [.underlineColor: color,
                                                    .underlineStyle: NSUnderlineStyle.single.rawValue]
         output.addAttributes(attr, range: underlineRange)
 

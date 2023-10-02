@@ -393,6 +393,74 @@
             </objects>
             <point key="canvasLocation" x="2281" y="-2"/>
         </scene>
+        <!--Pre Source Pop UpVC-->
+        <scene sceneID="CU6-b4-mxg">
+            <objects>
+                <viewController storyboardIdentifier="WWPreSourcePopUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cr0-z3-jQ2" customClass="WWPreSourcePopUpVC" customModule="WATRWELL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJf-6t-J4d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-f5-RrY">
+                                <rect key="frame" x="16" y="159" width="343" height="349"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-latest 1" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-cg-d3K">
+                                        <rect key="frame" x="141.5" y="0.0" width="60" height="127"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-dH-Chk">
+                                        <rect key="frame" x="78" y="167" width="187" height="43.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wc_watrWell" translatesAutoresizingMaskIntoConstraints="NO" id="uhB-29-3IQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="19"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb0-gh-vVg">
+                                                <rect key="frame" x="73" y="23" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dom-fR-r9v">
+                                        <rect key="frame" x="151" y="250.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAi-XY-0ND" customClass="WWVerticalImageTextButton" customModule="WATRWELL" customModuleProvider="target">
+                                        <rect key="frame" x="122" y="311" width="99.5" height="38"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Cancel" title="CLOSE">
+                                            <fontDescription key="titleFontDescription" name="Europa-Regular" family="Europa" pointSize="17"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stay_strng_white" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-5x-kpK">
+                                <rect key="frame" x="122.5" y="626" width="130" height="17"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iwf-Kl-seK"/>
+                        <color key="backgroundColor" name="menuBG"/>
+                        <constraints>
+                            <constraint firstItem="zS8-f5-RrY" firstAttribute="leading" secondItem="iwf-Kl-seK" secondAttribute="leading" constant="16" id="7YV-5c-yHL"/>
+                            <constraint firstItem="wEa-5x-kpK" firstAttribute="centerX" secondItem="iwf-Kl-seK" secondAttribute="centerX" id="8eh-Fp-aI3"/>
+                            <constraint firstItem="iwf-Kl-seK" firstAttribute="bottom" secondItem="wEa-5x-kpK" secondAttribute="bottom" constant="24" id="L2X-HF-jI3"/>
+                            <constraint firstItem="iwf-Kl-seK" firstAttribute="trailing" secondItem="zS8-f5-RrY" secondAttribute="trailing" constant="16" id="jmw-qX-AV5"/>
+                            <constraint firstItem="zS8-f5-RrY" firstAttribute="centerY" secondItem="iwf-Kl-seK" secondAttribute="centerY" id="ydk-vM-1eS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clickHereLabel" destination="Fb0-gh-vVg" id="xRl-F9-LV0"/>
+                        <outlet property="closeButton" destination="lAi-XY-0ND" id="ZVg-SL-77G"/>
+                        <outlet property="howItWorksLabel" destination="dom-fR-r9v" id="JTG-D4-Roa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQH-rx-cWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="-2"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="cDG-Ck-Z4e">
@@ -403,8 +471,10 @@
         <image name="Cancel" width="24" height="24"/>
         <image name="logo-latest 1" width="60" height="127"/>
         <image name="paymentSliderThumb" width="28" height="28"/>
+        <image name="stay_strng_white" width="130" height="17"/>
         <image name="staystrng_ic" width="130" height="17"/>
         <image name="watrGear" width="36" height="45"/>
+        <image name="wc_watrWell" width="187" height="19"/>
         <namedColor name="menuBG">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
