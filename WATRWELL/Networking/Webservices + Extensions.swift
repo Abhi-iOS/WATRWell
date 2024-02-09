@@ -7,7 +7,7 @@
 
 import Foundation
 extension WebServices {
-    static var baseUrl: String { "http://174.138.127.119/api/v1/" }
+    static var baseUrl: String { "https://watrwell.io/api/v1/" }
     
     enum EndPoint : String {
         
